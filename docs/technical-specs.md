@@ -1,9 +1,3 @@
----
-layout: page
-title: "Technical Specification"
-permalink: https://kommonitor.github.io/technical-specs
----
-
 # Technical Specifications
 ## Introduction
 This document describes technical system requirements and specifications for operating KomMonitor with
