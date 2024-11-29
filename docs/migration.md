@@ -1,8 +1,7 @@
 # Migration Guide
-## Migration to Version 5.0.0
-This guide gives you some step-by-step information to perform a major update of KomMonitor from an
-version below the latest 5.0.0 version. The 5.0.0 KomMonitor version introduces a completely new mandant 
-concept, which required the migration of the existing KomMonitor database schema. If you plan set up a
+## Migration to Data Management API Version 5.0.0
+This guide gives you some step-by-step information to perform a major update of KomMonitor Data Management API
+from any version below the latest 5.0.0 version. The 5.0.0 Data Management API version introduces a completely new mandant concept, which requires the migration of the existing KomMonitor database schema. If you plan set up a
 fresh instance of KomMonitor, you are fine and don't have to perform any migration steps. Otherwise, you
 can use the instructions listed below, which supports you to perform the migration by the use of 
 [Liquibase](https://docs.liquibase.com/home.html).
@@ -10,7 +9,8 @@ can use the instructions listed below, which supports you to perform the migrati
 **Important:** Make sure you have created a proper backup of your database, which can be used for
 restoring the current state of the database, if the migration process fails.
 ### From 4.x.x
-This section captures the migration steps that are required to update from any version 4.x.x to 5.0.0.
+This section captures the migration steps that are required to update from any version 4.x.x 
+of the Data Management API to version 5.0.0.
 #### 1) Capture current DB state
 First, capture the current state of those tables of your KomMonitor DB that have to be manually enhanced
 with additional values. In particular, these are the tables `indicatorspatialunits`, `metadatageoresources`,
@@ -23,7 +23,7 @@ Note, that the Liquibase Docker container must have access to your KomMonitor da
 
 ```
 docker run --network=kommonitor \
--v /home/user/kommonitor/liquibase/changelog:/liquibase/changelog \
+-v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 -v /home/user/kommonitor/liquibase/data:/liquibase/data_output \
 liquibase generate-changelog \
 --changelog-file=changelog/kommonitor-changelog-data-4.0.0.xml \
@@ -102,7 +102,7 @@ the database update by using the [Liquibase update command](https://docs.liquiba
 Just adapt it to your environment and execute the command.
 ```
 docker run --network=kommonitor \
--v /home/user/kommonitor/liquibase/changelog:/liquibase/changelog \
+-v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 -v /home/user/kommonitor/liquibase/data:/liquibase/data_input \
 liquibase update \
 --changelog-file=changelog/kommonitor-changelog-4.x-5.0.0.xml \
@@ -115,6 +115,25 @@ This will apply all changesets to your database to update its schema and also lo
 you have prepared in the CSV files, into the tables.
 
 #### 9) Sync DB to inital 5.0.0 schema
-TBD
+With Data Management API version 5.0.0 we integrated Liquibase as fixed part to perform all future migration tasks.
+This requires to baseline your migrated database to the 5.0.0 schema. As a result, when you first start the Data
+Management API in version 5.0.0, Liquibase automatically recognizes that your database has been migrated to the
+new schema and won't apply any changesets to it, which usually would be done if you start with a clean environment.
+For this purpose, you can use the [Liquibase changelog-sync command](https://docs.liquibase.com/commands/utility/changelog-sync.html)
+as stated in the snippet below. Download the [5.0.0 base changelog](https://github.com/KomMonitor/data-management/blob/0e0bf6122457b3cee9d7d1b1cc59e1e21aa093b8/src/main/resources/db/changelog/kommonitor-changelog-5.0.0.xml)
+and place it into the `/home/user/kommonitor/liquibase/changelog` directory. Again, adapt the command to your
+environment before exection.
+```
+docker run --network=kommonitor \
+-v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
+liquibase changelog-sync \
+--changelog-file=db/changelog/kommonitor-changelog-5.0.0.xml \
+--driver=org.postgresql.Driver \
+--url="jdbc:postgresql://kommonitor-db:5432/kommonitor" \
+--username=postgres \
+--password=postgres
 
-#### 10) 
+```
+
+#### 10) Adapt Docker Compose setup
+TBD
