@@ -2,7 +2,7 @@
 ---
 
 @import "{{ site.theme }}";
-.main-content h1 {
+.main-content {
     color: #337ab7;
 }
 .page-header {
