@@ -6,8 +6,8 @@ fresh instance of KomMonitor, you are fine and don't have to perform any migrati
 can use the instructions listed below, which supports you to perform the migration by the use of 
 [Liquibase](https://docs.liquibase.com/home.html).
 
-**Important:** Make sure you have created a proper backup of your database, which can be used for
-restoring the current state of the database, if the migration process fails.
+**Important: Make sure you have created a proper backup of your database, which can be used for
+restoring the current state of the database, if the migration process fails.**
 ### From 4.x.x
 This section captures the migration steps that are required to update from any version 4.x.x 
 of the Data Management API to version 5.0.0.
@@ -136,3 +136,13 @@ liquibase changelog-sync \
 ```
 
 #### 10) Adapt Docker Compose setup
+Adapt your Docker Compose setup for using the new KomMonitor component versions. This includes using our 
+custom Keycloak image, updating the image versions of the Data Management API, the Importer API
+and the Web Client and changing some environment variables. Our [Docker Compose templates](https://github.com/KomMonitor/docker/blob/feature/multi-tenancy/prod/kommonitor/docker-compose.yml)
+provide working configurations. 
+
+For the first startup after having your DB migrated, you have to add the environment variable 
+`KOMMONITOR_MIGRATIONS=5.0.0` to your Data Management API container in the `docker-compose.yml` file.
+This will execute some initial update routines at startup e.g., to initially create Keycloak groups
+for all your extsing organizational units. After successfull startup, delete this environment variable from your 
+`docker-compose.yml` again.
