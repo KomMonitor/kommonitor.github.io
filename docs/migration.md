@@ -1,9 +1,19 @@
 # Migration Guide
 ## Migration to Version 5.0.0
+This guide gives you some step-by-step information to perform a major update of KomMonitor from an
+version below the latest 5.0.0 version. The 5.0.0 KomMonitor version introduces a completely new mandant 
+concept, which required the migration of the existing KomMonitor database schema. If you plan set up a
+fresh instance of KomMonitor, you are fine and don't have to perform any migration steps. Otherwise, you
+can use the instructions listed below, which supports you to perform the migration by the use of 
+[Liquibase](https://docs.liquibase.com/home.html).
+
+**Important:** Make sure you have created a proper backup of your database, which can be used for
+restoring the current state of the database, if the migration process fails.
 ### From 4.x.x
+This section captures the migration steps that are required to update from any version 4.x.x to 5.0.0.
 #### 1) Capture current DB state
-First, capture the current state of those DB tabled that have to be manually enhanced with additional 
-values. In particular, these are the tables `indicatorspatialunits`, `metadatageoresources`,
+First, capture the current state of those tables of your KomMonitor DB that have to be manually enhanced
+with additional values. In particular, these are the tables `indicatorspatialunits`, `metadatageoresources`,
 `metadataindicators`, `metadataspatialunits`, `organizationalunits`, `permissions`. For this purpose,
 you have to generate a changelog with the Liquibase [generate-changelog](https://docs.liquibase.com/commands/inspection/generate-changelog.html)
 command that includes `data` in the `--diff-types` parameter. 
@@ -84,7 +94,27 @@ timeseries data of an indicator should be the same as the owner ID of the metada
 indicator.
 
 #### 8) Update DB to new schema
-TBD
+Now, with the adapted CSV files, you can perform the update of your KomMonitor DB to the new schema
+of version 5.0.0. For this purpose, you can simply use a [prepared Liquibase changelog](https://github.com/KomMonitor/db-schema-migration/blob/develop/changelog/kommonitor-changelog-4.x-5.0.0.xml).
+Download this file and place it at `/home/user/kommonitor/liquibase/changelog`. Make also sure that you 
+have placed your CSV files at `/home/user/kommonitor/liquibase/data`. The command listed below performs
+the database update by using the [Liquibase update command](https://docs.liquibase.com/change-types/update.html).
+Just adapt it to your environment and execute the command.
+```
+docker run --network=kommonitor \
+-v /home/user/kommonitor/liquibase/changelog:/liquibase/changelog \
+-v /home/user/kommonitor/liquibase/data:/liquibase/data_input \
+liquibase update \
+--changelog-file=changelog/kommonitor-changelog-4.x-5.0.0.xml \
+--driver=org.postgresql.Driver \
+--url="jdbc:postgresql://kommonitor-db:5432/kommonitor_data" \
+--username=kommonitor \
+--password=kommonitor 
+```
+This will apply all changesets to your database to update its schema and also loads the missing data, which
+you have prepared in the CSV files, into the tables.
 
 #### 9) Sync DB to inital 5.0.0 schema
 TBD
+
+#### 10) 
