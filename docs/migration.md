@@ -21,7 +21,7 @@ command that includes `data` in the `--diff-types` parameter.
 You can use the template listed below for this purpose. Just adapt the parameters to your environment.
 Note, that the Liquibase Docker container must have access to your KomMonitor database and to the mounted data directories:
 
-```
+```Shell
 docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 -v /home/user/kommonitor/liquibase/data:/liquibase/data_output \
@@ -100,7 +100,7 @@ Download this file and place it at `/home/user/kommonitor/liquibase/changelog`. 
 have placed your CSV files at `/home/user/kommonitor/liquibase/data`. The command listed below performs
 the database update by using the [Liquibase update command](https://docs.liquibase.com/change-types/update.html).
 Just adapt it to your environment and execute the command.
-```
+```Shell
 docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 -v /home/user/kommonitor/liquibase/data:/liquibase/data_input \
@@ -122,8 +122,8 @@ new schema and won't apply any changesets to it, which usually would be done if 
 For this purpose, you can use the [Liquibase changelog-sync command](https://docs.liquibase.com/commands/utility/changelog-sync.html)
 as stated in the snippet below. Download the [5.0.0 base changelog](https://github.com/KomMonitor/data-management/blob/0e0bf6122457b3cee9d7d1b1cc59e1e21aa093b8/src/main/resources/db/changelog/kommonitor-changelog-5.0.0.xml)
 and place it into the `/home/user/kommonitor/liquibase/changelog` directory. Again, adapt the command to your
-environment before exection.
-```
+environment before execution.
+```Shell
 docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 liquibase changelog-sync \
@@ -136,4 +136,3 @@ liquibase changelog-sync \
 ```
 
 #### 10) Adapt Docker Compose setup
-TBD
