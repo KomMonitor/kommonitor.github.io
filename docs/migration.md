@@ -28,7 +28,7 @@ docker run --network=kommonitor \
 liquibase generate-changelog \
 --changelog-file=changelog/kommonitor-changelog-data-4.0.0.xml \
 --diffTypes=data \
---include-objects="indicatorspatialunits,metadatageoresources,metadataindicators,metadataspatialunits,organizationalunits,permissions" \
+--include-objects="indicatorspatialunits,metadatageoresources,metadataindicators,metadataspatialunits,organizationalunits,roles" \
 --dataOutputDirectory=data_output \
 --driver=org.postgresql.Driver \
 --url="jdbc:postgresql://kommonitor-db:5432/kommonitor_data" \
