@@ -26,7 +26,7 @@ docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 -v /home/user/kommonitor/liquibase/data:/liquibase/data_output \
 liquibase generate-changelog \
---changelog-file=changelog/kommonitor-changelog-data-4.0.0.xml \
+--changelog-file=db/changelog/kommonitor-changelog-data-4.0.0.xml \
 --diffTypes=data \
 --include-objects="indicatorspatialunits,metadatageoresources,metadataindicators,metadataspatialunits,organizationalunits,roles" \
 --dataOutputDirectory=data_output \
@@ -105,7 +105,7 @@ docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 -v /home/user/kommonitor/liquibase/data:/liquibase/data_input \
 liquibase update \
---changelog-file=changelog/kommonitor-changelog-4.x-5.0.0.xml \
+--changelog-file=db/changelog/kommonitor-changelog-4.x-5.0.0.xml \
 --driver=org.postgresql.Driver \
 --url="jdbc:postgresql://kommonitor-db:5432/kommonitor_data" \
 --username=kommonitor \
