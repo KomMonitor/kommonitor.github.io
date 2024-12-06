@@ -19,7 +19,9 @@ you have to generate a changelog with the Liquibase [generate-changelog](https:/
 command that includes `data` in the `--diff-types` parameter. 
 
 You can use the template listed below for this purpose. Just adapt the parameters to your environment.
-Note, that the Liquibase Docker container must have access to your KomMonitor database and to the mounted data directories:
+Note, that the Liquibase Docker container must have access to your KomMonitor database and to the mounted data directories. 
+It may be required to adapt the permissions of the mounted data directories so that the Liquibase Docker container is able to
+write to these directories.:
 
 ```Shell
 docker run --network=kommonitor \
