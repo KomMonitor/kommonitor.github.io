@@ -46,12 +46,24 @@ Note, that you will only need the CSV files in the following steps, since the
 [db-schema-migration GitHub repo](https://github.com/KomMonitor/db-schema-migration) comes with several
 prepared Liquibase changelog files for migration of different DB schema versions.
 
+For editing the CSV files in the following steps, use a tool that is able to generate CSV files that matches
+the following format specifications:
+* use comma (,) as column seperator
+* use dot (.) as decimal seperator in floating values
+* all field values are quoted (")
+* the CSV-files are UTF-8 encoded
+
+For CSV files that have a differing format it can not be guaranted that data migration will succeed. 
+However, it is possible to adapt some options of the `loadUpdateData` changesets in the [migration changelog](https://github.com/KomMonitor/db-schema-migration/blob/develop/changelog/kommonitor-changelog-4.x-5.0.0.xml)
+in accordance to your custom CSV format. For this purpose, read the [Liquibase docs](https://docs.liquibase.com/change-types/load-update-data.html).
+
 #### 2) Adapt permission data
 Edit the `roles.csv` file with a tool that lets you easily handle tabular data.
 1. Rename the CSV file `roles.csv` to `permissions.csv`
 2. Rename the column `roleid` to `permissionid`
-3. Add a new column `permissiontype`
-4. Fill each cell for the column `permissiontype` with the value `resources`
+3. Rename the column `rolename` to `name`
+4. Add a new column `permissiontype`
+5. Fill each cell for the column `permissiontype` with the value `resources`
 
 #### 3) Adapt organizational unit data
 Edit the `organizationalunits.csv` file with a tool that lets you easily handle tabular data.
@@ -64,6 +76,11 @@ for the `ismandant` column must have their own ID for this field.
 is parent for the current organizational unit. Organizational units that have a `true` value for the
 `ismandant` column must have the value `null` for this field, since mandant do not have a parent
 organizational unit.
+
+**Important:** Make sure that the special organizational units "kommonitor" and "public" are not referenced
+as parent or mandant in the CSV files. These entities are deprecated and will be deleted at initial
+startup of the Data Management API. Also, do not reference these organizational units as owner
+for datasets during the following steps.
 
 #### 4) Adapt georesources
 Edit the `metadatageoresources.csv` file with a tool that lets you easily handle tabular data.
@@ -131,13 +148,22 @@ docker run --network=kommonitor \
 liquibase changelog-sync \
 --changelog-file=db/changelog/kommonitor-changelog-5.0.0.xml \
 --driver=org.postgresql.Driver \
---url="jdbc:postgresql://kommonitor-db:5432/kommonitor" \
---username=postgres \
---password=postgres
-
+--url="jdbc:postgresql://kommonitor-db:5432/kommonitor_data" \
+--username=kommonitor \
+--password=kommonitor
 ```
 
-#### 10) Adapt Docker Compose setup
+#### 10) Configure Keycloak
+The new version of the Data Management API utilizes a Keycloak Admin Client for managing, roles and policies in accordance
+to the organizational units. For this purpose, it is required to allow the Data Management API to communicate with Keycloak.
+You can prepare Keycloak as follows:
+1. Open the Keycloak client configuration in the Keycloak Admin UI for the Admin Client: "Clients" -> "admin-cli" -> "Settings"
+2. Enable "Client auhentication" and "Service account roles"
+3. Assign "kommonitor-creator" under "Service accounts roles"
+4. Generate a client secret under "Credentials"
+5. Set the client secret in the Docker Compose setup for the Data Management API for the environment variable [KK_CLI_SECRET](https://github.com/KomMonitor/docker/blob/5db513ce6275c466beb576306e20bfa5efc88435/prod/kommonitor/.env#L24).
+
+#### 11) Adapt Docker Compose setup
 Adapt your Docker Compose setup for using the new KomMonitor component versions. This includes using our 
 custom Keycloak image, updating the image versions of the Data Management API, the Importer API
 and the Web Client and changing some environment variables. Our [Docker Compose templates](https://github.com/KomMonitor/docker/blob/feature/multi-tenancy/prod/kommonitor/docker-compose.yml)
