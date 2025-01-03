@@ -169,8 +169,21 @@ custom Keycloak image, updating the image versions of the Data Management API, t
 and the Web Client and changing some environment variables. Our [Docker Compose templates](https://github.com/KomMonitor/docker/blob/feature/multi-tenancy/prod/kommonitor/docker-compose.yml)
 provide working configurations. 
 
-For the first startup after having your DB migrated, you have to add the environment variable 
-`KOMMONITOR_MIGRATIONS=5.0.0` to your Data Management API container in the `docker-compose.yml` file.
+For the first startup after having your DB migrated, you have to enable the migration startup script by setting
+the following environment variables to your Data Management API container in the `docker-compose.yml` file:
+* `KOMMONITOR_MIGRATION_ENABLED=true`
+* `KOMMONITOR_MIGRATION_VERSIONS=5.0.0`
+
 This will execute some initial update routines at startup e.g., to initially create Keycloak groups
-for all your extsing organizational units. After successfull startup, delete this environment variable from your 
-`docker-compose.yml` again.
+for all your extsing organizational units. There are also two optional config params, which control
+the deletion of some deprecated legacy OrganizationalUnits and set to `true` by default:
+* `KOMMONITOR_MIGRATION_DELETE_LEGACY_ADMIN_ORGANIZATIONALUNIT=true`: deletes the default "kommonitor" OrganizationalUnit and all of its associated permissions
+* `KOMMONITOR_MIGRATION_DELETE_LEGACY_PUBLIC_ORGANIZATIONALUNIT=true`: deletes the deafault "public"  OrganizationalUnit and all of its associated permissions
+
+E.g., if you have associated the `kommonitor` OrganizationalUnit as owner for some datasets (which is not recommended),
+you can set `KOMMONITOR_MIGRATION_DELETE_LEGACY_ADMIN_ORGANIZATIONALUNIT` to `false` in order to preserve the 
+`kommonitor ` OrganizationalUnit.
+
+
+Note: After successfull startup, set `KOMMONITOR_MIGRATION_ENABLED` to `false` again, to prevent another migration routine
+execution at next startup.
