@@ -7,7 +7,9 @@ can use the instructions listed below, which supports you to perform the migrati
 [Liquibase](https://docs.liquibase.com/home.html).
 
 **Important: Make sure you have created a proper backup of your database, which can be used for
-restoring the current state of the database, if the migration process fails.**
+restoring the current state of the database, if the migration process fails. We strongly recommend 
+that you apply the following migration steps to a copy of your database and only move to that database
+if you are sure the migration was successful**
 ### From 4.x.x
 This section captures the migration steps that are required to update from any version 4.x.x 
 of the Data Management API to version 5.0.0.
@@ -154,6 +156,16 @@ liquibase changelog-sync \
 ```
 
 #### 10) Configure Keycloak
+##### 10.1) Use Custom Keycloak image
+We have built and published a custom Keycloak image that contains some KomMonitor specific extension, such as a custom
+role mapper as well as a custom policy evaluation provider. To use the custom Keycloak image, you have to adapt your
+Docker Compose setup for Keycloak according to our [Docker Compose template](https://github.com/KomMonitor/docker/blob/feature/multi-tenancy/prod/keycloak/docker-compose.yml).
+Note, that the custom image is built for supporting fixed DB provider, which can not be changed. Currently, we built images that support 
+the following DB providers:
+* [MSSQL](https://hub.docker.com/layers/kommonitor/keycloak/latest-mssql/images/sha256-cb74a77aff7922ab11897c9103bd0a5523c5d7e692e990515d11d27cd46be2f5)
+* [PostgreSQL](https://hub.docker.com/layers/kommonitor/keycloak/latest-postgres/images/sha256-65854815b05d6b893f361cc6fd59c1dfb221ff88dc7f2e8c1160405bc59f50aa)
+
+##### 10.2) Configure Admin CLI
 The new version of the Data Management API utilizes a Keycloak Admin Client for managing, roles and policies in accordance
 to the organizational units. For this purpose, it is required to allow the Data Management API to communicate with Keycloak.
 You can prepare Keycloak as follows:
@@ -162,6 +174,46 @@ You can prepare Keycloak as follows:
 3. Assign "kommonitor-creator" under "Service accounts roles"
 4. Generate a client secret under "Credentials"
 5. Set the client secret in the Docker Compose setup for the Data Management API for the environment variable [KK_CLI_SECRET](https://github.com/KomMonitor/docker/blob/5db513ce6275c466beb576306e20bfa5efc88435/prod/kommonitor/.env#L24).
+
+##### 10.3) Configure Role Mapper
+Our pre-built Keycloak image comes with a custom role mapper that has to be set as default for the KomMonitor realm in Keycloak.
+For this purpose, follow the steps below:
+1. Open the "Client Scopes" configuration page
+2. Select the "roles" scope 
+3. Open the "Mappers" tab
+4. Delete the "realm roles" mapper
+5. Add a new mapper by clicking "Add mapper" -> "By Configuration"
+6. Select the "Kommonitor Role Mapper"
+7. Configure the "Kommonitor Role Mapper" as follows:
+    * *Name*: `kommonitor realm roles`
+    * *Multivalued*: `On`
+    * *Token Claim Name*: `realm_access.roles`
+    * All other fields can have the default values
+
+##### 10.4) Create Groups Scope
+KomMonitor services need information about group membership of a youse. By default, that JWT that is granted by Keycloak
+does not contain a group claim, which have to be configured additionally:
+1. Open the "Client Scopes" configuration page
+2. Create a new scope by clicking on "Create client scope" and set the following configuration parameters:
+    * *Name*: `groups`
+    * *Description*: `user groups`
+    * *Type*: `default`
+    * *Include in token scope*: `On`
+3. After saving the new scope add a mapper by clicking on "Add mapper" -> "By Configuration" at the "Mappers" tab
+4. Select the "Group Membeship" mapper
+5. Configure the "Group Membeship Mapper" as follows:
+    * *Name*: `groups`
+    * *Token Claim Name*: `groups`
+    * All other fields can have the default values
+6. Add the newly created groups client scope to every single KomMonitor service that is registered as client at Keycloak. Below you find
+the steps for the Data Management API client:
+    * Open the "Clients" page
+    * Select "kommonitor-data-management"
+    * Open the "Client scopes" tab
+    * Click "Add client scope"
+    * Select "groups" scope and click "Add" -> "Default"
+    * Repeat these steps for: "kommonitor-client-config", "kommonitor-importer", "kommonitor-processing-engine", 
+    "kommonitor-processing-scheduler" and "kommonitor-web-client"
 
 #### 11) Adapt Docker Compose setup
 Adapt your Docker Compose setup for using the new KomMonitor component versions. This includes using our 
