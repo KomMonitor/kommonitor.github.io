@@ -160,7 +160,11 @@ liquibase changelog-sync \
 We have built and published a custom Keycloak image that contains some KomMonitor specific extension, such as a custom
 role mapper as well as a custom policy evaluation provider. To use the custom Keycloak image, you have to adapt your
 Docker Compose setup for Keycloak according to our [Docker Compose template](https://github.com/KomMonitor/docker/blob/feature/multi-tenancy/prod/keycloak/docker-compose.yml).
-Note, that the custom image is built for supporting fixed DB provider, which can not be changed. Currently, we built images that support 
+Our custom image is built upon a recent Keycloak version. Usually, Keycloak automatically updates the DB schema when starting a new version for the first time. However, if you 
+use an older version of Keycloak then our custom Keycloak image, you should review the [migration changes of Keycloak](https://www.keycloak.org/docs/latest/upgrading/)
+and read the [upgrading instructions](https://www.keycloak.org/docs/latest/upgrading/#_upgrading).
+
+Also note, that the custom image is built for supporting fixed DB provider, which can not be changed. Currently, we built images that support 
 the following DB providers:
 * [MSSQL](https://hub.docker.com/layers/kommonitor/keycloak/latest-mssql/images/sha256-cb74a77aff7922ab11897c9103bd0a5523c5d7e692e990515d11d27cd46be2f5)
 * [PostgreSQL](https://hub.docker.com/layers/kommonitor/keycloak/latest-postgres/images/sha256-65854815b05d6b893f361cc6fd59c1dfb221ff88dc7f2e8c1160405bc59f50aa)
@@ -191,7 +195,7 @@ For this purpose, follow the steps below:
     * All other fields can have the default values
 
 ##### 10.4) Create Groups Scope
-KomMonitor services need information about group membership of a youse. By default, that JWT that is granted by Keycloak
+KomMonitor services need information about group membership of a user. By default, that JWT that is granted by Keycloak
 does not contain a group claim, which have to be configured additionally:
 1. Open the "Client Scopes" configuration page
 2. Create a new scope by clicking on "Create client scope" and set the following configuration parameters:
