@@ -116,7 +116,8 @@ indicator.
 
 #### 8) Update DB to new schema
 Now, with the adapted CSV files, you can perform the update of your KomMonitor DB to the new schema
-of version 5.0.0. For this purpose, you can simply use a [prepared Liquibase changelog](https://github.com/KomMonitor/db-schema-migration/blob/develop/changelog/kommonitor-changelog-4.x-5.0.0.xml).
+of version 5.0.0. For this purpose, you can simply use a [prepared Liquibase changelog](https://github.com/KomMonitor/db-schema-migration/blob/develop/changelog/).
+Choose the changelog script that fits to your current Data Management API version and the target version.
 Download this file and place it at `/home/user/kommonitor/liquibase/changelog`. Make also sure that you 
 have placed your CSV files at `/home/user/kommonitor/liquibase/data`. The command listed below performs
 the database update by using the [Liquibase update command](https://docs.liquibase.com/change-types/update.html).
