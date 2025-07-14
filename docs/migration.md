@@ -30,7 +30,7 @@ docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 -v /home/user/kommonitor/liquibase/data:/liquibase/data_output \
 liquibase generate-changelog \
---changelog-file=db/changelog/kommonitor-changelog-data-4.0.0.xml \
+--changelog-file=db/changelog/kommonitor-changelog-data-base.xml \
 --diffTypes=data \
 --include-objects="indicatorspatialunits,metadatageoresources,metadataindicators,metadataspatialunits,organizationalunits,roles" \
 --dataOutputDirectory=data_output \
@@ -115,8 +115,8 @@ timeseries data of an indicator should be the same as the owner ID of the metada
 indicator.
 
 #### 8) Update DB to new schema
-Now, with the adapted CSV files, you can perform the update of your KomMonitor DB to the new schema
-of version 5.0.0. For this purpose, you can simply use a [prepared Liquibase changelog](https://github.com/KomMonitor/db-schema-migration/blob/develop/changelog/).
+Now, with the adapted CSV files, you can perform the update of your KomMonitor DB to a new 5.x.x schema.
+For this purpose, you can simply use a [prepared Liquibase changelog](https://github.com/KomMonitor/db-schema-migration/blob/develop/changelog/).
 Choose the changelog script that fits to your current Data Management API version and the target version.
 Download this file and place it at `/home/user/kommonitor/liquibase/changelog`. Make also sure that you 
 have placed your CSV files at `/home/user/kommonitor/liquibase/data`. The command listed below performs
@@ -127,7 +127,7 @@ docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 -v /home/user/kommonitor/liquibase/data:/liquibase/data_input \
 liquibase update \
---changelog-file=db/changelog/kommonitor-changelog-4.x-5.0.0.xml \
+--changelog-file=db/changelog/kommonitor-changelog-4.1.x-5.1.0.xml \
 --driver=org.postgresql.Driver \
 --url="jdbc:postgresql://kommonitor-db:5432/kommonitor_data" \
 --username=kommonitor \
@@ -136,20 +136,22 @@ liquibase update \
 This will apply all changesets to your database to update its schema and also loads the missing data, which
 you have prepared in the CSV files, into the tables.
 
-#### 9) Sync DB to inital 5.0.0 schema
+#### 9) Sync DB to root schema
 With Data Management API version 5.0.0 we integrated Liquibase as fixed part to perform all future migration tasks.
-This requires to baseline your migrated database to the 5.0.0 schema. As a result, when you first start the Data
-Management API in version 5.0.0, Liquibase automatically recognizes that your database has been migrated to the
-new schema and won't apply any changesets to it, which usually would be done if you start with a clean environment.
+This requires to baseline your migrated database to the target 5.x.x schema from the previous step. As a result, 
+when you first start the Data Management API Liquibase automatically recognizes that your database has been migrated 
+to a new schema and won't apply any changesets to it, which usually would be done if you start with a clean environment.
 For this purpose, you can use the [Liquibase changelog-sync command](https://docs.liquibase.com/commands/utility/changelog-sync.html)
-as stated in the snippet below. Download the [5.0.0 base changelog](https://github.com/KomMonitor/data-management/blob/0e0bf6122457b3cee9d7d1b1cc59e1e21aa093b8/src/main/resources/db/changelog/kommonitor-changelog-5.0.0.xml)
-and place it into the `/home/user/kommonitor/liquibase/changelog` directory. Again, adapt the command to your
-environment before execution.
+as stated in the snippet below. Download the [root changelog](https://github.com/KomMonitor/data-management/blob/0e0bf6122457b3cee9d7d1b1cc59e1e21aa093b8/src/main/resources/db/changelog/kommonitor-changelog-root.xml)
+and place it into the `/home/user/kommonitor/liquibase/changelog` directory. Within the `kommonitor-changelog-root.xml` 
+remove all includings of versions that are above your migrated version. E.g. if you used `kommonitor-changelog-4.1.x-5.1.0.xml`
+the previous step, you have to remove `<include file="db/changelog/kommonitor-changelog-5.1.1.xml"/>` from `kommonitor-changelog-root.xml`.
+Then adapt the following command to your environment before execution.
 ```Shell
 docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 liquibase changelog-sync \
---changelog-file=db/changelog/kommonitor-changelog-5.0.0.xml \
+--changelog-file=db/changelog/kommonitor-changelog-root.xml \
 --driver=org.postgresql.Driver \
 --url="jdbc:postgresql://kommonitor-db:5432/kommonitor_data" \
 --username=kommonitor \
