@@ -225,8 +225,16 @@ the steps for the Data Management API client:
 #### 11) Adapt Docker Compose setup
 Adapt your Docker Compose setup for using the new KomMonitor component versions. This includes using our 
 custom Keycloak image, updating the image versions of the Data Management API, the Importer API
-and the Web Client and changing some environment variables. Our [Docker Compose templates](https://github.com/KomMonitor/docker/blob/feature/multi-tenancy/prod/kommonitor/docker-compose.yml)
-provide working configurations. 
+and the Web Client and changing some environment variables
+##### 11.1) Keycloak Setup
+Check the [Docker Compose template](https://github.com/KomMonitor/docker/blob/master/prod/keycloak/docker-compose.yml) for setting up a production ready Keycloak instance.
+
+Besides the Keycloak related configuration parameters, you'll find the `KOMMONITOR_REALMS` environment variable, which is dedicated to
+our custom Keycloak image. For this parameter set all Keycloak realms as comma separated list, which should use the multi-tenancy feature.
+
+##### 11.2) KomMonitor Setup
+There is also a [Docker Compose templates](https://github.com/KomMonitor/docker/blob/master/prod/kommonitor/docker-compose.yml)
+that provides a production ready configurations for all KomMonitor components. 
 
 For the first startup after having your DB migrated, you have to enable the migration startup script by setting
 the following environment variables to your Data Management API container in the `docker-compose.yml` file:
@@ -246,3 +254,24 @@ you can set `KOMMONITOR_MIGRATION_DELETE_LEGACY_ADMIN_ORGANIZATIONALUNIT` to `fa
 
 Note: After successfull startup, set `KOMMONITOR_MIGRATION_ENABLED` to `false` again, to prevent another migration routine
 execution at next startup.
+
+
+## Common Errors and Pitfalls
+**Access denied exception during Liquibase changelog generation**  
+You may run into an access denied error or some similiar when executing the `liquibase generate-changelog` command. Most probably,
+the reason for this is that you mounted a data directory into the Liquibase Docker container, which is not writable from within the
+container. Just adapt the permissions of this directory on your host machine with `chmod` before mounting it as volume.
+
+**Unexpected error during Liquibase update**  
+In some cases, the command `liquibase update` will fail with an unexpected error. This may be caused by strings within the CSV-files
+that contain special characters. In particular, the `processdescription` column within `metadataindicators.csv` may contain problematic 
+Latex formulars, such as `Formel<br/>$$ \frac{ A}{ I_{ref}} \times 100`. Replace these strings by an unproblemativ string. After
+succesfull migration you can set the original string again via KomMonitor Admin UI.
+
+
+**401 error occurs during DataManagament API startup**  
+Check if you have set the Keycloak admin-cli secret properly to `KK_CLI_SECRET` as mentioned in [this section](#102-configure-admin-cli).
+
+**403 error occurs during DataManagament API startup**  
+Check in Keycloak that the `kommonitor-creator` role is associated with the `realm-management` or `realm-admin` role.
+
