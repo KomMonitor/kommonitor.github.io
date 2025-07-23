@@ -265,9 +265,8 @@ container. Just adapt the permissions of this directory on your host machine wit
 **Unexpected error during Liquibase update**  
 In some cases, the command `liquibase update` will fail with an unexpected error. This may be caused by strings within the CSV-files
 that contain special characters. In particular, the `processdescription` column within `metadataindicators.csv` may contain problematic 
-Latex formulars, such as `Formel<br/>$$ \frac{ A}{ I_{ref}} \times 100`. Replace these strings by an unproblemativ string. After
+Latex formulars, such as `Formel<br/>$$ \frac{ A}{ I_{ref}} \times 100`. Replace these strings by an unproblematic string. After
 succesfull migration you can set the original string again via KomMonitor Admin UI.
-
 
 **401 error occurs during DataManagament API startup**  
 Check if you have set the Keycloak admin-cli secret properly to `KK_CLI_SECRET` as mentioned in [this section](#102-configure-admin-cli).
