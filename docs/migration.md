@@ -141,8 +141,9 @@ With Data Management API version 5.0.0 we integrated Liquibase as fixed part to 
 This requires to baseline your migrated database to the target 5.x.x schema from the previous step. As a result, 
 when you first start the Data Management API Liquibase automatically recognizes that your database has been migrated 
 to a new schema and won't apply any changesets to it, which usually would be done if you start with a clean environment.
+
 For this purpose, you can use the [Liquibase changelog-sync command](https://docs.liquibase.com/commands/utility/changelog-sync.html)
-as stated in the snippet below. Download the [root changelog](https://github.com/KomMonitor/data-management/blob/0e0bf6122457b3cee9d7d1b1cc59e1e21aa093b8/src/main/resources/db/changelog/kommonitor-changelog-root.xml)
+as stated in the snippet below. Download all required [changelog files](https://github.com/KomMonitor/data-management/blob/master/src/main/resources/db/changelog)
 and place it into the `/home/user/kommonitor/liquibase/changelog` directory. Within the `kommonitor-changelog-root.xml` 
 remove all includings of versions that are above your migrated version. E.g. if you used `kommonitor-changelog-4.1.x-5.1.0.xml`
 the previous step, you have to remove `<include file="db/changelog/kommonitor-changelog-5.1.1.xml"/>` from `kommonitor-changelog-root.xml`.
