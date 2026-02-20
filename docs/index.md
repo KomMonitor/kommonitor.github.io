@@ -8,3 +8,5 @@ You'll find some useful information and requirements for deploying KomMonitor vi
 ## Migration Guide
 Use the [Migration Guide](https://kommonitor.github.io/migration) for major version updates of 
 KomMonitor. 
+## Datenschutz und personenbezogene Daten
+[Handreichung zu Datenschutz und personenbezogenen Daten](https://kommonitor.github.io/datenschutz)
