@@ -4,7 +4,7 @@ This guide gives you some step-by-step information to perform a major update of 
 from any version below the latest 5.0.0 version. The 5.0.0 Data Management API version introduces a completely new mandant concept, which requires the migration of the existing KomMonitor database schema. If you plan set up a
 fresh instance of KomMonitor, you are fine and don't have to perform any migration steps. Otherwise, you
 can use the instructions listed below, which supports you to perform the migration by the use of 
-[Liquibase](https://docs.liquibase.com/home.html).
+[Liquibase](https://docs.liquibase.com/pro/reference-guide-4-33/parameters/liquibase-catalog-name).
 
 **Important: Make sure you have created a proper backup of your database, which can be used for
 restoring the current state of the database, if the migration process fails. We strongly recommend 
@@ -17,7 +17,7 @@ of the Data Management API to version 5.0.0.
 First, capture the current state of those tables of your KomMonitor DB that have to be manually enhanced
 with additional values. In particular, these are the tables `indicatorspatialunits`, `metadatageoresources`,
 `metadataindicators`, `metadataspatialunits`, `organizationalunits`, `permissions`. For this purpose,
-you have to generate a changelog with the Liquibase [generate-changelog](https://docs.liquibase.com/commands/inspection/generate-changelog.html)
+you have to generate a changelog with the Liquibase [generate-changelog](https://docs.liquibase.com/pro/reference-guide-4-33/database-inspection-change-tracking-and-utility-commands/generate-changelog)
 command that includes `data` in the `--diff-types` parameter. 
 
 You can use the template listed below for this purpose. Just adapt the parameters to your environment.
@@ -29,7 +29,7 @@ write to these directories.:
 docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 -v /home/user/kommonitor/liquibase/data:/liquibase/data_output \
-liquibase generate-changelog \
+liquibase/liquibase:4.33 generate-changelog \
 --changelog-file=db/changelog/kommonitor-changelog-data-base.xml \
 --diffTypes=data \
 --include-objects="indicatorspatialunits,metadatageoresources,metadataindicators,metadataspatialunits,organizationalunits,roles" \
@@ -57,7 +57,7 @@ the following format specifications:
 
 For CSV files that have a differing format it can not be guaranted that data migration will succeed. 
 However, it is possible to adapt some options of the `loadUpdateData` changesets in the [migration changelog](https://github.com/KomMonitor/db-schema-migration/blob/develop/changelog/kommonitor-changelog-4.x-5.0.0.xml)
-in accordance to your custom CSV format. For this purpose, read the [Liquibase docs](https://docs.liquibase.com/change-types/load-update-data.html).
+in accordance to your custom CSV format. For this purpose, read the [Liquibase docs](https://docs.liquibase.com/pro/reference-guide-4-33/change-types/load-update-data).
 
 #### 2) Adapt permission data
 Edit the `roles.csv` file with a tool that lets you easily handle tabular data.
@@ -120,13 +120,13 @@ For this purpose, you can simply use a [prepared Liquibase changelog](https://gi
 Choose the changelog script that fits to your current Data Management API version and the target version.
 Download this file and place it at `/home/user/kommonitor/liquibase/changelog`. Make also sure that you 
 have placed your CSV files at `/home/user/kommonitor/liquibase/data`. The command listed below performs
-the database update by using the [Liquibase update command](https://docs.liquibase.com/change-types/update.html).
+the database update by using the [Liquibase update command](https://docs.liquibase.com/pro/reference-guide-4-33/init-update-and-rollback-commands/update).
 Just adapt it to your environment and execute the command.
 ```Shell
 docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 -v /home/user/kommonitor/liquibase/data:/liquibase/data_input \
-liquibase update \
+liquibase/liquibase:4.33 update \
 --changelog-file=db/changelog/kommonitor-changelog-4.1.x-5.1.0.xml \
 --driver=org.postgresql.Driver \
 --url="jdbc:postgresql://kommonitor-db:5432/kommonitor_data" \
@@ -142,7 +142,7 @@ This requires to baseline your migrated database to the target 5.x.x schema from
 when you first start the Data Management API Liquibase automatically recognizes that your database has been migrated 
 to a new schema and won't apply any changesets to it, which usually would be done if you start with a clean environment.
 
-For this purpose, you can use the [Liquibase changelog-sync command](https://docs.liquibase.com/commands/utility/changelog-sync.html)
+For this purpose, you can use the [Liquibase changelog-sync command](https://docs.liquibase.com/pro/reference-guide-4-33/database-inspection-change-tracking-and-utility-commands/changelog-sync)
 as stated in the snippet below. Download all required [changelog files](https://github.com/KomMonitor/data-management/blob/master/src/main/resources/db/changelog)
 and place it into the `/home/user/kommonitor/liquibase/changelog` directory. Within the `kommonitor-changelog-root.xml` 
 remove all includings of versions that are above your migrated version. E.g. if you used `kommonitor-changelog-4.1.x-5.1.0.xml`
@@ -151,7 +151,7 @@ Then adapt the following command to your environment before execution.
 ```Shell
 docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
-liquibase changelog-sync \
+liquibase/liquibase:4.33 changelog-sync \
 --changelog-file=db/changelog/kommonitor-changelog-root.xml \
 --driver=org.postgresql.Driver \
 --url="jdbc:postgresql://kommonitor-db:5432/kommonitor_data" \
