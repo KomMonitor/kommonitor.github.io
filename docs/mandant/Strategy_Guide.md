@@ -38,7 +38,7 @@
 
 ## 1. Das Kernkonzept: "Vom Einzelschlüssel zum Gruppen-Zutritt"
 
-Seit der Umstellung auf die neue Mandantenfähigkeit ($DataManagement API \ge 5.0.0$) ($Web Client \ge 4.0.0$) erfolgt der Zugriff nicht mehr über individuelle Rollenzuweisungen für jeden einzelnen Nutzer. 
+Seit der Umstellung auf die neue Mandantenfähigkeit ($API \ge 5.0.0$) ($CLIENT \ge 4.0.0$) erfolgt der Zugriff nicht mehr über individuelle Rollenzuweisungen für jeden einzelnen Nutzer. 
 
 * **Gruppenbasierte Rechte**: Nutzer erhalten ihre Befugnisse ausschließlich über die explizite Mitgliedschaft in Keycloak-Gruppen.
 * **1:1 Zuordnung**: Jede Organisationseinheit in KomMonitor entspricht technisch exakt einer Gruppe in Keycloak.
@@ -148,6 +148,7 @@ So nutzen Sie zentrale Kreisdaten und lokale Kommunaldaten gleichzeitig.
 
 * **Themenverwaltung**: Themen sind aktuell noch mandantenübergreifend sichtbar. Benutzen Sie Präfixe im Namen (z.B. **STADT_X_Soziales**).
 * **Einseitige Synchronisation**: Die Verknüpfung erfolgt nur von KomMonitor nach Keycloak. Manuelle Änderungen direkt in Keycloak führen zu Inkonsistenzen.
+* **Einstellungen und Design**: Derzeit haben nur User mit der Superadmin-Rolle ***kommonitor-creator*** Zugriff auf die Einstellungen von KomMonitor. Einstellungen greifen demnach noch mandantenübergreifend. Workaround: pro Manant können  separate ***Web Client*** und ***Client Config*** Software-Komponenten beim IT-Dienstleister aufgesetzt werden, die eine mandantenspezifische Konfiguration für Einstellungen und Design abbilden. 
 * **Ausblick**: Volle Mandantenfähigkeit für Themen, Designs und die Prozessierung folgt 2026.
 
 ---
