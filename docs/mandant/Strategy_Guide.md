@@ -38,7 +38,7 @@
 
 ## 1. Das Kernkonzept: "Vom Einzelschlüssel zum Gruppen-Zutritt"
 
-Seit der Umstellung auf die neue Mandantenfähigkeit ($API \ge 5.0.0$) erfolgt der Zugriff nicht mehr über individuelle Rollenzuweisungen für jeden einzelnen Nutzer. 
+Seit der Umstellung auf die neue Mandantenfähigkeit ($DataManagement API \ge 5.0.0$) ($Web Client \ge 4.0.0$) erfolgt der Zugriff nicht mehr über individuelle Rollenzuweisungen für jeden einzelnen Nutzer. 
 
 * **Gruppenbasierte Rechte**: Nutzer erhalten ihre Befugnisse ausschließlich über die explizite Mitgliedschaft in Keycloak-Gruppen.
 * **1:1 Zuordnung**: Jede Organisationseinheit in KomMonitor entspricht technisch exakt einer Gruppe in Keycloak.
