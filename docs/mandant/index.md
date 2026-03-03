@@ -6,12 +6,12 @@ Dieses Repository enthält umfassende Anleitungen und Praxisbeispiele zur Umsetz
 
 | Datei | Inhalt / Zweck |
 | :--- | :--- |
-| **[Strategy_Guide.md](./Strategy_Guide.md)** | Das Hauptdokument. Erklärt Konzepte, Rollen und das neue Datenmodell. |
+| **[Leitfaden Mandantenfähigkeit](./Strategy_Guide.md)** | Das Hauptdokument. Erklärt Konzepte, Usergruppen, Rollen und das neue Datenmodell. |
 | **[Szenario Einzelkommune](./Scenario_Einzelkommune.md)** | Öffentliche Sozialberichterstattung und interne Fachplanungs-Werkstatt innerhalb einer Kommune. |
 | **[Szenario Mandantenisolation](./Scenario_mandant_isolation.md)** | Völlig Getrennte Nutzung von KomMonitor. |
 | **[Szenario kreisweite interkommunales Armutsmonitoring](./Scenario_Social_Planning.md)** | Praxisvorlage für gemeinsame Datenhaltung im interkommunalen Armutsmonitoring. |
 | **[Szenario Hybride Mandanten](./Scenario_Hybrid_Model.md)** | Leitfaden für die Trennung zwischen Zentral-Repository und lokaler Fachplanung. |
-| **[Glossary.md](./Glossary.md)** | Erläuterung technischer Fachbegriffe für Planer*innen. |
+| **[Glossar](./Glossary.md)** | Erläuterung technischer Fachbegriffe für Planer*innen. |
 
 <!-- ## 🚀 Kernkonzepte
 * **Keine automatische Vererbung**: Rechte müssen explizit vergeben werden.

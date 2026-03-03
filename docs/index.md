@@ -11,4 +11,4 @@ KomMonitor.
 ## Datenschutz und personenbezogene Daten
 [Handreichung zu Datenschutz und personenbezogenen Daten](https://kommonitor.github.io/datenschutz)
 ## KomMonitor Mandantenfähigkeit (2025/2026)
-[Best Practice Guides und Leitfäden zur KomMonitor Mandantenfähigkeit](https://kommonitor.github.io/mandant/index)
+[Best Practice Guides und Leitfäden zur KomMonitor Mandantenfähigkeit](./mandant/index.md)
