@@ -275,3 +275,7 @@ Check if you have set the Keycloak admin-cli secret properly to `KK_CLI_SECRET` 
 **403 error occurs during DataManagament API startup**  
 Check in Keycloak that the `kommonitor-creator` role is associated with the `realm-management` or `realm-admin` role.
 
+**401/403 error occurs during Web Client initialization (403 on /roles or 401 on /account)**
+If after logging in with a kommonitor-creator account the admin user interface of KomMonitor does not show any resource administration pages, then the user information details cannot be fetched properly from Keykloak.  
+Check in Keycloak that the `kommonitor-creator` role is associated with the account-related roles `manage-account` and `manage-account-links` and `view-profile`.
+
