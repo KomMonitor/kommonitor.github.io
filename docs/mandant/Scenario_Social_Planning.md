@@ -16,6 +16,7 @@ Dieses Schema beschreibt die Umsetzung einer kooperativen Datenhaltung zwischen 
 ---
 
 ## 2. Administrative Rollenverteilung
+
 | Akteur | Administrative Rolle | Befugnis in der Praxis |
 | :--- | :--- | :--- |
 | **Kreis-Administrator** | **client-user-creator** | Verwaltet Nutzer für den gesamten Mandanten und alle Kommunen. |
@@ -29,6 +30,7 @@ Dieses Schema beschreibt die Umsetzung einer kooperativen Datenhaltung zwischen 
 * **Öffentliche Lesefreigabe (isPublic):** Deaktiviert.
 
 **Explizite Zugriffsrechte im Freigabe-Dialog:**
+
 | Ziel-Gruppe | Lese-Recht | Editier-Recht | Zweck |
 | :--- | :--- | :--- | :--- |
 | **Kommune A** | **Ja** | Nein | Nutzung der Kreisdaten als Vergleichswerte. |
