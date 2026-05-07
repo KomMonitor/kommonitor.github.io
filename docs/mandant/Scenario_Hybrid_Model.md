@@ -23,6 +23,7 @@ Nutzer können Mitglied in **1 bis n Gruppen** sein.
 ---
 
 ## 3. Daten-Matrix & Freigaben
+
 | Datensatz | Mandant (Eigentümer) | Status | Reichweite |
 | :--- | :--- | :--- | :--- |
 | **Basis-Indikatoren** | Zentrale Plattform | **isPublic = EIN** | Mandanten-übergreifend lesbar. |
