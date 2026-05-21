@@ -1,3 +1,8 @@
+---
+title: Technical Specifications (en)
+nav_order: 5
+---
+
 # Technical Specifications
 ## Introduction
 This document describes technical system requirements and specifications for operating KomMonitor with

@@ -1,6 +1,39 @@
-theme: jekyll-theme-cayman
-# remote_theme: fongandrew/hydeout
-plugins:
-- jekyll-remote-theme
+# Allgemeine Projekt-Einstellungen
 title: KomMonitor
-description: Deployment information and updates.
+description: Deployment-Informationen, Updates und Leitfäden zur Mandantenfähigkeit.
+back_to_top: true
+back_to_top_text: "Nach oben"
+
+# Aktivierung des "Just the Docs" Remote-Themes
+remote_theme: just-the-docs/just-the-docs
+
+# Plugins für GitHub Pages
+plugins:
+  - jekyll-remote-theme
+
+# Spezifische Einstellungen für Just the Docs
+heading_anchors: true
+
+# Navigationseinstellungen
+search_enabled: true
+search:
+  tokenizer: 'any' # Optimiert die Suche für deutsche Umlaute und zusammengesetzte Wörter
+
+# Nützliche Links oben rechts im Header
+aux_links:
+  "KomMonitor GitHub": "https://github.com/KomMonitor"
+  "Docker-Repository": "https://github.com/KomMonitor/docker"
+
+logo: "/assets/images/kommonitor_logo.png"
+favicon_ico: "/assets/images/favicon.ico"
+
+callouts:
+  important:
+    title: Important
+    color: blue
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red

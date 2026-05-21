@@ -1,3 +1,10 @@
+---
+layout: default
+title: Szenario Hybride Mandanten
+parent: Mandantenfähigkeit (2025/2026)
+nav_order: 5
+---
+
 # Praxisvorlage: Hybrid-Modell „Zentrales Repository & Lokale Fachplanung“
 
 [zurück zur Übersicht](./index.md)

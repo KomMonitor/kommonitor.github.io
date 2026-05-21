@@ -1,3 +1,8 @@
+---
+title: Migration Guide
+nav_order: 6
+---
+
 # Migration Guide
 ## Migration to Data Management API Version 5.0.0
 This guide gives you some step-by-step information to perform a major update of KomMonitor Data Management API
@@ -6,10 +11,9 @@ fresh instance of KomMonitor, you are fine and don't have to perform any migrati
 can use the instructions listed below, which supports you to perform the migration by the use of 
 [Liquibase](https://docs.liquibase.com/pro/reference-guide-4-33/parameters/liquibase-catalog-name).
 
-**Important: Make sure you have created a proper backup of your database, which can be used for
-restoring the current state of the database, if the migration process fails. We strongly recommend 
-that you apply the following migration steps to a copy of your database and only move to that database
-if you are sure the migration was successful**
+{: .important }
+Make sure you have created a proper backup of your database, which can be used for restoring the current state of the database, if the migration process fails. We strongly recommend that you apply the following migration steps to a copy of your database and only move to that database if you are sure the migration was successful
+
 ### From 4.x.x
 This section captures the migration steps that are required to update from any version 4.x.x 
 of the Data Management API to version 5.0.0.

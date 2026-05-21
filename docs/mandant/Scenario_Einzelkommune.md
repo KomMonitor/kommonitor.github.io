@@ -1,3 +1,10 @@
+---
+layout: default
+title: Szenario Einzelkommune
+parent: Mandantenfähigkeit (2025/2026)
+nav_order: 2
+---
+
 # Praxisvorlage: Szenario A – Die „All-in-One“ Kommune
 ## Integrierte Sozialberichterstattung und interne Fachplanung
 

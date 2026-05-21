@@ -1,3 +1,10 @@
+---
+layout: default
+title: Szenario kreisweite interkommunales Armutsmonitoring
+parent: Mandantenfähigkeit (2025/2026)
+nav_order: 4
+---
+
 # Praxisvorlage: Interkommunales Monitoring „Sozialplanung & Armut“
 
 [zurück zur Übersicht](./index.md)

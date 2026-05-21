@@ -1,3 +1,8 @@
+---
+title: Datenschutz
+nav_order: 4
+---
+
 # Handreichung: Datenschutz und Umgang mit personenbezogenen Daten in KomMonitor
 
 ## Einführung

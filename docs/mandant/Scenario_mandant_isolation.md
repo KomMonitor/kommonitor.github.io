@@ -1,3 +1,10 @@
+---
+layout: default
+title: Szenario Mandantenisolation
+parent: Mandantenfähigkeit (2025/2026)
+nav_order: 3                           # Position als 3. Unterpunkt
+---
+
 # Praxisvorlage: Szenario B – Strikte Trennung (N+1 Mandanten)
 ## Autarke Datenhaltung für Kreis und Kommunen
 

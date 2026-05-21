@@ -1,3 +1,10 @@
+---
+layout: default
+title: Strategie-Leitfaden
+parent: Mandantenfähigkeit (2025/2026)
+nav_order: 1
+---
+
 # Strategie-Leitfaden: KomMonitor Mandantenfähigkeit (2025/2026)
 
 ### Ein Ratgeber für die digitale Souveränität von Kommunen und Kreisen

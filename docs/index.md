@@ -1,13 +1,17 @@
+---
+title: Home
+nav_order: 0
+---
+
+
 # KomMonitor
-## Docker Deployment
-If you wish to deploy KomMonitor via Docker, you'll find templates for different setup at the [KomMonitor Docker](https://github.com/KomMonitor/docker) repository.
-## Kubernetes Deployment
-There are also some templates for a Kubernetes deployment at the  [KomMonitor Kubernetes](https://github.com/KomMonitor/kubernetes)  repository.
-## Technical Specification
-You'll find some useful information and requirements for deploying KomMonitor via Docker at the [Technical Specification](https://kommonitor.github.io/technical-specs) page.
-## Migration Guide
-Use the [Migration Guide](https://kommonitor.github.io/migration) for major version updates of 
-KomMonitor. 
+{: .fs-9 }
+Die Open-Source Software KomMonitor ermöglicht ein GIS-basiertes, raum-zeitliches Monitoring von Geodaten und Statistiken. Auf diesen Seiten finden Sie verschiedene technische Dokumentation zu KomMonitor
+{: .fs-6 .fw-300 }
+## Technische Spezifikation
+Weitere nützliche Informationen und Anforderungen für die Bereitstellung von KomMonitor über Docker finden Sie auf der Seite [Technische Spezifikation](https://kommonitor.github.io/technical-specs).
+## Migrationsleitfaden
+Nutzen Sie den [Migrationsleitfaden](https://kommonitor.github.io/migration) für größere Versionsaktualisierungen von KomMonitor. 
 ## Datenschutz und personenbezogene Daten
 [Handreichung zu Datenschutz und personenbezogenen Daten](https://kommonitor.github.io/datenschutz)
 ## KomMonitor Mandantenfähigkeit (2025/2026)

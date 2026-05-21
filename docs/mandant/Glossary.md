@@ -1,3 +1,10 @@
+---
+layout: default
+title: Glossar
+parent: Mandantenfähigkeit (2025/2026)
+nav_order: 6
+---
+
 ## Glossar für Datenadministratoren
 
 Dieses Glossar erläutert die zentralen Begriffe der KomMonitor-Mandantenfähigkeit und Datenmodellierung, um Fachplaner*innen ein sicheres Agieren im System zu ermöglichen.

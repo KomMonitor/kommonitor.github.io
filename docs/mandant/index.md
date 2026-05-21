@@ -1,3 +1,11 @@
+---
+layout: default
+title: Mandantenfähigkeit (2025/2026)
+nav_order: 2
+has_children: true
+permalink: /mandant/
+---
+
 # KomMonitor Mandantenfähigkeit (2025/2026) – Best Practice Guides
 
 Dieses Repository enthält umfassende Anleitungen und Praxisbeispiele zur Umsetzung des Mandantenkonzepts in KomMonitor.
