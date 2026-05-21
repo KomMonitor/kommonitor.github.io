@@ -1,20 +1,30 @@
 ---
 layout: default
-title: Szenario Mandantenisolation
+title: Szenario - Mandantenisolation
 parent: Mandantenfähigkeit (2025/2026)
 nav_order: 3                           # Position als 3. Unterpunkt
 ---
 
-# Praxisvorlage: Szenario B – Strikte Trennung (N+1 Mandanten)
-## Autarke Datenhaltung für Kreis und Kommunen
+# Szenario – Strikte Trennung (N+1 Mandanten)
+{: .no_toc }
 
-[zurück zur Übersicht](./index.md)
+Praxisvorlage einer autarken Datenhaltung für Kreis und Kommunen
+{: .fs-6 .fw-300 }
+
+## Inhalt
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
 
 Dieses Schema beschreibt die Umsetzung in einem Kreis, in dem sowohl die Kreisverwaltung als auch jede einzelne Kommune völlig eigenständig und abgeschottet voneinander ihre Sozialplanung betreiben.
 
+[zurück zur Übersicht](./index.md)
+
 ---
 
-## 1. Die Organisationsstruktur
+## Die Organisationsstruktur
 In diesem Szenario wird für jede Kommune und für die Kreisverwaltung jeweils ein **eigener, separater Mandant** (Wurzelknoten) eingerichtet. Es besteht keine hierarchische Verbindung zwischen den Mandanten.
 
 * **Mandant 1: Kreisverwaltung (Sozialamt)** (isMandant = EIN)
@@ -24,7 +34,7 @@ In diesem Szenario wird für jede Kommune und für die Kreisverwaltung jeweils e
 
 ---
 
-## 2. Administrative Rollenverteilung
+## Administrative Rollenverteilung
 Die Trennung wird technisch dadurch erzwungen, dass Mandanten-Administratoren keine Rechte außerhalb ihres eigenen Mandanten besitzen.
 
 | Akteur | Administrative Rolle | Befugnis im System |
@@ -35,7 +45,7 @@ Die Trennung wird technisch dadurch erzwungen, dass Mandanten-Administratoren ke
 
 ---
 
-## 3. Daten-Matrix: Absolute Isolation
+## Daten-Matrix: Absolute Isolation
 In diesem Modell gibt es keinen Datenaustausch über das Usergruppen-Konzept zwischen den Mandanten. Datenredundanz wird zugunsten der Datensouveränität in Kauf genommen.
 
 | Datensatz (Beispiel) | Mandant (Eigentümer) | Sichtbarkeit | Zugriff durch Dritte |
@@ -46,7 +56,7 @@ In diesem Modell gibt es keinen Datenaustausch über das Usergruppen-Konzept zwi
 
 ---
 
-## 4. Implementierungs-Checkliste
+## Implementierungs-Checkliste
 1. [ ] **Mandanten-Setup**: Der IT-Dienstleister registriert für jede Kommune und den Kreis einen eigenen Mandanten mit aktiviertem Mandanten-Toggle.
 2. [ ] **Zuweisung der Admins**: Pro Mandant wird mindestens ein lokaler Mandanten-Admin ernannt, der nur für seinen Bereich zuständig ist.
 3. [ ] **Datenhoheit**: Jede Kommune lädt ihre eigenen Raumebenen (z. B. Sozialräume oder Quartiere) in ihren eigenen Mandanten hoch.
@@ -55,7 +65,7 @@ In diesem Modell gibt es keinen Datenaustausch über das Usergruppen-Konzept zwi
 
 ---
 
-## 5. Strategische Vorteile dieses Szenarios
+## Strategische Vorteile dieses Szenarios
 * **Maximale Autonomie**: Jede Kommune entscheidet völlig frei über ihre Daten, Themenstrukturen und Nutzer.
 * **Datenschutz-Garantie**: Es ist technisch unmöglich, dass ein Nutzer aus Kommune A versehentlich Zugriff auf interne Planungsdaten von Kommune B erhält.
 * **Souveränität**: Die Kreisverwaltung hat keinen direkten Zugriff auf die (nicht-öffentlichen) Arbeitsdaten der Kommunen, was das Vertrauen in die Systemnutzung bei sensiblen Themen stärkt.

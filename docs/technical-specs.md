@@ -1,25 +1,41 @@
 ---
-title: Technical Specifications (en)
+title: Technische Spezifikationen
 nav_order: 5
 ---
 
-# Technical Specifications
-## Introduction
-This document describes technical system requirements and specifications for operating KomMonitor with
-Docker. It is assumed that all KomMonitor components and 3rd party software components that are necessary
-for the operation of KomMonitor are deployed using Docker Compose.
+# Technische Spezifikationen
+{: .no_toc }
 
-Docker Compose templates for deploying KomMonitor as Docker containers are provided in the following 
-repository: https://github.com/KomMonitor/docker. The configuration files provided simplify and
-accelerate the local deployment of the entire KomMonitor stack via Docker. For productive deployment,
-the configuration files provided must be adapted to the respective operating environment,
+Technischen Systemanforderungen und Spezifikationen für den Betrieb von
+KomMonitor mit Docker.
+{: .fs-6 .fw-300 }
 
-The operation of KomMonitor in a Kubernetes cluster is not described in this document.
+## Inhalt
+{: .no_toc .text-delta }
 
-## System Requirements
-The most important requirement for the operation of KomMonitor is that it is possible to use a Docker Engine
-on the server. Windows Server as an operating system is not supported. Additional system requirements:
-* Server operating system: Ubuntu (other Linux distributions would also be possible, provided that a Docker engine can be operated there - see supported platforms: https://docs.docker.com/desktop/install/linux-install/#supported-platforms)
-* CPU: 4 cores
-* Memory: 12-16 GB RAM
-* Storage: 50 GB SSD (depending on the amount of data to be managed in KomMonitor, there may be higher storage requirements)
+1. TOC
+{:toc}
+
+---
+
+## Einführung
+Dieses Dokument beschreibt die technischen Systemanforderungen und Spezifikationen für den Betrieb von
+KomMonitor mit Docker. Es wird davon ausgegangen, dass alle KomMonitor-Komponenten und erforderliche
+Drittanbieter-Softwarekomponenten mit Docker Compose bereitgestellt werden.
+
+Docker Compose-Vorlagen für die Bereitstellung von KomMonitor als Docker-Container sind im folgenden 
+Repository verfügbar: [https://github.com/KomMonitor/docker](https://github.com/KomMonitor/docker). Die bereitgestellten Konfigurationsdateien 
+vereinfachen und beschleunigen die lokale Bereitstellung des gesamten KomMonitor-Stacks über Docker. Für 
+den produktiven Betrieb müssen die bereitgestellten Konfigurationsdateien an die jeweilige 
+Betriebsumgebung angepasst werden.
+
+Der Betrieb von KomMonitor in einem Kubernetes-Cluster wird in diesem Dokument nicht beschrieben.
+
+## Systemanforderungen
+Die wichtigste Anforderung für den Betrieb von KomMonitor ist, dass eine Docker Engine auf dem Server 
+verwendet werden kann. Windows Server wird als Betriebssystem nicht unterstützt. Zusätzliche 
+Systemanforderungen:
+* Server-Betriebssystem: Ubuntu (andere Linux-Distributionen wären ebenfalls möglich, sofern dort eine Docker Engine betrieben werden kann - siehe unterstützte Plattformen: [https://docs.docker.com/desktop/install/linux-install/#supported-platforms](https://docs.docker.com/desktop/install/linux-install/#supported-platforms)
+* CPU: 4 Kerne
+* Speicher: 12-16 GB RAM
+* Speicherplatz: 50 GB SSD (abhängig von der Menge der in KomMonitor zu verwaltenden Daten können höhere Speicheranforderungen erforderlich sein)

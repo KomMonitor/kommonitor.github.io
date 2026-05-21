@@ -6,44 +6,23 @@ nav_order: 1
 ---
 
 # Strategie-Leitfaden: KomMonitor Mandantenfähigkeit (2025/2026)
+{: .no_toc }
 
-### Ein Ratgeber für die digitale Souveränität von Kommunen und Kreisen
+Ein Ratgeber für die digitale Souveränität von Kommunen und Kreisen
+{: .fs-6 .fw-300 }
+
+## Inhalt
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 [zurück zur Übersicht](./index.md)
 
 ---
 
-## Inhaltsverzeichnis
-- [Strategie-Leitfaden: KomMonitor Mandantenfähigkeit (2025/2026)](#strategie-leitfaden-kommonitor-mandantenfähigkeit-20252026)
-    - [Ein Ratgeber für die digitale Souveränität von Kommunen und Kreisen](#ein-ratgeber-für-die-digitale-souveränität-von-kommunen-und-kreisen)
-  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  - [1. Das Kernkonzept: "Vom Einzelschlüssel zum Gruppen-Zutritt"](#1-das-kernkonzept-vom-einzelschlüssel-zum-gruppen-zutritt)
-  - [2. Die drei Säulen der Administration](#2-die-drei-säulen-der-administration)
-  - [3. Das Datenmodell im Praxiskontext](#3-das-datenmodell-im-praxiskontext)
-  - [4. Typische Use Cases und Szenarien](#4-typische-use-cases-und-szenarien)
-  - [5. Praxis-Checklisten \& Anleitungen](#5-praxis-checklisten--anleitungen)
-    - [5.1 Neuen Mandanten einrichten (Superadmin)](#51-neuen-mandanten-einrichten-superadmin)
-    - [5.2 Internen Indikator (z. B. Altersarmut) anlegen](#52-internen-indikator-z-b-altersarmut-anlegen)
-    - [5.3 Workflow: Vom internen Entwurf zur Veröffentlichung](#53-workflow-vom-internen-entwurf-zur-veröffentlichung)
-    - [5.4 Anleitung: Zugriff für neue Teams einrichten (Die „Vererbungs-Falle“)](#54-anleitung-zugriff-für-neue-teams-einrichten-die-vererbungs-falle)
-    - [5.5 Anleitung: Eigentümerschaft übertragen](#55-anleitung-eigentümerschaft-übertragen)
-    - [5.6 Fehlerbehebung: „Ich sehe meine Daten nicht“](#56-fehlerbehebung-ich-sehe-meine-daten-nicht)
-    - [5.7 Anleitung: Zusammenarbeit im Hybrid-Modell](#57-anleitung-zusammenarbeit-im-hybrid-modell)
-  - [6. Aktuelle Limitationen \& Roadmap](#6-aktuelle-limitationen--roadmap)
-  - [7. FAQ – Nach Themen strukturiert](#7-faq--nach-themen-strukturiert)
-    - [Thema: Datenzugriff \& Sichtbarkeit](#thema-datenzugriff--sichtbarkeit)
-    - [Thema: Technische Administration \& Synchronisation](#thema-technische-administration--synchronisation)
-    - [Thema: Rollen \& Verantwortlichkeiten](#thema-rollen--verantwortlichkeiten)
-    - [Thema: Zusammenarbeit \& Mandantengrenzen](#thema-zusammenarbeit--mandantengrenzen)
-  - [8. Praxis-Musterschemata](#8-praxis-musterschemata)
-    - [8.1 Szenario A: Die „All-in-One“ Kommune](#81-szenario-a-die-all-in-one-kommune)
-    - [8.2 Szenario B: Strikte Trennung (N+1 Mandanten)](#82-szenario-b-strikte-trennung-n1-mandanten)
-    - [8.3 Szenario C: Gemeinsame Sozialplanung](#83-szenario-c-gemeinsame-sozialplanung)
-    - [8.4 Szenario D: Das Hybrid-Modell](#84-szenario-d-das-hybrid-modell)
 
----
-
-## 1. Das Kernkonzept: "Vom Einzelschlüssel zum Gruppen-Zutritt"
+## Das Kernkonzept: "Vom Einzelschlüssel zum Gruppen-Zutritt"
 
 Seit der Umstellung auf die neue Mandantenfähigkeit (***API >= 5.0.0***) (***CLIENT >= 4.0.0***) erfolgt der Zugriff nicht mehr über individuelle Rollenzuweisungen für jeden einzelnen Nutzer. 
 
@@ -55,7 +34,7 @@ Seit der Umstellung auf die neue Mandantenfähigkeit (***API >= 5.0.0***) (***CL
 
 ---
 
-## 2. Die drei Säulen der Administration
+## Die drei Säulen der Administration
 
 Die Administration wurde von einer globalen Rolle auf feingranulare administrative Rollen erweitert, die über intuitive Masken gesteuert werden.
 
@@ -69,7 +48,7 @@ Die Administration wurde von einer globalen Rolle auf feingranulare administrati
 
 ---
 
-## 3. Das Datenmodell im Praxiskontext
+## Das Datenmodell im Praxiskontext
 
 Fachplaner steuern die Mandantenfähigkeit über einfache Menüs, während im Hintergrund technische Parameter die Trennung sicherstellen.
 
@@ -82,7 +61,7 @@ Fachplaner steuern die Mandantenfähigkeit über einfache Menüs, während im Hi
 
 ---
 
-## 4. Typische Use Cases und Szenarien
+## Typische Use Cases und Szenarien
 
 * **Szenario A: Die autarke Kommune**: Eine Stadt nutzt KomMonitor intern. Ein Mandant wird als Wurzelknoten erstellt. Fachämter werden als Untergruppen abgebildet.
 * **Szenario B: Der Kreis als Hoster**: Jede Kommune sowie die Kreisverwaltung agiert als eigenständiger Mandant. Es besteht eine strenge Abgrenzung; ein Mandant kann einen anderen weder einsehen noch verwalten.
@@ -91,21 +70,21 @@ Fachplaner steuern die Mandantenfähigkeit über einfache Menüs, während im Hi
 
 ---
 
-## 5. Praxis-Checklisten & Anleitungen
+## Praxis-Checklisten & Anleitungen
 
-### 5.1 Neuen Mandanten einrichten (Superadmin)
+### Neuen Mandanten einrichten (Superadmin)
 1. Anmeldung als globaler Admin mit der Rolle **kommonitor-creator**.
 2. In der Gruppenverwaltung eine neue Organisationseinheit registrieren.
 3. Den Toggle **"Mandant"** explizit aktivieren.
 4. Über den Button "Rechte verwalten" der neuen Gruppe die administrative Selbstverwaltung übertragen.
 
-### 5.2 Internen Indikator (z. B. Altersarmut) anlegen
+### Internen Indikator (z. B. Altersarmut) anlegen
 1. Metadaten und ressourcenspezifische Informationen für den neuen Datensatz eintragen.
 2. Die zuständige Fachgruppe als **Eigentümer** hinterlegen.
 3. Den Schalter für die öffentliche Lesefreigabe deaktiviert lassen.
 4. Im Schritt "Datensatz-Freigaben" Lese- oder Editierrechte explizit für Partner-Gruppen auswählen.
 
-### 5.3 Workflow: Vom internen Entwurf zur Veröffentlichung
+### Workflow: Vom internen Entwurf zur Veröffentlichung
 Fachplaner arbeiten oft über längere Zeiträume an Indikatoren, bevor diese für andere Ämter oder die Öffentlichkeit sichtbar sein dürfen.
 
 * **Der Entwurfs-Status:** Beim Registrieren eines neuen Indikators wählen Sie Ihre eigene Fachgruppe als **Eigentümer-Organisationseinheit**  Nur Mitglieder dieser Gruppe (oder übergeordnete Ressourcen-Admins) können den Datensatz bearbeiten oder löschen.
@@ -113,7 +92,7 @@ Fachplaner arbeiten oft über längere Zeiträume an Indikatoren, bevor diese f�
 * **Interne Abstimmung:** Falls ein anderes Amt den Entwurf prüfen soll, vergeben Sie im Prozessschritt „Datensatz-Freigaben“ explizit ein **Leserecht** für die entsprechende Gruppe.
 * **Go-Live:** Wenn der Datensatz final ist, bearbeiten Sie die Metadaten und aktivieren Sie die **öffentliche Lesefreigabe**. Erst jetzt ist der Indikator für anonyme Nutzer und andere Mandanten sichtbar.
 
-### 5.4 Anleitung: Zugriff für neue Teams einrichten (Die „Vererbungs-Falle“)
+### Anleitung: Zugriff für neue Teams einrichten (Die „Vererbungs-Falle“)
 Ein häufiger Stolperstein: Eine neue Untergruppe wird angelegt, sieht aber die bestehenden Daten der Abteilung nicht.
 
 * **Das Problem:** In KomMonitor werden Zugriffsrechte auf Datensätze **nicht** automatisch an Untergruppen vererbt.
@@ -124,7 +103,7 @@ Ein häufiger Stolperstein: Eine neue Untergruppe wird angelegt, sieht aber die 
     3.  Suchen Sie die neue Untergruppe in der Liste der Organisationseinheiten und aktivieren Sie das Häkchen für **„Lesen“**.
     4.  Speichern Sie die Änderungen. Erst jetzt haben Mitglieder des neuen Teams Zugriff.
 
-### 5.5 Anleitung: Eigentümerschaft übertragen
+### Anleitung: Eigentümerschaft übertragen
 Wenn die Zuständigkeit für einen Indikator (z. B. von der Statistik zur Fachplanung) wechselt, muss die Eigentümerschaft angepasst werden.
 
 * **Bedeutung:** Nur die Eigentümer-Gruppe besitzt das exklusive Recht, einen Datensatz zu löschen sowie Rechte anderer Gruppen am Datensatz anzupassen.
@@ -134,7 +113,7 @@ Wenn die Zuständigkeit für einen Indikator (z. B. von der Statistik zur Fachpl
     2.  Wählen Sie im Feld **„Eigentümer-Organisationseinheit“** die neue Gruppe aus.
     3.  Nach dem Speichern hat die neue Gruppe die volle administrative Kontrolle über den Datensatz.
 
-### 5.6 Fehlerbehebung: „Ich sehe meine Daten nicht“
+### Fehlerbehebung: „Ich sehe meine Daten nicht“
 Falls Nutzer trotz Anmeldung keine Inhalte sehen, prüfen Sie folgende Punkte:
 
 * **Gruppenmitgliedschaft:** Prüfen Sie im Info-Fenster des Logins, ob der Nutzer tatsächlich Mitglied der berechtigten Gruppe ist.
@@ -142,7 +121,7 @@ Falls Nutzer trotz Anmeldung keine Inhalte sehen, prüfen Sie folgende Punkte:
 * **Mandantengrenzen:** Befindet sich der Datensatz in einem anderen Mandanten? Ohne Mitgliedschaft in einer Gruppe dieses Mandanten oder eine öffentliche Freigabe (`isPublic`) bleibt der Datensatz unsichtbar.
 * **Aktualisierung:** Nach Rechteänderungen muss die Seite oft neu geladen werden (Taste **F5**), damit die neuen Berechtigungen vom Browser abgerufen werden.
 
-### 5.7 Anleitung: Zusammenarbeit im Hybrid-Modell
+### Anleitung: Zusammenarbeit im Hybrid-Modell
 So nutzen Sie zentrale Kreisdaten und lokale Kommunaldaten gleichzeitig.
 
 * **Doppel-Mitgliedschaft:** Der Nutzer muss in Keycloak Mitglied in mindestens zwei Gruppen sein: einer Gruppe seines eigenen Mandanten und einer Gruppe des zentralen Mandanten.
@@ -151,7 +130,7 @@ So nutzen Sie zentrale Kreisdaten und lokale Kommunaldaten gleichzeitig.
 
 ---
 
-## 6. Aktuelle Limitationen & Roadmap
+## Aktuelle Limitationen & Roadmap
 
 * **Themenverwaltung**: Themen sind aktuell noch mandantenübergreifend sichtbar. Benutzen Sie Präfixe im Namen (z.B. **STADT_X_Soziales**).
 * **Einseitige Synchronisation**: Die Verknüpfung erfolgt nur von KomMonitor nach Keycloak. Manuelle Änderungen direkt in Keycloak führen zu Inkonsistenzen.
@@ -160,7 +139,7 @@ So nutzen Sie zentrale Kreisdaten und lokale Kommunaldaten gleichzeitig.
 
 ---
 
-## 7. FAQ – Nach Themen strukturiert
+## FAQ – Nach Themen strukturiert
 
 In diesem Abschnitt finden Sie Antworten auf die häufigsten Fragen, die bei der täglichen Arbeit mit dem Mandantenkonzept auftreten.
 
@@ -207,27 +186,27 @@ In diesem Abschnitt finden Sie Antworten auf die häufigsten Fragen, die bei der
 **F: Wie kann ich trotzdem Daten eines anderen Mandanten nutzen?**
 * **Antwort:** Ein registrierter Benutzer kann Mitglied in mehreren Gruppen (1-n) gleichzeitig sein. Um Daten aus verschiedenen Mandanten zu sehen, muss der Nutzer in Gruppen beider Mandanten als Mitglied eingetragen sein (sog. Doppel-Mitgliedschaft).
 
-## 8. Praxis-Musterschemata
+## Praxis-Musterschemata
 
-### 8.1 Szenario A: Die „All-in-One“ Kommune
+### Szenario A: Die „All-in-One“ Kommune
 * **Struktur**: Ein Mandant "Stadt Musterstadt" mit Untergruppen für Statistik, Sozialplanung und Jugendhilfe.
 * **Logik**: Das Statistikamt veröffentlicht Daten auf Bezirksebene für Bürger (isPublic = EIN). Die Sozialplanung nutzt kleinräumige Baublöcke für interne Zwecke (isPublic = AUS).
 * **Vorteil**: Transparenz nach außen bei gleichzeitigem Datenschutz nach innen.
 * ***[zur detaillierten Szenariomodellierung](./Scenario_Einzelkommune.md)***
 
-### 8.2 Szenario B: Strikte Trennung (N+1 Mandanten)
+### Szenario B: Strikte Trennung (N+1 Mandanten)
 * **Struktur**: Kreis und jede Kommune erhalten einen eigenen Mandanten-Wurzelknoten.
 * **Logik**: Keine gegenseitige Einsicht. Austausch erfolgt nur über offizielle Open-Data-Schnittstellen (isPublic).
 * **Vorteil**: Maximale Datensouveränität und Vertrauen der Kommunen in die Datentrennung.
 * ***[zur detaillierten Szenariomodellierung](./Scenario_mandant_isolation.md)***
 
-### 8.3 Szenario C: Gemeinsame Sozialplanung
+### Szenario C: Gemeinsame Sozialplanung
 * **Struktur**: Ein gemeinsamer Mandant "Sozialplanung Kreis X".
 * **Logik**: Der Kreis ist Eigentümer zentraler Indikatoren (z.B. SGB-II-Quoten). Kommunen erhalten Lese- oder Editierrechte, um eigene lokale Daten im selben System zu ergänzen.
 * **Vorteil**: Einheitliche Datenbasis für den gesamten Kreis ohne Redundanz.
 * ***[zur detaillierten Szenariomodellierung](./Scenario_Social_Planning.md)***
 
-### 8.4 Szenario D: Das Hybrid-Modell
+### Szenario D: Das Hybrid-Modell
 * **Struktur**: Ein Mandant für "Zentrale Daten" (Kreis-Basisdaten) und separate Mandanten für "Kommunale Fachplanung".
 * **Logik**: Nutzer sind Mitglied in beiden Mandanten gleichzeitig (Doppel-Mitgliedschaft).
 * **Vorteil**: Planer sehen im Web-Client beide Welten nahtlos nebeneinander, aber die sensiblen Fachdaten bleiben im kommunalen Mandanten isoliert.

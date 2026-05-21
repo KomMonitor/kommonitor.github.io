@@ -1,19 +1,30 @@
 ---
 layout: default
-title: Szenario kreisweite interkommunales Armutsmonitoring
+title: Szenario - Interkommunale Sozialplanung
 parent: Mandantenfähigkeit (2025/2026)
 nav_order: 4
 ---
 
-# Praxisvorlage: Interkommunales Monitoring „Sozialplanung & Armut“
+#  Szenario - Interkommunale Sozialplanung
+{: .no_toc }
 
-[zurück zur Übersicht](./index.md)
+Praxisvorlage für interkommunales Monitoring „Sozialplanung & Armut“
+{: .fs-6 .fw-300 }
+
+## Inhalt
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
 
 Dieses Schema beschreibt die Umsetzung einer kooperativen Datenhaltung zwischen einem Kreis und seinen angehörigen Kommunen am Beispiel Kinderarmut.
 
+[zurück zur Übersicht](./index.md)
+
 ---
 
-## 1. Die Organisationsstruktur
+## Die Organisationsstruktur
 * **Mandant: Gemeinsame Sozialplanung Kreis X** (Wurzelknoten)
     * **Untergruppe: Kreis-Sozialamt (Projektleitung)**
     * **Untergruppe: Kommune A – Jugendamt**
@@ -22,7 +33,7 @@ Dieses Schema beschreibt die Umsetzung einer kooperativen Datenhaltung zwischen 
 
 ---
 
-## 2. Administrative Rollenverteilung
+## Administrative Rollenverteilung
 
 | Akteur | Administrative Rolle | Befugnis in der Praxis |
 | :--- | :--- | :--- |
@@ -32,7 +43,7 @@ Dieses Schema beschreibt die Umsetzung einer kooperativen Datenhaltung zwischen 
 
 ---
 
-## 3. Daten-Matrix: Beispiel „Kinderarmut“
+## Daten-Matrix: Beispiel „Kinderarmut“
 * **Eigentümer (Ownership):** Kreis-Sozialamt.
 * **Öffentliche Lesefreigabe (isPublic):** Deaktiviert.
 
@@ -46,7 +57,7 @@ Dieses Schema beschreibt die Umsetzung einer kooperativen Datenhaltung zwischen 
 
 ---
 
-## 4. Implementierungs-Checkliste
+## Implementierungs-Checkliste
 1. [ ] **Mandant erstellen**: Organisationseinheit mit Mandanten-Toggle registrieren.
 2. [ ] **Hierarchie anlegen**: Untergruppen für Jugendämter korrekt einhängen.
 3. [ ] **Nutzer-Registrierung**: In Keycloak User sofort ihrer Fachgruppe zuweisen.

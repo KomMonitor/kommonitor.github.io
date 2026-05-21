@@ -3,7 +3,19 @@ title: Datenschutz
 nav_order: 4
 ---
 
-# Handreichung: Datenschutz und Umgang mit personenbezogenen Daten in KomMonitor
+# Datenschutz
+{: .no_toc }
+
+Datenschutz und Umgang mit personenbezogenen Daten in KomMonitor
+{: .fs-6 .fw-300 }
+
+## Inhalt
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
 
 ## Einführung
 Der Schutz personenbezogener Daten und die Einhaltung der DSGVO sind zentrale Säulen beim Betrieb von Software in der kommunalen Verwaltung. **KomMonitor** ist als Werkzeug für das kommunale Monitoring (z. B. in der Sozialplanung) darauf ausgelegt, das Prinzip der **Datensparsamkeit** konsequent umzusetzen.
@@ -14,7 +26,7 @@ Dieses Dokument dient als Orientierungshilfe für Fachplaner, IT-Abteilungen, Da
 
 ## FAQ – Datenschutz & Datensicherheit
 
-### 1. Nutzerverwaltung und Keycloak
+### Nutzerverwaltung und Keycloak
 
 **Welche personenbezogenen Daten der User werden in Keycloak gespeichert?**
 Keycloak fungiert als Single Sign-On (SSO) Lösung. Folgende Daten werden verarbeitet:
@@ -34,7 +46,7 @@ Der Zugriff ist streng auf Administratoren beschränkt:
 
 ---
 
-### 2. Datenspeicherung und Fachdaten
+### Datenspeicherung und Fachdaten
 
 **Speichert KomMonitor personenbezogene Daten der Anwender?**
 KomMonitor nutzt zur Personalisierung (z. B. Favoriten für Indikatoren oder Themenbäume) lediglich die **technische Keycloak-ID (UUID)**. Der Fachdienst selbst speichert keine Klarnamen. Eine Zuordnung erfolgt nur temporär während einer aktiven Sitzung.
@@ -44,7 +56,7 @@ KomMonitor nutzt zur Personalisierung (z. B. Favoriten für Indikatoren oder The
 
 ---
 
-### 3. Protokollierung (Logging) und Überwachung
+### Protokollierung (Logging) und Überwachung
 
 **Was wird in den Protokolldateien gespeichert?**
 In den Fachdiensten von KomMonitor werden lediglich technische Autorisierungsvorgänge geloggt. Dabei tauchen nur IDs auf:
@@ -65,7 +77,7 @@ Das Logging erfolgt standardmäßig über **Docker-Container**.
 
 ---
 
-### 4. Gegenüberstellung
+### Gegenüberstellung
 
 Um die Anforderungen typischer Rahmen-Dienstvereinbarungen (Rahmen-DV) zu erfüllen, unterscheidet KomMonitor strikt zwischen notwendigen Systemdaten und (nicht vorhandenen) verhaltensbezogenen Verfahrensdaten.
 
@@ -78,7 +90,7 @@ Um die Anforderungen typischer Rahmen-Dienstvereinbarungen (Rahmen-DV) zu erfül
 
 ---
 
-### Anhang: kompakter Textbaustein
+## Anhang: Kompakter Textbaustein
 
 *Kategorien personenbezogener Daten:*
 * **Identifikationsdaten:** Benutzername, Vorname, Nachname, E-Mail-Adresse (in Keycloak).

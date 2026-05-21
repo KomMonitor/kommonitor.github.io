@@ -1,20 +1,31 @@
 ---
 layout: default
-title: Szenario Einzelkommune
+title: Szenario - Einzelkommune
 parent: Mandantenfähigkeit (2025/2026)
 nav_order: 2
 ---
 
-# Praxisvorlage: Szenario A – Die „All-in-One“ Kommune
-## Integrierte Sozialberichterstattung und interne Fachplanung
+# Szenario – Die „All-in-One“ Kommune
+{: .no_toc }
 
-[zurück zur Übersicht](./index.md)
+Praxisvorlage für die integrierte Sozialberichterstattung und interne Fachplanung
+{: .fs-6 .fw-300 }
+
+## Inhalt
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
 
 Dieses Schema beschreibt die Umsetzung in einer Stadtverwaltung, die KomMonitor sowohl für die Information der Bürger*innen als auch für die hochsensible interne Sozialplanung nutzt.
 
+[zurück zur Übersicht](./index.md)
+
 ---
 
-## 1. Die Organisationsstruktur
+
+## Die Organisationsstruktur
 In einer Einzelkommune wird in der Regel nur ein Mandant benötigt. Die fachliche Trennung erfolgt über eine klare Hierarchie von Untergruppen.
 
 * **Mandant: Stadt Musterstadt** (Wurzelknoten)
@@ -24,7 +35,7 @@ In einer Einzelkommune wird in der Regel nur ein Mandant benötigt. Die fachlich
 
 ---
 
-## 2. Administrative Rollenverteilung
+## Administrative Rollenverteilung
 Die Verwaltung wird so aufgeteilt, dass das Statistikamt die Basisstruktur pflegt, während die Fachplaner die Hoheit über ihre sensiblen Daten behalten.
 
 | Akteur | Administrative Rolle | Funktion im System |
@@ -35,7 +46,7 @@ Die Verwaltung wird so aufgeteilt, dass das Statistikamt die Basisstruktur pfleg
 
 ---
 
-## 3. Daten-Matrix: Öffentliche Transparenz vs. Interne Analyse
+## Daten-Matrix: Öffentliche Transparenz vs. Interne Analyse
 Der Schutz sensibler Daten erfolgt über die Wahl der Raumebene und den Status der öffentlichen Lesefreigabe.
 
 | Datensatz (Indikator) | Raumebene | Sichtbarkeit | Eigentümer (Ownership) |
@@ -47,7 +58,7 @@ Der Schutz sensibler Daten erfolgt über die Wahl der Raumebene und den Status d
 
 ---
 
-## 4. Implementierungs-Checkliste
+## Implementierungs-Checkliste
 1. [ ] **Mandant einrichten**: Der IT-Admin registriert die „Stadt Musterstadt“ mit aktiviertem Mandanten-Toggle.
 2. [ ] **Öffentliche Ebenen bereitstellen**: Das Statistikamt lädt Raumebenen (Bezirke/Stadtteile) hoch und schaltet diese für anonyme Nutzer frei.
 3. [ ] **Interne Ebenen isolieren**: Die Fachplanung lädt kleinräumige Ebenen (z. B. Baublöcke) hoch. Diese erhalten **keine** öffentliche Lesefreigabe.
@@ -56,7 +67,7 @@ Der Schutz sensibler Daten erfolgt über die Wahl der Raumebene und den Status d
 
 ---
 
-## 5. Besonderheit dieses Szenarios
+## Besonderheit dieses Szenarios
 Dieses Modell ermöglicht eine **Zwei-Ebenen-Strategie**:
 * **Bürger-Service**: Transparente Sozialberichterstattung auf groben, datenschutzkonformen Ebenen.
 * **Fachplanungs-Werkstatt**: Hochauflösende Analysen auf kleinsten Einheiten (Baublöcken), die nur für berechtigte Fachnutzer nach Login sichtbar sind.

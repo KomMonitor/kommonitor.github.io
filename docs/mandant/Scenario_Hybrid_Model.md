@@ -1,26 +1,38 @@
 ---
 layout: default
-title: Szenario Hybride Mandanten
+title: Szenario - Hybride Mandanten
 parent: Mandantenfähigkeit (2025/2026)
 nav_order: 5
 ---
 
-# Praxisvorlage: Hybrid-Modell „Zentrales Repository & Lokale Fachplanung“
+# Szenario - Hybride Mandanten
+{: .no_toc }
 
-[zurück zur Übersicht](./index.md)
+Praxisvorlage: Hybrid-Modell „Zentrales Repository & Lokale Fachplanung“
+{: .fs-6 .fw-300 }
+
+## Inhalt
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
 
 Höchste Datensicherheit durch physische Trennung der Mandanten-Wurzelknoten.
 
+[zurück zur Übersicht](./index.md)
+
 ---
 
-## 1. Die Mandanten-Struktur
+
+## Die Mandanten-Struktur
 * **Mandant 1: Zentrale Datenplattform**: Öffentliche Basisindikatoren (Einwohner, SGB-II-Trend).
 * **Mandant 2: Fachplanung Kreis**: Kreisinterne Berichte (nicht öffentlich).
 * **Mandant 3: Fachplanung Kommune A**: Hochauflösende Detaildaten (z. B. auf Baublockebene).
 
 ---
 
-## 2. Nutzer-Konfiguration (Doppel-Mitgliedschaft)
+## Nutzer-Konfiguration (Doppel-Mitgliedschaft)
 Nutzer können Mitglied in **1 bis n Gruppen** sein.
 * **Beispiel Planer Kommune A**:
     * Mitgliedschaft in Gruppe „Kommune A“ (Mandant 3).
@@ -29,7 +41,7 @@ Nutzer können Mitglied in **1 bis n Gruppen** sein.
 
 ---
 
-## 3. Daten-Matrix & Freigaben
+## Daten-Matrix & Freigaben
 
 | Datensatz | Mandant (Eigentümer) | Status | Reichweite |
 | :--- | :--- | :--- | :--- |
@@ -39,7 +51,7 @@ Nutzer können Mitglied in **1 bis n Gruppen** sein.
 
 ---
 
-## 4. Implementierungs-Checkliste
+## Implementierungs-Checkliste
 1. [ ] **Mandanten-Setup**: Erstellung von mindestens zwei unabhängigen Mandanten-Wurzelknoten.
 2. [ ] **Daten-Isolation**: Hochsensible Daten werden nur im kommunalen Mandanten hochgeladen.
 3. [ ] **Zentral-Repository**: Kreis aktiviert **isPublic** für Vergleichsdaten im zentralen Mandanten.

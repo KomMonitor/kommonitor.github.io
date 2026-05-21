@@ -7,10 +7,14 @@ permalink: /mandant/
 ---
 
 # KomMonitor Mandantenfähigkeit (2025/2026) – Best Practice Guides
+{: .no_toc }
 
 Dieses Repository enthält umfassende Anleitungen und Praxisbeispiele zur Umsetzung des Mandantenkonzepts in KomMonitor.
+{: .fs-6 .fw-300 }
 
-## 📂 Projektstruktur
+---
+
+## Projektstruktur
 
 | Datei | Inhalt / Zweck |
 | :--- | :--- |

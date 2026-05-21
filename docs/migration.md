@@ -1,12 +1,25 @@
 ---
-title: Migration Guide
+title: Migration Guide (en)
 nav_order: 6
 ---
-
 # Migration Guide
-## Migration to Data Management API Version 5.0.0
+{: .no_toc }
+
+
 This guide gives you some step-by-step information to perform a major update of KomMonitor Data Management API
-from any version below the latest 5.0.0 version. The 5.0.0 Data Management API version introduces a completely new mandant concept, which requires the migration of the existing KomMonitor database schema. If you plan set up a
+from any version below the latest 5.0.0 version.
+{: .fs-6 .fw-300 }
+
+## Inhalt
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+# Migration to Data Management API Version 5.0.0
+The 5.0.0 Data Management API version introduces a completely new mandant concept, which requires the migration of the existing KomMonitor database schema. If you plan set up a
 fresh instance of KomMonitor, you are fine and don't have to perform any migration steps. Otherwise, you
 can use the instructions listed below, which supports you to perform the migration by the use of 
 [Liquibase](https://docs.liquibase.com/pro/reference-guide-4-33/parameters/liquibase-catalog-name).
@@ -14,10 +27,10 @@ can use the instructions listed below, which supports you to perform the migrati
 {: .important }
 Make sure you have created a proper backup of your database, which can be used for restoring the current state of the database, if the migration process fails. We strongly recommend that you apply the following migration steps to a copy of your database and only move to that database if you are sure the migration was successful
 
-### From 4.x.x
+## From 4.x.x
 This section captures the migration steps that are required to update from any version 4.x.x 
 of the Data Management API to version 5.0.0.
-#### 1) Capture current DB state
+### 1) Capture current DB state
 First, capture the current state of those tables of your KomMonitor DB that have to be manually enhanced
 with additional values. In particular, these are the tables `indicatorspatialunits`, `metadatageoresources`,
 `metadataindicators`, `metadataspatialunits`, `organizationalunits`, `permissions`. For this purpose,
@@ -29,7 +42,7 @@ Note, that the Liquibase Docker container must have access to your KomMonitor da
 It may be required to adapt the permissions of the mounted data directories so that the Liquibase Docker container is able to
 write to these directories.:
 
-```Shell
+```bash
 docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 -v /home/user/kommonitor/liquibase/data:/liquibase/data_output \
@@ -63,7 +76,7 @@ For CSV files that have a differing format it can not be guaranted that data mig
 However, it is possible to adapt some options of the `loadUpdateData` changesets in the [migration changelog](https://github.com/KomMonitor/db-schema-migration/blob/develop/changelog/kommonitor-changelog-4.x-5.0.0.xml)
 in accordance to your custom CSV format. For this purpose, read the [Liquibase docs](https://docs.liquibase.com/pro/reference-guide-4-33/change-types/load-update-data).
 
-#### 2) Adapt permission data
+### 2) Adapt permission data
 Edit the `roles.csv` file with a tool that lets you easily handle tabular data.
 1. Rename the CSV file `roles.csv` to `permissions.csv`
 2. Rename the column `roleid` to `permissionid`
@@ -71,7 +84,7 @@ Edit the `roles.csv` file with a tool that lets you easily handle tabular data.
 4. Add a new column `permissiontype`
 5. Fill each cell for the column `permissiontype` with the value `resources`
 
-#### 3) Adapt organizational unit data
+### 3) Adapt organizational unit data
 Edit the `organizationalunits.csv` file with a tool that lets you easily handle tabular data.
 1. Add new column `ismandant` -> Fill each cell for this column with `true` or `false`, dependent
 on whether the organizational unit is a mandant or not
@@ -88,28 +101,28 @@ as parent or mandant in the CSV files. These entities are deprecated and will be
 startup of the Data Management API. Also, do not reference these organizational units as owner
 for datasets during the following steps.
 
-#### 4) Adapt georesources
+### 4) Adapt georesources
 Edit the `metadatageoresources.csv` file with a tool that lets you easily handle tabular data.
 1. Add new column `ispublic` -> Fill each cell for this column with `true` or `false`, dependent
 on whether the georesource should be public or not.
 2. Add new column `owner` -> Fill each cell for this column with the ID of the organizational unit
 that is owner of a georesource
 
-#### 5) Adapt spatial units
+### 5) Adapt spatial units
 Edit the `metadataspatialunits.csv` file with a tool that lets you easily handle tabular data.
 1. Add new column `ispublic` -> Fill each cell for this column with `true` or `false`, dependent
 on whether the spatial unit should be public or not.
 2. Add new column `owner` -> Fill each cell for this column with the ID of the organizational unit
 that is owner of a spatial unit
 
-#### 6) Adapt indicators metadata
+### 6) Adapt indicators metadata
 Edit the `metadataindicators.csv` file with a tool that lets you easily handle tabular data.
 1. Add new column `ispublic` -> Fill each cell for this column with `true` or `false`, dependent
 on whether the indicator should be public or not.
 2. Add new column `owner` -> Fill each cell for this column with the ID of the organizational unit
 that is owner of an indicator
 
-#### 7) Adapt indicators timeseries data
+### 7) Adapt indicators timeseries data
 Edit the `indicatorspatialunits.csv` file with a tool that lets you easily handle tabular data.
 1. Add new column `ispublic` -> Fill each cell for this column with `true` or `false`, dependent
 on whether the indicator timeseries data for a certain spatial unit should be public or not.
@@ -118,7 +131,7 @@ that is owner of the timeseries data for a certain spatial unit. Note, that the 
 timeseries data of an indicator should be the same as the owner ID of the metadata for the same
 indicator.
 
-#### 8) Update DB to new schema
+### 8) Update DB to new schema
 Now, with the adapted CSV files, you can perform the update of your KomMonitor DB to a new 5.x.x schema.
 For this purpose, you can simply use a [prepared Liquibase changelog](https://github.com/KomMonitor/db-schema-migration/blob/develop/changelog/).
 Choose the changelog script that fits to your current Data Management API version and the target version.
@@ -126,7 +139,7 @@ Download this file and place it at `/home/user/kommonitor/liquibase/changelog`. 
 have placed your CSV files at `/home/user/kommonitor/liquibase/data`. The command listed below performs
 the database update by using the [Liquibase update command](https://docs.liquibase.com/pro/reference-guide-4-33/init-update-and-rollback-commands/update).
 Just adapt it to your environment and execute the command.
-```Shell
+```bash
 docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 -v /home/user/kommonitor/liquibase/data:/liquibase/data_input \
@@ -140,7 +153,7 @@ liquibase/liquibase:4.33 update \
 This will apply all changesets to your database to update its schema and also loads the missing data, which
 you have prepared in the CSV files, into the tables.
 
-#### 9) Sync DB to root schema
+### 9) Sync DB to root schema
 With Data Management API version 5.0.0 we integrated Liquibase as fixed part to perform all future migration tasks.
 This requires to baseline your migrated database to the target 5.x.x schema from the previous step. As a result, 
 when you first start the Data Management API Liquibase automatically recognizes that your database has been migrated 
@@ -152,7 +165,7 @@ and place it into the `/home/user/kommonitor/liquibase/changelog` directory. Wit
 remove all includings of versions that are above your migrated version. E.g. if you used `kommonitor-changelog-4.1.x-5.1.0.xml`
 the previous step, you have to remove `<include file="db/changelog/kommonitor-changelog-5.1.1.xml"/>` from `kommonitor-changelog-root.xml`.
 Then adapt the following command to your environment before execution.
-```Shell
+```bash
 docker run --network=kommonitor \
 -v /home/user/kommonitor/liquibase/changelog:/liquibase/db/changelog \
 liquibase/liquibase:4.33 changelog-sync \
@@ -163,8 +176,8 @@ liquibase/liquibase:4.33 changelog-sync \
 --password=kommonitor
 ```
 
-#### 10) Configure Keycloak
-##### 10.1) Use Custom Keycloak image
+### 10) Configure Keycloak
+#### 10.1) Use Custom Keycloak image
 We have built and published a custom Keycloak image that contains some KomMonitor specific extension, such as a custom
 role mapper as well as a custom policy evaluation provider. To use the custom Keycloak image, you have to adapt your
 Docker Compose setup for Keycloak according to our [Docker Compose template](https://github.com/KomMonitor/docker/blob/feature/multi-tenancy/prod/keycloak/docker-compose.yml).
@@ -177,7 +190,7 @@ the following DB providers:
 * [MSSQL](https://hub.docker.com/layers/kommonitor/keycloak/latest-mssql/images/sha256-cb74a77aff7922ab11897c9103bd0a5523c5d7e692e990515d11d27cd46be2f5)
 * [PostgreSQL](https://hub.docker.com/layers/kommonitor/keycloak/latest-postgres/images/sha256-65854815b05d6b893f361cc6fd59c1dfb221ff88dc7f2e8c1160405bc59f50aa)
 
-##### 10.2) Configure Admin CLI
+#### 10.2) Configure Admin CLI
 The new version of the Data Management API utilizes a Keycloak Admin Client for managing, roles and policies in accordance
 to the organizational units. For this purpose, it is required to allow the Data Management API to communicate with Keycloak.
 You can prepare Keycloak as follows:
@@ -187,7 +200,7 @@ You can prepare Keycloak as follows:
 4. Generate a client secret under "Credentials"
 5. Set the client secret in the Docker Compose setup for the Data Management API for the environment variable [KK_CLI_SECRET](https://github.com/KomMonitor/docker/blob/5db513ce6275c466beb576306e20bfa5efc88435/prod/kommonitor/.env#L24).
 
-##### 10.3) Configure Role Mapper
+#### 10.3) Configure Role Mapper
 Our pre-built Keycloak image comes with a custom role mapper that has to be set as default for the KomMonitor realm in Keycloak.
 For this purpose, follow the steps below:
 1. Open the "Client Scopes" configuration page
@@ -202,7 +215,7 @@ For this purpose, follow the steps below:
     * *Token Claim Name*: `realm_access.roles`
     * All other fields can have the default values
 
-##### 10.4) Create Groups Scope
+#### 10.4) Create Groups Scope
 KomMonitor services need information about group membership of a user. By default, that JWT that is granted by Keycloak
 does not contain a group claim, which have to be configured additionally:
 1. Open the "Client Scopes" configuration page
@@ -227,17 +240,17 @@ the steps for the Data Management API client:
     * Repeat these steps for: "kommonitor-client-config", "kommonitor-importer", "kommonitor-processing-engine", 
     "kommonitor-processing-scheduler" and "kommonitor-web-client"
 
-#### 11) Adapt Docker Compose setup
+### 11) Adapt Docker Compose setup
 Adapt your Docker Compose setup for using the new KomMonitor component versions. This includes using our 
 custom Keycloak image, updating the image versions of the Data Management API, the Importer API
 and the Web Client and changing some environment variables
-##### 11.1) Keycloak Setup
+#### 11.1) Keycloak Setup
 Check the [Docker Compose template](https://github.com/KomMonitor/docker/blob/master/prod/keycloak/docker-compose.yml) for setting up a production ready Keycloak instance.
 
 Besides the Keycloak related configuration parameters, you'll find the `KOMMONITOR_REALMS` environment variable, which is dedicated to
 our custom Keycloak image. For this parameter set all Keycloak realms as comma separated list, which should use the multi-tenancy feature.
 
-##### 11.2) KomMonitor Setup
+#### 11.2) KomMonitor Setup
 There is also a [Docker Compose templates](https://github.com/KomMonitor/docker/blob/master/prod/kommonitor/docker-compose.yml)
 that provides a production ready configurations for all KomMonitor components. 
 
@@ -261,7 +274,7 @@ Note: After successfull startup, set `KOMMONITOR_MIGRATION_ENABLED` to `false` a
 execution at next startup.
 
 
-## Common Errors and Pitfalls
+# Common Errors and Pitfalls
 **Access denied exception during Liquibase changelog generation**  
 You may run into an access denied error or some similiar when executing the `liquibase generate-changelog` command. Most probably,
 the reason for this is that you mounted a data directory into the Liquibase Docker container, which is not writable from within the
