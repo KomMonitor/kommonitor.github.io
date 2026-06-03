@@ -22,6 +22,10 @@ Informationen zum Deployment von KomMonitor via Docker und Kubernetes
 ## KomMonitor Mandantenfähigkeit (2025/2026)
 [Best Practice Guides und Leitfäden zur KomMonitor Mandantenfähigkeit](./mandant/index.md)
 
+## Release Info
+Informationen zu den neuesten Funktionen und Verbesserungen des KomMonitor Web-Clients.
+
+[Release Info](./releases/index.md)
 
 ## Technische Spezifikation
 Weitere nützliche Informationen und Anforderungen für die Bereitstellung von KomMonitor über Docker finden Sie auf der Seite 

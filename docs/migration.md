@@ -1,6 +1,6 @@
 ---
 title: Migration Guide (en)
-nav_order: 6
+nav_order: 7
 ---
 # Migration Guide
 {: .no_toc }
