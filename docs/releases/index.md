@@ -28,8 +28,8 @@ Hier finden Sie Informationen zu den neuesten Funktionen, Verbesserungen und Kor
 | Dienst | Beschreibung | Link |
 | :--- | :--- | :--- |
 | **Web-Client** | Die Benutzeroberfläche für Endanwender*innen. | [Release Info Web-Client](./web-client.md) |
-| **Data Management API** | Die zentrale Schnittstelle zur Datenverwaltung. | *In Kürze verfügbar* |
-| **Processing Engine** | Der Dienst für räumliche Berechnungen. | *In Kürze verfügbar* |
+| **Data Management API** | Die zentrale Schnittstelle zur Datenverwaltung. | [Release Info Data Management](./data-management.md) |
+| **Processing Engine** | Der Dienst für räumliche Berechnungen. | [Release Info Processing Engine](./processing-engine.md) |
 | **Importer API** | Werkzeug zum Importieren von Geodaten und Statistiken. | [Release Info Importer](./importer.md) |
 
 ---
