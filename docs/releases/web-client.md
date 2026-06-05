@@ -22,6 +22,11 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen und Verbesserungen de
 ---
 
 ## Version 5.1.x
+### 5.1.3 (5. Juni 2026)
+{: .no_toc }
+*   **Filter-Konfiguration:** Neue Konfigurationsmöglichkeit, um Filter-Einstellungen für Administratoren von Ressourcen verfügbar zu machen.
+*   **Fehlerbehebung Metadaten:** Problem mit redundantem Abrufen von Metadaten behoben, welches zu Fehlern bei globalen Filtern führte.
+
 ### 5.1.2
 {: .no_toc }
 *   **Geokodierung:** Die Adresssuche (Geokodierung) kann nun flexibler für verschiedene Länder konfiguriert werden.
@@ -48,6 +53,15 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen und Verbesserungen de
 ---
 
 ## Version 4.4.x
+### 4.4.3 (5. Juni 2026)
+{: .no_toc }
+*   **Filter-Konfiguration:** Neue Konfigurationsmöglichkeit, um Filter-Einstellungen für Administratoren von Ressourcen verfügbar zu machen.
+*   **Fehlerbehebung Metadaten:** Problem mit redundantem Abrufen von Metadaten behoben, welches zu Fehlern bei globalen Filtern führte.
+
+### 4.4.2 (29. Mai 2026)
+{: .no_toc }
+*   **Filter-Konfiguration:** Der Bereich Filter-Einstellungen ist nun auch für Administratoren von Ressourcen verfügbar.
+
 ### 4.4.0 & 4.4.1 (Mai 2026)
 {: .no_toc }
 *   **Berichts-Optimierung:** Performance-Verbesserungen durch Hintergrund-Generierung von Geodaten-Features.
