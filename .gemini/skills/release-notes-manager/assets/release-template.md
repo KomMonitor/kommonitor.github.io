@@ -21,7 +21,15 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 
 ---
 
-## Version {{VERSION}}
-### {{SUBTITLE}}
+## Version {{MAJOR.MINOR.x}}
+### {{MAJOR.MINOR.PATCH}} ({{DATE}})
 {: .no_toc }
-*   **Thema:** Beschreibung der Änderung...
+#### Neue Features
+{: .no_toc }
+*   **{{TOPIC}}:** Beschreibung der neuen Features/Funktionen ...
+#### Fehlerbehebungen
+{: .no_toc }
+*   **{{TOPIC}}:** Beschreibung der Fehlerbehebungen ...
+#### Änderungen
+{: .no_toc }
+*   **{{TOPIC}}:** Beschreibung der Änderung...

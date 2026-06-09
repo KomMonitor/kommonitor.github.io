@@ -26,6 +26,8 @@ This skill guides the process of maintaining release information for the KomMoni
 - **Headers**:
     - Use `## Version X.Y.x` for major/minor branches.
     - Use `### X.Y.Z (Datum)` for specific versions.
+    - Use `#### Neue Features`, `#### Fehlerbehebungen`, `#### Änderungen` if applicable.
+    - Describe changes in bullet points in full sentences with the format: `*   **TOPIC:** Description...` where TOPIC is a concise label for the change.
     - Add `{: .no_toc }` below version headers.
 - **TOC**: Always include the TOC block:
   ```markdown
