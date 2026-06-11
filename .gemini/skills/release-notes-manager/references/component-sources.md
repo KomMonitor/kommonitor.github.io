@@ -8,12 +8,12 @@ This reference maps KomMonitor components to their remote changelog locations an
 - **Other Sources:** `https://raw.githubusercontent.com/KomMonitor/web-client/refs/heads/master/app/components/kommonitorUserInterface/kommonitorControls/versionInfo/version-info.template.html`
 - **Local File:** `docs/releases/web-client.md`
 
-## Data Management
+## Data Management API
 - **GitHub Repo:** [data-management](https://github.com/KomMonitor/data-management)
 - **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/data-management/refs/heads/develop/CHANGELOG.md`
 - **Local File:** `docs/releases/data-management.md`
 
-## Importer
+## Importer API
 - **GitHub Repo:** [kommonitor-importer](https://github.com/KomMonitor/kommonitor-importer)
 - **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/kommonitor-importer/refs/heads/develop/CHANGELOG.md`
 - **Local File:** `docs/releases/importer.md`
