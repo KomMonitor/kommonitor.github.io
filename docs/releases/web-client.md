@@ -26,11 +26,13 @@ Hier finden Sie eine detaillierte Übersicht der wichtigsten Neuerungen, Verbess
 #### Neue Features
 {: .no_toc }
 ##### Filter-Konfiguration:
+{: .no_toc }
 Die administrativen Filter-Einstellungen können nun gezielt für Admnistratoren von Ressourcen freigeschaltet werden.
 
 #### Fehlerbehebungen
 {: .no_toc }
 ##### Globale Filter:
+{: .no_toc }
 Probleme beim Abruf von Indikatoren und Geodaten bei aktiven globalen Filtern wurden behoben. Es wird nun sichergestellt, dass Datensätze wirksam gefiltert werden.
 
 ### 5.1.2 (27. Mai 2026)
@@ -39,6 +41,7 @@ Probleme beim Abruf von Indikatoren und Geodaten bei aktiven globalen Filtern wu
 #### Neue Features
 {: .no_toc }
 ##### Adresssuche:
+{: .no_toc }
 Die Adresssuche lässt sich nun auch für Adressen außerhalb Deutschlands und in weiteren Sprachen konfigurieren.
 
 ### 5.1.1 (15. Mai 2026)
@@ -47,11 +50,13 @@ Die Adresssuche lässt sich nun auch für Adressen außerhalb Deutschlands und i
 #### Fehlerbehebungen
 {: .no_toc }
 ##### Radardiagramme:
+{: .no_toc }
 Probleme mit der Funktion "Raumeinheits-Selektion aufheben" und der damit verbundenen Entfernung von Raumeinheiten aus dem Radardiagramm wurden behoben.
 
 #### Änderungen
 {: .no_toc }
 ##### Wartungs-Release:
+{: .no_toc }
 Offizielles Wartungs-Release zur Stabilisierung der 5.1.x-Linie.
 
 ### 5.1.0 (6. Mai 2026)
@@ -60,6 +65,7 @@ Offizielles Wartungs-Release zur Stabilisierung der 5.1.x-Linie.
 #### Neue Features
 {: .no_toc }
 ##### Reporting Tool:
+{: .no_toc }
 Umfangreiche Verbesserungen des Reporting Tools, inklusive beschleunigter Vorschau, verbesserter Benutzerführung, ergänzter Hinweistexte sowie einer optimierten Fortschrittsanzeige und Hintergrund-Aufbereitung von Kartenbildern.
 
 ---
@@ -72,10 +78,13 @@ Umfangreiche Verbesserungen des Reporting Tools, inklusive beschleunigter Vorsch
 #### Neue Features
 {: .no_toc }
 ##### Indikatoren-Fortschreibung:
+{: .no_toc }
 Einführung einer neuen Methodik für die automatisierte Fortführung und Berechnung von Indikatoren.
 ##### Skriptverwaltung:
+{: .no_toc }
 Anpassungen in der Skriptverwaltung zur Unterstützung von On-Demand Berechnungen und dynamischen Skript-Prototypen.
 ##### Reporting-Performance:
+{: .no_toc }
 Implementierung eines asynchronen Lade-Konzepts ("Preview-First"), bei dem Berichtsseiten sofort eine Vorschau anzeigen, während Geodaten im Hintergrund geladen werden.
 
 ---
@@ -88,11 +97,13 @@ Implementierung eines asynchronen Lade-Konzepts ("Preview-First"), bei dem Beric
 #### Neue Features
 {: .no_toc }
 ##### Filter-Konfiguration:
+{: .no_toc }
 Übernahme der Filter-Sichtbarkeitskonfiguration aus dem 5.x-Zweig für Nutzer der 4.4er Wartungslinie.
 
 #### Fehlerbehebungen
 {: .no_toc }
 ##### Metadaten-Fix:
+{: .no_toc }
 Behebung redundanter Metadaten-Abrufe zur Vermeidung von Fehlern bei globalen Filtern.
 
 ### 4.4.2 (29. Mai 2026)
@@ -101,6 +112,7 @@ Behebung redundanter Metadaten-Abrufe zur Vermeidung von Fehlern bei globalen Fi
 #### Änderungen
 {: .no_toc }
 ##### Sichtbarkeit:
+{: .no_toc }
 Der Bereich Filter-Einstellungen ist nun auch für Administratoren von Ressourcen verfügbar. Technisches Release zur Synchronisation interner Metadaten und Versions-Templates.
 
 ### 4.4.0 & 4.4.1 (Mai 2026)
@@ -109,11 +121,13 @@ Der Bereich Filter-Einstellungen ist nun auch für Administratoren von Ressource
 #### Neue Features
 {: .no_toc }
 ##### Feature-Backports:
+{: .no_toc }
 Integration der Performance-Optimierungen für das Berichtswesen (asynchrone Generierung von Geodaten-Features) in die stabile 4.4.x-Linie.
 
 #### Fehlerbehebungen
 {: .no_toc }
 ##### Radar-Diagramme:
+{: .no_toc }
 Konsistente Interaktions-Fixes für komplexe Diagramm-Typen beim Abwählen von Objekten.
 
 ---
@@ -126,6 +140,7 @@ Konsistente Interaktions-Fixes für komplexe Diagramm-Typen beim Abwählen von O
 #### Fehlerbehebungen
 {: .no_toc }
 ##### Raumfilter-Logik:
+{: .no_toc }
 Verfeinerung der räumlichen Selektionsalgorithmen und Behebung von Kantenfällen bei der Filterung komplexer Geometrien.
 
 ### 4.3.0 - 4.3.5 (Januar - März 2026)
@@ -134,13 +149,16 @@ Verfeinerung der räumlichen Selektionsalgorithmen und Behebung von Kantenfälle
 #### Neue Features
 {: .no_toc }
 ##### Raumebenen-Aggregation:
+{: .no_toc }
 Neue Benutzeroberfläche zur Auswahl verschiedener Aggregationsstufen für Raumeinheiten inklusive vollständiger Integration in Import- und Export-Workflows.
 ##### Visualisierungs-Details:
+{: .no_toc }
 Dynamische Datums-Beschriftungen auf der X-Achse von Balkendiagrammen und neue Layout-Optionen für den Druck-Modus.
 
 #### Änderungen
 {: .no_toc }
 ##### Automatisierung:
+{: .no_toc }
 Automatischer Metadaten-Refresh nach On-Demand-Berechnungen zur Sicherstellung aktueller Anzeigen.
 
 ---
@@ -153,11 +171,13 @@ Automatischer Metadaten-Refresh nach On-Demand-Berechnungen zur Sicherstellung a
 #### Neue Features
 {: .no_toc }
 ##### Kartenprojektionen:
+{: .no_toc }
 Integration verbesserter Projektions-Logik in Diagramme zur exakten Überlagerung statistischer Daten auf Karten.
 
 #### Änderungen
 {: .no_toc }
 ##### UX-Feedback:
+{: .no_toc }
 Einführung neuer Statusmeldungen und Fortschrittsbalken während der Vorbereitung umfangreicher Berichtsdaten.
 
 ---
@@ -170,8 +190,10 @@ Einführung neuer Statusmeldungen und Fortschrittsbalken während der Vorbereitu
 #### Neue Features
 {: .no_toc }
 ##### Modulares Filter-System:
+{: .no_toc }
 Komplettes Redesign des Filter-Dialogs mit einem übersichtlichen Modal und tabellarischer Mehrfachauswahl für Indikatoren und Ressourcen.
 ##### Barrierefreiheit:
+{: .no_toc }
 Erweiterte Unterstützung für assistierende Technologien und Tastaturnavigation für komplexe UI-Widgets.
 
 ---
@@ -184,13 +206,16 @@ Erweiterte Unterstützung für assistierende Technologien und Tastaturnavigation
 #### Neue Features
 {: .no_toc }
 ##### Berechtigungskonzept:
+{: .no_toc }
 Umstellung des Benutzermenüs auf ein granulares Berechtigungskonzept mit Synchronisation von Benutzergruppen.
 ##### Tabellen-Ansicht:
+{: .no_toc }
 Einführung eines performanten Gitter-Layouts für Ressourcen-Tabellen für flüssiges Scrollen bei großen Datenmengen.
 
 #### Fehlerbehebungen
 {: .no_toc }
 ##### Datenintegrität:
+{: .no_toc }
 Verbesserte Handhabung von leeren Werten und fehlenden Datenpunkten in Berechnungs-Skripten.
 
 ---
@@ -203,11 +228,13 @@ Verbesserte Handhabung von leeren Werten und fehlenden Datenpunkten in Berechnun
 #### Neue Features
 {: .no_toc }
 ##### Zahlenformatierung:
+{: .no_toc }
 Verbesserte Darstellung formatierter Zahlen in Filter-Komponenten.
 
 #### Änderungen
 {: .no_toc }
 ##### Klassifizierung:
+{: .no_toc }
 Optimierte Unterscheidung zwischen Rohwerten und eindeutigen Werten für die Klasseneinteilung in der Legende.
 
 ---
@@ -220,11 +247,13 @@ Optimierte Unterscheidung zwischen Rohwerten und eindeutigen Werten für die Kla
 #### Neue Features
 {: .no_toc }
 ##### Design & Theming:
+{: .no_toc }
 Einführung von Farbthemen für alle Komponenten und Unterstützung benutzerdefinierter Farbschemata.
 
 #### Änderungen
 {: .no_toc }
 ##### Begrifflichkeiten:
+{: .no_toc }
 Anpassung der Terminologie (z.B. "Raumeinheit" statt "Feature"), um die Verständlichkeit für Planer*innen zu erhöhen.
 
 ---
@@ -237,11 +266,13 @@ Anpassung der Terminologie (z.B. "Raumeinheit" statt "Feature"), um die Verstän
 #### Neue Features
 {: .no_toc }
 ##### Favoriten:
-Möglichkeit, Georessourcen als Favoriten zu markieren.
+{: .no_toc }
+Möglichkeit, Indikatoren, Georessourcen und Themen als Favoriten zu markieren.
 
 #### Änderungen
 {: .no_toc }
 ##### Skript-Verwaltung:
+{: .no_toc }
 Neue Hinweise und Sicherheitsabfragen bei Massenaktualisierungen und in der Skript-Verwaltung.
 
 ---
@@ -254,13 +285,16 @@ Neue Hinweise und Sicherheitsabfragen bei Massenaktualisierungen und in der Skri
 #### Fehlerbehebungen
 {: .no_toc }
 ##### Diagramm-Referenzen:
+{: .no_toc }
 Neue Referenzwerte für Ranking-Diagramme zur Korrektur von Fehlern in Zeitreihen-Berichten.
 
 #### Änderungen
 {: .no_toc }
 ##### Farben:
+{: .no_toc }
 Reaktivierung verschiedener Farppaletten und Unterstützung für zusätzliche Farbschemata.
 ##### Statistik:
+{: .no_toc }
 Neue Konfigurationsoptionen für die Anzeige von Mittelwerten in Legenden und Diagrammen.
 
 ---
@@ -273,17 +307,22 @@ Neue Konfigurationsoptionen für die Anzeige von Mittelwerten in Legenden und Di
 #### Neue Features
 {: .no_toc }
 ##### Erreichbarkeitsanalysen:
+{: .no_toc }
 Integration von Erreichbarkeits-Zonen direkt in die Hauptkarte und neue Kurzinformationen für Statistiken.
 ##### Metadaten-Tab:
+{: .no_toc }
 Umstrukturierung der Legende: Metadaten und verknüpfte Ressourcen befinden sich nun in einem eigenen Reiter.
 ##### Regionale Referenzwerte:
+{: .no_toc }
 Neue Benutzeroberfläche für den Vergleich mit regionalen Durchschnittswerten in Zeitreihen.
 
 #### Änderungen
 {: .no_toc }
 ##### Karten-Interaktion:
+{: .no_toc }
 Anzeige von Informationstexten direkt in der Karte und Legende.
 ##### Technik-Update:
+{: .no_toc }
 Modernisierung der Basis-Technologien für eine zukunftssichere Anwendung.
 
 ---
@@ -296,11 +335,13 @@ Modernisierung der Basis-Technologien für eine zukunftssichere Anwendung.
 #### Neue Features
 {: .no_toc }
 ##### Standard-Schnittstellen:
+{: .no_toc }
 Unterstützung für moderne Geodaten-Standards (OGC API Features) für Ressourcen und Raumeinheiten.
 
 #### Fehlerbehebungen
 {: .no_toc }
 ##### Stabilität:
+{: .no_toc }
 Allgemeine Fehlerbehebungen und Stabilitätsverbesserungen in der Kartenansicht.
 
 ---
@@ -313,15 +354,19 @@ Allgemeine Fehlerbehebungen und Stabilitätsverbesserungen in der Kartenansicht.
 #### Neue Features
 {: .no_toc }
 ##### Rollenmanagement:
+{: .no_toc }
 Umstellung der Berechtigungsverwaltung auf ein effizientes Daten-Gitter (RBAC Grid) mit Auswahlfeldern.
 ##### Navigation:
+{: .no_toc }
 Neue Klick-Interaktionen für direktes Springen in der Ressourcen-Verwaltung über eine Fortschrittsanzeige.
 ##### Geokodierung:
+{: .no_toc }
 Verbesserte Adresssuche und Geokodierung für eine präzisere Platzierung von Ressourcen.
 
 #### Fehlerbehebungen
 {: .no_toc }
 ##### Skripting-Logik:
+{: .no_toc }
 Verfeinerung der Handhabung von fehlenden Werten und Optimierung mathematischer Grundlagen für Diagramme.
 
 ---
@@ -334,17 +379,22 @@ Verfeinerung der Handhabung von fehlenden Werten und Optimierung mathematischer 
 #### Neue Features
 {: .no_toc }
 ##### Erreichbarkeits-Analysen (Beta):
+{: .no_toc }
 Erster Entwurf für Erreichbarkeits-Zonen und Analysen interessanter Orte (POI) inklusive Puffer-Zonen.
 ##### Barrierefreiheit:
+{: .no_toc }
 Erste Beta-Phase für verbesserte Zugänglichkeit der Benutzeroberfläche.
 ##### Berechtigungskonzept:
+{: .no_toc }
 Einführung des initialen rollenbasierten Zugriffskontrollmodells (RBAC).
 
 #### Änderungen
 {: .no_toc }
 ##### Authentifizierung:
+{: .no_toc }
 Integration von Keycloak zur zentralen Benutzerverwaltung und automatischer Abruf der Sicherheitskonfiguration.
 ##### Performance:
+{: .no_toc }
 Optimierung der Ladegeschwindigkeit durch Auslagerung großer Software-Bibliotheken.
 
 ---
@@ -357,6 +407,7 @@ Optimierung der Ladegeschwindigkeit durch Auslagerung großer Software-Bibliothe
 #### Neue Features
 {: .no_toc }
 ##### ZIP-Export:
+{: .no_toc }
 Funktion zum Herunterladen von Indikatordaten als Archiv inklusive Metadaten.
 
 ---
@@ -369,11 +420,13 @@ Funktion zum Herunterladen von Indikatordaten als Archiv inklusive Metadaten.
 #### Neue Features
 {: .no_toc }
 ##### Skriptverwaltung:
+{: .no_toc }
 Erweiterungen in der administrativen Verwaltung von Berechnungs-Skripten.
 
 #### Änderungen
 {: .no_toc }
 ##### Metadaten-Caching:
+{: .no_toc }
 Implementierung einer Zwischenspeicherung für Metadaten zur Beschleunigung der Anzeige.
 
 ---
@@ -386,6 +439,7 @@ Implementierung einer Zwischenspeicherung für Metadaten zur Beschleunigung der 
 #### Änderungen
 {: .no_toc }
 ##### Job-Monitoring:
+{: .no_toc }
 Verbesserte Übersicht laufender Hintergrundprozesse mit Statusanzeigen.
 
 ---
@@ -398,6 +452,7 @@ Verbesserte Übersicht laufender Hintergrundprozesse mit Statusanzeigen.
 #### Neue Features
 {: .no_toc }
 ##### Suche & Filter:
+{: .no_toc }
 Einführung einer globalen Suchfunktion für alle Datentabellen.
 
 ---
@@ -410,11 +465,13 @@ Einführung einer globalen Suchfunktion für alle Datentabellen.
 #### Neue Features
 {: .no_toc }
 ##### Geführte Tour:
+{: .no_toc }
 Einführung einer interaktiven Einführung für neue Nutzer*innen.
 
 #### Änderungen
 {: .no_toc }
 ##### Tabellen-Migration:
+{: .no_toc }
 Umstellung der zentralen Übersichts-Tabellen auf ag-grid für verbesserte Performance.
 
 ---
@@ -427,4 +484,5 @@ Umstellung der zentralen Übersichts-Tabellen auf ag-grid für verbesserte Perfo
 #### Neue Features
 {: .no_toc }
 ##### Mapping-Grundlagen:
+{: .no_toc }
 Erster Prototyp der Karten-Engine (Leaflet Integration) mit Fokus auf dynamischem Styling von Geodaten.
