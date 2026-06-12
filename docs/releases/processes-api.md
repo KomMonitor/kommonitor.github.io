@@ -31,11 +31,11 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 
 ##### Indikatoren-Berechnung: 
 {: .no_toc }
-Korrektur eines Fehlers, der bei einer Reihe identischer berechneter Indikatoren auftrat.
+Korrektur eines Fehlers, der bei einer Reihe identischer Eingabe-Indikatoren von Skripnte auftrat.
 
-##### Headline-Indikatoren: 
+##### Leitindikatoren-Skript: 
 {: .no_toc }
-Fehlerbehebungen im HeadlineIndicator-Skript.
+Fehlerbehebungen im Leitindikator-Skript bei der Berücksichtigung von Gültigkeitszeiträumen von Raumeinheiten-Features.
 
 #### Änderungen
 {: .no_toc }
@@ -98,6 +98,30 @@ Verfeinerung der Berechtigungsprüfung bei der Prozess-Ausführung und beim Down
 {: .no_toc }
 Bereitstellung der OGC-konformen Schnittstelle zur Prozess-Orchestrierung.
 
+##### Indikatoren-Skripte: 
+{: .no_toc }
+Die Processes API bietet eine Vielzahl an standardisierten Skripten zur Berechnung von Indikatoren und Statistiken. Im Folgenden sind die verfügbaren Skripte mit ihrem vollen Titel aufgeführt:
+
+- Anzahl Punktobjekte pro Gebietskörperschaft (`km_georesource_count_pointsWithinPolygon.py`)
+- Summierte Linienlänge pro Gebietskörperschaft (`km_georesource_length_lineSegmentsWithinPolygon.py`)
+- Statistiken anhand Eigenschaft der punktbasierten Georessource (`km_georesource_miscStatistics.py`)
+- Prozentualer Anteil für eine Teilmenge gewählter Punktobjekte pro Gebietskörperschaft (`km_georesource_share_byPropertyValue.py`)
+- Leitindikator - verkettete Berechnung (`km_headline_indicator.py`)
+- Absolute Veränderung bezogen auf Zeitspanne (`km_indicator_absChange_nTemporalItems.py`)
+- Absolute Veränderung bezogen auf festen Referenz-Zeitpunkt (`km_indicator_absChange_refDate.py`)
+- Grad der Kontinuität bezogen auf Zeitspanne (`km_indicator_continuity_nTemporalItems.py`)
+- Division zweier Indikatoren (`km_indicator_divide.py`)
+- Multiplikation beliebig vieler Indikatoren (`km_indicator_multiply.py`)
+- Multiplikation eines Indikators mit einem festen Wert (`km_indicator_multiply_value.py`)
+- Prozentualer Anteil mehrerer Basisindikatoren von einem Referenzindikator (`km_indicator_percentage.py`)
+- Promille Wert mehrerer Basisindikatoren von einem Referenzindikator (`km_indicator_promille.py`)
+- Relative Veränderung bezogen auf Zeitspanne (`km_indicator_relChange_nTemporalItems.py`)
+- Relative Veränderung bezogen auf einen Referenzzeitpunkt (`km_indicator_relChange_refDate.py`)
+- Anteil mehrerer Basisindikatoren von einem Referenzindikator (`km_indicator_share.py`)
+- Subtraktion mehrerer Basisindikatoren von einem Referenzindikator (`km_indicator_subtract.py`)
+- Summe aus mehreren Indikatoren (`km_indicator_sum.py`)
+- Trendberechnung bezogen auf Zeitspanne (`km_indicator_trend_nTemporalItems.py`)
+
 ##### Prozess-Scheduling: 
 {: .no_toc }
 Implementierung von Endpunkten zur Planung, Abfrage und zum Löschen von Prozess-Schedules.
@@ -106,20 +130,10 @@ Implementierung von Endpunkten zur Planung, Abfrage und zum Löschen von Prozess
 {: .no_toc }
 Integration von Prefect zur Workflow-Steuerung und Ergebnis-Speicherung.
 
-##### Berechnungs-Skripte: 
+##### Konfiguration: 
 {: .no_toc }
-Re-Implementierung von Skripten zur Indikatoren-Berechnung in Python.
-
-**Indikatoren-Skripte**
-
+Alle externen Komponenten sind nun konfigurierbar (z.B. Keycloak, Daten-Management API).
 
 ##### Infrastruktur: 
 {: .no_toc }
 Bereitstellung eines Docker-Compose-Setups inklusive pygeoapi-Konfiguration und GitHub Actions für den Docker-Build.
-
-#### Änderungen
-{: .no_toc }
-
-##### Konfiguration: 
-{: .no_toc }
-Alle externen Komponenten sind nun konfigurierbar (z.B. Keycloak, Daten-Management API).
