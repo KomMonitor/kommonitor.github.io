@@ -21,7 +21,7 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 
 ---
 
-## Version 1.x.x
+## Version 1.1.x
 
 ### 1.1.0 (März 2025)
 {: .no_toc }
@@ -41,6 +41,7 @@ Implementierung einer Prüfung auf topologische Gültigkeit von Geometrien. Ung�
 Aktualisierung der Versionen für Cache-Actions und Trivy-Security-Scans.
 
 ---
+## Version 1.0.x
 
 ### 1.0.1 - 1.0.4 (Juni - September 2024)
 {: .no_toc }
@@ -73,8 +74,6 @@ Behebung von Fehlern bei fehlenden Indikatorenwerten für einzelne Raumeinheiten
 ##### Sicherheit: 
 {: .no_toc }
 Anpassungen an der CORS-Konfiguration und Aktualisierung des Docker-Basis-Images (Eclipse Temurin).
-
----
 
 ### 1.0.0 (Juni 2024)
 {: .no_toc }

@@ -21,7 +21,7 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 
 ---
 
-## Version 1.x.x
+## Version 1.1.x
 
 ### 1.1.0 - 1.1.1 (Mai 2026)
 {: .no_toc }
@@ -45,6 +45,8 @@ Fehlerbehebungen im Leitindikator-Skript bei der Berücksichtigung von Gültigke
 Aktualisierung der Version und interne Code-Verbesserungen.
 
 ---
+
+## Version 1.0.x
 
 ### 1.0.1 (März 2026)
 {: .no_toc }
@@ -86,7 +88,6 @@ Behandlung von leeren Zeitreihen und ungültigen Referenzdaten korrigiert.
 {: .no_toc }
 Verfeinerung der Berechtigungsprüfung bei der Prozess-Ausführung und beim Download von Ergebnissen.
 
----
 
 ### 1.0.0 (Januar 2026)
 {: .no_toc }
