@@ -27,12 +27,15 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 #### Neue Features
 {: .no_toc }
 ##### {{TOPIC}}: 
+{: .no_toc }
 Beschreibung der neuen Features/Funktionen ...
 #### Fehlerbehebungen
 {: .no_toc }
 ##### {{TOPIC}}: 
+{: .no_toc }
 Beschreibung der neuen Features/Funktionen ...
 #### Änderungen
 {: .no_toc }
 ##### {{TOPIC}}: 
+{: .no_toc }
 Beschreibung der neuen Features/Funktionen ...
