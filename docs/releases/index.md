@@ -29,8 +29,10 @@ Hier finden Sie Informationen zu den neuesten Funktionen, Verbesserungen und Kor
 | :--- | :--- | :--- |
 | **Web-Client** | Die Benutzeroberfläche für Endanwender*innen. | [Release Info Web-Client](./web-client.md) |
 | **Data Management API** | Die zentrale Schnittstelle zur Datenverwaltung. | [Release Info Data Management](./data-management.md) |
-| **Processing Engine** | Der Dienst für räumliche Berechnungen. | [Release Info Processing Engine](./processing-engine.md) |
+| **Processes API** | OGC-konforme Schnittstelle zur Prozess-Orchestrierung. | [Release Info Processes API](./processes-api.md) |
+| **Spatial Data Processor** | Spezialisierter Dienst für komplexe räumliche Analysen. | [Release Info Spatial Data Processor](./spatial-data-processor.md) |
 | **Importer API** | Werkzeug zum Importieren von Geodaten und Statistiken. | [Release Info Importer](./importer.md) |
+| **Client Config API** | Dienst zur zentralen Verwaltung und Bereitstellung von Client-Konfigurationen. | [Release Info Client Config](./client-config.md) |
 
 ---
 
