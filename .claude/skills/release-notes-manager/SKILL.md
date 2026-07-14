@@ -11,6 +11,7 @@ This skill maintains the release documentation for the KomMonitor ecosystem on t
 
 - **Component sources** (GitHub URLs + local file paths): `references/component-sources.md` — read this first to identify the right CHANGELOG URL and local docs file.
 - **Jekyll page template** (for new release pages): `assets/release-template.md`
+- **RSS feed data** (one entry per release): `docs/_data/releases.yml` — must be updated whenever a new version is documented.
 
 ## Workflow
 
@@ -32,7 +33,24 @@ This skill maintains the release documentation for the KomMonitor ecosystem on t
 
 6. **Apply changes** — for existing files, insert new version sections at the top (newest first) with surgical edits. For new components, start from the template.
 
-7. **Update the index** — if a new component page was created, add an entry to `docs/releases/index.md`.
+7. **Update the RSS feed data** — prepend a new entry to `docs/_data/releases.yml` for each newly documented version:
+
+   ```yaml
+   - component: "Component Name"
+     version: "MAJOR.MINOR.PATCH"
+     date: YYYY-MM-DD
+     page: "/releases/<slug>.html"
+     anchor: "<computed-anchor>"
+     summary: "One-sentence German summary of the most notable change"
+   ```
+
+   **Anchor computation:** take the heading text (e.g. `1.1.3 (Juli 2026)`), remove `.`, `(`, `)`, `&`, `,`, lowercase, replace spaces with hyphens → `113-juli-2026`. Hyphens already in the text stay (a range like `1.0 - 1.1` becomes `10---11`).
+
+   **Date:** use the ISO date of the release. For month-only dates (e.g. "Juli 2026") use the 1st of that month. For date ranges, use the end date.
+
+   **Also update** the `date:` frontmatter on the release page if the new version's date is more recent than the current value.
+
+8. **Update the index** — if a new component page was created, add an entry to `docs/releases/index.md`.
 
 ## Formatting Rules
 

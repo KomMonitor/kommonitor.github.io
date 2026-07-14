@@ -3,6 +3,8 @@ layout: default
 title: Processes API
 parent: Release Info
 nav_order: 4
+date: 2026-07-01
+description: Release-Informationen für die KomMonitor Processes API
 ---
 
 # Release Info (Processes API)

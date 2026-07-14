@@ -1,0 +1,222 @@
+# Release entries for the RSS feed.
+# Sorted newest-first. One entry per documented version (or version range).
+# Anchor computation: take the heading text, remove . ( ) & , — keep letters/digits/spaces/hyphens,
+# lowercase, replace spaces with hyphens. Example: "1.1.3 (Juli 2026)" → "113-juli-2026".
+# Add new entries at the TOP of this list when a version is released.
+
+- component: "Processes API"
+  version: "1.1.3"
+  date: 2026-07-01
+  page: "/releases/processes-api.html"
+  anchor: "113-juli-2026"
+  summary: "Fehlerbehebungen beim Raumeinheiten-Export und Aktualisierung des Docker-Entwicklungssetups"
+
+- component: "Web-Client"
+  version: "5.1.3"
+  date: 2026-06-05
+  page: "/releases/web-client.html"
+  anchor: "513-5-juni-2026"
+  summary: "Neue Filter-Konfiguration für Administratoren und Fehlerbehebungen bei globalen Filtern"
+
+- component: "Web-Client"
+  version: "4.4.3"
+  date: 2026-06-05
+  page: "/releases/web-client.html"
+  anchor: "443-5-juni-2026"
+  summary: "Backport der Filter-Sichtbarkeitskonfiguration für die 4.4er Wartungslinie"
+
+- component: "Data Management"
+  version: "5.2.3"
+  date: 2026-06-01
+  page: "/releases/data-management.html"
+  anchor: "523-01062026"
+  summary: "Neues Managementsystem für Web Service Favoriten"
+
+- component: "Processes API"
+  version: "1.1.2"
+  date: 2026-06-01
+  page: "/releases/processes-api.html"
+  anchor: "112-juni-2026"
+  summary: "Korrektur des Raumeinheiten-Exports und Einführung automatisierter Changelog-Erstellung"
+
+- component: "Web-Client"
+  version: "4.4.2"
+  date: 2026-05-29
+  page: "/releases/web-client.html"
+  anchor: "442-29-mai-2026"
+  summary: "Technisches Release zur Synchronisation interner Metadaten und Versions-Templates"
+
+- component: "Data Management"
+  version: "5.2.2"
+  date: 2026-05-21
+  page: "/releases/data-management.html"
+  anchor: "522-21052026"
+  summary: "Erweiterte Unterstützung für qualitative Klassifizierung und Refactoring der Klassifizierungslogik"
+
+- component: "Web-Client"
+  version: "5.1.1"
+  date: 2026-05-15
+  page: "/releases/web-client.html"
+  anchor: "511-15-mai-2026"
+  summary: "Fehlerbehebungen bei Radardiagrammen und offizielles Wartungs-Release der 5.1.x-Linie"
+
+- component: "Web-Client"
+  version: "5.1.0"
+  date: 2026-05-06
+  page: "/releases/web-client.html"
+  anchor: "510-6-mai-2026"
+  summary: "Umfangreiche Verbesserungen des Reporting Tools mit beschleunigter Vorschau"
+
+- component: "Importer"
+  version: "4.2.1"
+  date: 2026-05-05
+  page: "/releases/importer.html"
+  anchor: "421-05052026"
+  summary: "Korrekturen beim Zertifikats-Management und Sicherheits-Token sowie verbesserte Proxy-Unterstützung"
+
+- component: "Web-Client"
+  version: "4.4.0 & 4.4.1"
+  date: 2026-05-01
+  page: "/releases/web-client.html"
+  anchor: "440--441-mai-2026"
+  summary: "Feature-Backports der Performance-Optimierungen für das Berichtswesen in die 4.4.x-Linie"
+
+- component: "Processes API"
+  version: "1.1.0 – 1.1.1"
+  date: 2026-05-01
+  page: "/releases/processes-api.html"
+  anchor: "110---111-mai-2026"
+  summary: "Fehlerbehebungen bei der Indikatoren-Berechnung und Leitindikator-Skripten"
+
+- component: "Client Config API"
+  version: "2.3.0-SNAPSHOT"
+  date: 2026-05-01
+  page: "/releases/client-config.html"
+  anchor: "230-snapshot-mai-2026"
+  summary: "Neue Endpunkte für die Konfiguration von Dashboards"
+
+- component: "Client Config API"
+  version: "2.2.1"
+  date: 2026-05-01
+  page: "/releases/client-config.html"
+  anchor: "221-mai-2026"
+  summary: "Rollenbasierte Berechtigungskonfiguration für Endpunkte zur Verwaltung globaler Filter"
+
+- component: "Web-Client"
+  version: "4.3.6"
+  date: 2026-04-20
+  page: "/releases/web-client.html"
+  anchor: "436-20-april-2026"
+  summary: "Verfeinerung der räumlichen Selektionsalgorithmen bei komplexen Geometrien"
+
+- component: "Data Management"
+  version: "5.2.0"
+  date: 2026-04-20
+  page: "/releases/data-management.html"
+  anchor: "520-20042026"
+  summary: "Optimierte Docker-Compose Konfiguration und Integration der interaktiven OpenAPI-Oberfläche"
+
+- component: "Web-Client"
+  version: "5.0.0"
+  date: 2026-03-23
+  page: "/releases/web-client.html"
+  anchor: "500-23-märz-2026"
+  summary: "Neue Methodik für automatisierte Indikatoren-Fortschreibung und asynchrones Reporting-Konzept"
+
+- component: "Web-Client"
+  version: "4.3.0 – 4.3.5"
+  date: 2026-03-01
+  page: "/releases/web-client.html"
+  anchor: "430---435-januar---märz-2026"
+  summary: "Neue Benutzeroberfläche für Raumebenen-Aggregation und dynamische Datumsbeschriftungen"
+
+- component: "Processes API"
+  version: "1.0.1"
+  date: 2026-03-01
+  page: "/releases/processes-api.html"
+  anchor: "101-märz-2026"
+  summary: "Neue Export-Skripte, Zeitspannen-Filter für Georessourcen und öffentliche Exporte"
+
+- component: "Data Management"
+  version: "5.1.5"
+  date: 2026-01-21
+  page: "/releases/data-management.html"
+  anchor: "515-21012026"
+  summary: "Flexible Sortierlogik für Themen, erweiterte Web Service Filterung und GeoPackage-Export"
+
+- component: "Processes API"
+  version: "1.0.0"
+  date: 2026-01-01
+  page: "/releases/processes-api.html"
+  anchor: "100-januar-2026"
+  summary: "Initialer Release der OGC-konformen Schnittstelle zur Prozess-Orchestrierung"
+
+- component: "Client Config API"
+  version: "2.2.0"
+  date: 2025-11-01
+  page: "/releases/client-config.html"
+  anchor: "220--220-beta1-september---november-2025"
+  summary: "Implementierung der Funktionalität zum Speichern und Abrufen der Startseite"
+
+- component: "Importer"
+  version: "4.2.0"
+  date: 2025-11-06
+  page: "/releases/importer.html"
+  anchor: "420-06112025"
+  summary: "Automatische Datenaggregation beim Import und grundlegendes API-Refactoring"
+
+- component: "Web-Client"
+  version: "4.2.0 & 4.2.1"
+  date: 2025-09-01
+  page: "/releases/web-client.html"
+  anchor: "420--421-juli---september-2025"
+  summary: "Verbesserte Projektions-Logik in Diagrammen und neue UX-Statusmeldungen"
+
+- component: "Importer"
+  version: "4.1.1"
+  date: 2025-09-02
+  page: "/releases/importer.html"
+  anchor: "411-02092025"
+  summary: "Aktualisierung von Abhängigkeiten und allgemeine Wartungsarbeiten"
+
+- component: "Data Management"
+  version: "5.1.0"
+  date: 2025-08-20
+  page: "/releases/data-management.html"
+  anchor: "510-20082025"
+  summary: "RBAC-Updates, GZIP-Komprimierung und öffentliche Themen-Endpunkte"
+
+- component: "Importer"
+  version: "4.1.0"
+  date: 2025-05-28
+  page: "/releases/importer.html"
+  anchor: "410-28052025"
+  summary: "Synchronisation der internen Schnittstellen mit aktuellen System-Spezifikationen"
+
+- component: "Web-Client"
+  version: "4.1.0 & 4.1.1"
+  date: 2025-05-01
+  page: "/releases/web-client.html"
+  anchor: "410--411-mai-2025"
+  summary: "Komplettes Redesign des Filter-Dialogs und erweiterte Barrierefreiheit"
+
+- component: "Web-Client"
+  version: "3.3.0"
+  date: 2025-05-05
+  page: "/releases/web-client.html"
+  anchor: "330-5-mai-2025"
+  summary: "Einführung von Farbthemen für alle Komponenten"
+
+- component: "Spatial Data Processor"
+  version: "1.1.0"
+  date: 2025-03-01
+  page: "/releases/spatial-data-processor.html"
+  anchor: "110-märz-2025"
+  summary: "Geometrie-Validierung mit automatischer Reparatur ungültiger Topologien"
+
+- component: "Data Management"
+  version: "5.0.0"
+  date: 2025-03-01
+  page: "/releases/data-management.html"
+  anchor: "500-märz-2025"
+  summary: "Grundlegende Überarbeitung der Systemarchitektur"

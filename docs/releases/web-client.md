@@ -3,6 +3,8 @@ layout: default
 title: Web-Client
 parent: Release Info
 nav_order: 1
+date: 2026-06-05
+description: Release-Informationen für den KomMonitor Web-Client
 ---
 
 # Release Info (Web-Client)

@@ -3,6 +3,8 @@ layout: default
 title: Spatial Data Processor
 parent: Release Info
 nav_order: 5
+date: 2025-03-01
+description: Release-Informationen für den KomMonitor Spatial Data Processor
 ---
 
 # Release Info (Spatial Data Processor)

@@ -1,6 +1,7 @@
 # Allgemeine Projekt-Einstellungen
 title: KomMonitor
 description: Deployment-Informationen, Updates und Leitfäden zur Mandantenfähigkeit.
+url: "https://kommonitor.github.io"
 back_to_top: true
 back_to_top_text: "Nach oben"
 
@@ -21,6 +22,7 @@ search:
 
 # Nützliche Links oben rechts im Header
 aux_links:
+  "RSS Feed": "/feed.xml"
   "KomMonitor GitHub": "https://github.com/KomMonitor"
   "Docker-Repository": "https://github.com/KomMonitor/docker"
 

@@ -3,6 +3,8 @@ layout: default
 title: Data Management
 parent: Release Info
 nav_order: 3
+date: 2026-06-01
+description: Release-Informationen für die KomMonitor Data Management API
 ---
 
 # Release Info (Data Management)

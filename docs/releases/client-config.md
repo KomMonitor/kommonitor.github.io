@@ -3,6 +3,8 @@ layout: default
 title: Client Config API
 parent: Release Info
 nav_order: 8
+date: 2026-05-01
+description: Release-Informationen für die KomMonitor Client Config API
 ---
 
 # Release Info (Client Config API)

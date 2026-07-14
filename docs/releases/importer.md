@@ -3,6 +3,8 @@ layout: default
 title: Importer
 parent: Release Info
 nav_order: 2
+date: 2026-05-05
+description: Release-Informationen für die KomMonitor Importer API
 ---
 
 # Release Info (Importer)
