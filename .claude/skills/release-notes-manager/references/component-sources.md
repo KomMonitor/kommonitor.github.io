@@ -18,19 +18,9 @@ This reference maps KomMonitor components to their remote changelog locations an
 - **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/kommonitor-importer/refs/heads/develop/CHANGELOG.md`
 - **Local File:** `docs/releases/importer.md`
 
-## Processing Scheduler
-- **GitHub Repo:** [processing-scheduler](https://github.com/KomMonitor/processing-scheduler)
-- **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/processing-scheduler/refs/heads/master/CHANGELOG.md`
-- **Local File:** `docs/releases/processing-scheduler.md`
-
-## Processing Engine
-- **GitHub Repo:** [processing-engine](https://github.com/KomMonitor/processing-engine)
-- **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/processing-engine/master/CHANGELOG.md`
-- **Local File:** `docs/releases/processing-engine.md`
-
 ## Processes API
 - **GitHub Repo:** [processes-api](https://github.com/KomMonitor/processes-api)
-- **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/processes-api/refs/heads/develop/CHANGELOG.md`
+- **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/processes-api/refs/heads/master/CHANGELOG.md`
 - **Local File:** `docs/releases/processes-api.md`
 
 ## Spatial Data Processor
