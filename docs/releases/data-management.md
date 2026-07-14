@@ -99,7 +99,7 @@ Bereitstellung dedizierter Endpunkte für den unbeschränkten Zugriff auf öffen
 
 ## Version 5.0.x
 
-### 5.0.0 (März 2025)
+### 5.0.0 (10.03.2025)
 {: .no_toc }
 
 #### Neue Features

@@ -22,7 +22,7 @@ Hier finden Sie eine detaillierte Übersicht der wichtigsten Neuerungen, Verbess
 
 ## Version 5.1.x
 
-### 5.1.3 (5. Juni 2026)
+### 5.1.3 (05.07.2026)
 {: .no_toc }
 
 #### Neue Features
@@ -37,7 +37,7 @@ Die administrativen Filter-Einstellungen können nun gezielt für Admnistratoren
 {: .no_toc }
 Probleme beim Abruf von Indikatoren und Geodaten bei aktiven globalen Filtern wurden behoben. Es wird nun sichergestellt, dass Datensätze wirksam gefiltert werden.
 
-### 5.1.2 (27. Mai 2026)
+### 5.1.2 (27.05.2026)
 {: .no_toc }
 
 #### Neue Features
@@ -46,7 +46,7 @@ Probleme beim Abruf von Indikatoren und Geodaten bei aktiven globalen Filtern wu
 {: .no_toc }
 Die Adresssuche lässt sich nun auch für Adressen außerhalb Deutschlands und in weiteren Sprachen konfigurieren.
 
-### 5.1.1 (15. Mai 2026)
+### 5.1.1 (15.05.2026)
 {: .no_toc }
 
 #### Fehlerbehebungen
@@ -61,7 +61,7 @@ Probleme mit der Funktion "Raumeinheits-Selektion aufheben" und der damit verbun
 {: .no_toc }
 Offizielles Wartungs-Release zur Stabilisierung der 5.1.x-Linie.
 
-### 5.1.0 (6. Mai 2026)
+### 5.1.0 (06.05.2026)
 {: .no_toc }
 
 #### Neue Features
@@ -74,7 +74,7 @@ Umfangreiche Verbesserungen des Reporting Tools, inklusive beschleunigter Vorsch
 
 ## Version 5.0.x
 
-### 5.0.0 (23. März 2026)
+### 5.0.0 (23.03.2026)
 {: .no_toc }
 
 #### Neue Features
@@ -93,7 +93,7 @@ Implementierung eines asynchronen Lade-Konzepts ("Preview-First"), bei dem Beric
 
 ## Version 4.4.x
 
-### 4.4.3 (5. Juni 2026)
+### 4.4.3 (05.06.2026)
 {: .no_toc }
 
 #### Neue Features
@@ -108,7 +108,7 @@ Implementierung eines asynchronen Lade-Konzepts ("Preview-First"), bei dem Beric
 {: .no_toc }
 Behebung redundanter Metadaten-Abrufe zur Vermeidung von Fehlern bei globalen Filtern.
 
-### 4.4.2 (29. Mai 2026)
+### 4.4.2 (29.05.2026)
 {: .no_toc }
 
 #### Änderungen
@@ -117,7 +117,7 @@ Behebung redundanter Metadaten-Abrufe zur Vermeidung von Fehlern bei globalen Fi
 {: .no_toc }
 Der Bereich Filter-Einstellungen ist nun auch für Administratoren von Ressourcen verfügbar. Technisches Release zur Synchronisation interner Metadaten und Versions-Templates.
 
-### 4.4.0 & 4.4.1 (Mai 2026)
+### 4.4.0 & 4.4.1 (15.05.2026)
 {: .no_toc }
 
 #### Neue Features
@@ -136,7 +136,7 @@ Konsistente Interaktions-Fixes für komplexe Diagramm-Typen beim Abwählen von O
 
 ## Version 4.3.x
 
-### 4.3.6 (20. April 2026)
+### 4.3.6 (20.04.2026)
 {: .no_toc }
 
 #### Fehlerbehebungen
@@ -145,7 +145,7 @@ Konsistente Interaktions-Fixes für komplexe Diagramm-Typen beim Abwählen von O
 {: .no_toc }
 Verfeinerung der räumlichen Selektionsalgorithmen und Behebung von Kantenfällen bei der Filterung komplexer Geometrien.
 
-### 4.3.0 - 4.3.5 (Januar - März 2026)
+### 4.3.0 - 4.3.5 (24.03.2026)
 {: .no_toc }
 
 #### Neue Features
@@ -167,7 +167,7 @@ Automatischer Metadaten-Refresh nach On-Demand-Berechnungen zur Sicherstellung a
 
 ## Version 4.2.x
 
-### 4.2.0 & 4.2.1 (Juli - September 2025)
+### 4.2.0 & 4.2.1 (09.09.2025)
 {: .no_toc }
 
 #### Neue Features
@@ -186,7 +186,7 @@ Einführung neuer Statusmeldungen und Fortschrittsbalken während der Vorbereitu
 
 ## Version 4.1.x
 
-### 4.1.0 & 4.1.1 (Mai 2025)
+### 4.1.0 & 4.1.1 (27.05.2025)
 {: .no_toc }
 
 #### Neue Features
@@ -224,7 +224,7 @@ Verbesserte Handhabung von leeren Werten und fehlenden Datenpunkten in Berechnun
 
 ## Version 3.4.x
 
-### 3.4.0 - 3.4.3 (Juli 2025 - März 2026)
+### 3.4.0 - 3.4.3 (20.03.2026)
 {: .no_toc }
 
 #### Neue Features
@@ -243,7 +243,7 @@ Optimierte Unterscheidung zwischen Rohwerten und eindeutigen Werten für die Kla
 
 ## Version 3.3.x
 
-### 3.3.0 (5. Mai 2025)
+### 3.3.0 (05.05.2025)
 {: .no_toc }
 
 #### Neue Features

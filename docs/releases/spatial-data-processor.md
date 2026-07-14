@@ -25,7 +25,7 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 
 ## Version 1.1.x
 
-### 1.1.0 (März 2025)
+### 1.1.0 (10.03.2025)
 {: .no_toc }
 
 #### Neue Features
@@ -45,7 +45,7 @@ Aktualisierung der Versionen für Cache-Actions und Trivy-Security-Scans.
 ---
 ## Version 1.0.x
 
-### 1.0.1 - 1.0.4 (Juni - September 2024)
+### 1.0.1 - 1.0.4 (25.09.2024)
 {: .no_toc }
 
 #### Neue Features
@@ -77,7 +77,7 @@ Behebung von Fehlern bei fehlenden Indikatorenwerten für einzelne Raumeinheiten
 {: .no_toc }
 Anpassungen an der CORS-Konfiguration und Aktualisierung des Docker-Basis-Images (Eclipse Temurin).
 
-### 1.0.0 (Juni 2024)
+### 1.0.0 (06.06.2024)
 {: .no_toc }
 
 #### Neue Features

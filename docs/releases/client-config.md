@@ -25,7 +25,7 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 
 ## Version 2.3.x
 
-### 2.3.0-SNAPSHOT (Mai 2026)
+### 2.3.0-SNAPSHOT (29.05.2026)
 {: .no_toc }
 
 #### Neue Features
@@ -49,7 +49,7 @@ Die Docker-Compose Konfiguration für Keycloak wurde aktualisiert.
 ---
 ## Version 2.2.x
 
-### 2.2.1 (Mai 2026)
+### 2.2.1 (29.05.2026)
 {: .no_toc }
 
 #### Änderungen
@@ -64,7 +64,7 @@ Die `keycloak-helper` Abhängigkeit wurde aktualisiert.
 
 ---
 
-### 2.2.0 & 2.2.0-beta.1 (September - November 2025)
+### 2.2.0 & 2.2.0-beta.1 (06.11.2025)
 {: .no_toc }
 
 #### Neue Features
@@ -84,7 +84,7 @@ Verschiedene Abhängigkeiten und die Dokumentation (README) wurden aktualisiert.
 ---
 ## Version 2.1.x
 
-### 2.1.0 (Oktober 2024)
+### 2.1.0 (24.10.2024)
 {: .no_toc }
 
 #### Neue Features
@@ -108,7 +108,7 @@ Ein Docker-Setup für Entwicklungszwecke wurde hinzugefügt.
 ---
 ## Version 2.0.x
 
-### 2.0.0 - 2.0.4 (Juli 2022 - Juli 2023)
+### 2.0.0 - 2.0.4 (14.07.2023)
 {: .no_toc }
 
 #### Neue Features
@@ -137,7 +137,7 @@ Standardeinstellungen in der App-Konfiguration wurden angepasst und `.env` Komme
 
 ## Version 1.3.x
 
-### 1.3.0 (September 2021)
+### 1.3.0 (07.09.2021)
 {: .no_toc }
 
 #### Neue Features
@@ -157,7 +157,7 @@ Die Einstellung `useNoDataToggle` wurde standardmäßig auf `false` gesetzt.
 ---
 ## Version 1.2.x
 
-### 1.2.0 (Juni 2021)
+### 1.2.0 (01.06.2021)
 {: .no_toc }
 
 #### Neue Features
@@ -170,7 +170,7 @@ In der Konfigurationsdatei wird nun die Bearbeitung von Benachrichtigungen für 
 ---
 ## Version 1.1.x
 
-### 1.1.0 - 1.1.1 (Mai 2021)
+### 1.1.0 - 1.1.1 (11.05.2021)
 {: .no_toc }
 
 #### Änderungen
@@ -187,7 +187,7 @@ Automatischer Docker Image Build mit GitHub Actions
 ---
 ## Version 1.0.x
 
-### 1.0.0 (Mai 2021)
+### 1.0.0 (11.05.2021)
 {: .no_toc }
 
 #### Neue Features

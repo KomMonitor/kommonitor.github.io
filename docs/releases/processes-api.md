@@ -25,7 +25,7 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 
 ## Version 1.1.x
 
-### 1.1.3 (Juli 2026)
+### 1.1.3 (14.07.2026)
 {: .no_toc }
 
 #### Fehlerbehebungen
@@ -42,7 +42,7 @@ Behebung eines Fehlers beim Export von Raumeinheiten sowie allgemeine Code-Verbe
 {: .no_toc }
 Aktualisierung des Docker-Entwicklungssetups.
 
-### 1.1.2 (Juni 2026)
+### 1.1.2 (09.06.2026)
 {: .no_toc }
 
 #### Fehlerbehebungen
@@ -59,7 +59,7 @@ Korrektur der Methodensignatur des Export-Prozesses für Raumeinheiten sowie Beh
 {: .no_toc }
 Einführung einer automatisierten Changelog-Erstellung (git-cliff).
 
-### 1.1.0 - 1.1.1 (Mai 2026)
+### 1.1.0 - 1.1.1 (28.05.2026)
 {: .no_toc }
 
 #### Fehlerbehebungen
@@ -84,7 +84,7 @@ Aktualisierung der Version und interne Code-Verbesserungen.
 
 ## Version 1.0.x
 
-### 1.0.1 (März 2026)
+### 1.0.1 (23.03.2026)
 {: .no_toc }
 
 #### Neue Features
@@ -125,7 +125,7 @@ Behandlung von leeren Zeitreihen und ungültigen Referenzdaten korrigiert.
 Verfeinerung der Berechtigungsprüfung bei der Prozess-Ausführung und beim Download von Ergebnissen.
 
 
-### 1.0.0 (Januar 2026)
+### 1.0.0 (21.01.2026)
 {: .no_toc }
 
 #### Neue Features

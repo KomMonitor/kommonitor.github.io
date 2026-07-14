@@ -44,7 +44,7 @@ This skill maintains the release documentation for the KomMonitor ecosystem on t
      summary: "One-sentence German summary of the most notable change"
    ```
 
-   **Anchor computation:** take the heading text (e.g. `1.1.3 (Juli 2026)`), remove `.`, `(`, `)`, `&`, `,`, lowercase, replace spaces with hyphens → `113-juli-2026`. Hyphens already in the text stay (a range like `1.0 - 1.1` becomes `10---11`).
+   **Anchor computation:** take the heading text (e.g. `1.1.3 (14.07.2026)`), remove `.`, `(`, `)`, `&`, `,`, lowercase, replace spaces with hyphens → `113-14072026`. Hyphens already in the text stay (a range like `1.0 - 1.1` becomes `10---11`).
 
    **Date:** use the ISO date of the release. For month-only dates (e.g. "Juli 2026") use the 1st of that month. For date ranges, use the end date.
 
@@ -58,7 +58,7 @@ Structure of a release notes page:
 
 ```
 ## Version MAJOR.MINOR.x          ← one section per minor series
-### MAJOR.MINOR.PATCH (DATE)      ← one subsection per patch
+### MAJOR.MINOR.PATCH (DATE)      ← one subsection per patch, date in German format dd.mm.yyyy (e.g. 01.06.2026)
 {: .no_toc }
 #### Neue Features                 ← only if applicable
 {: .no_toc }
