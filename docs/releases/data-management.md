@@ -8,7 +8,7 @@ nav_order: 3
 # Release Info (Data Management)
 {: .no_toc }
 
-Release Informationen für die KomMonitor Data Management API
+Release Informationen für die zentrale Datenverwaltung des KomMonitor-Systems.
 {: .fs-6 .fw-300 }
 
 ## Inhalt
@@ -17,80 +17,253 @@ Release Informationen für die KomMonitor Data Management API
 1. TOC
 {:toc}
 
-Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Datenbank-Updates und Sicherheitsverbesserungen der KomMonitor Data Management API ab Version 1.0.0. Diese Komponente bildet das Herzstück der Datenhaltung und Rechteverwaltung im KomMonitor-Ökosystem.
+Hier finden Sie eine detaillierte Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und technischen Optimierungen der KomMonitor Data Management API ab Version 1.0.0.
 
 ---
 
-## Version 5.x
-### Highlights & API-Änderungen
-{: .no_toc }
-*   **Web-Service Management:** Einführung neuer Endpunkte zur Verwaltung von externen Web-Services, inklusive Favoriten-Management, Filterung und differenzierter Rechtevergabe.
-*   **Qualitative Klassifizierung:** Unterstützung für qualitative Klassifizierungsmethoden und Refactoring der JPA-Entitäten für Standard-Klassifizierungselemente.
-*   **Export-Optionen:** Implementierung von GeoPackage-Export-Endpunkten für Indikatoren und Georessourcen zur besseren Interoperabilität.
-*   **Themen-Steuerung:** Neue Endpunkte zur Festlegung der Anzeige-Reihenfolge von Themen (Topics) und erweiterte Filterstrategien.
+## Version 5.2.x
 
-### Datenbank & Technik
+### 5.2.3 (01.06.2026)
 {: .no_toc }
-*   **Schema-Erweiterung:** Integration neuer Tabellen zur Unterstützung der Web-Service-Verwaltung.
-*   **Datenintegrität:** Einführung von Unique-Constraints für Keycloak-IDs in der `userinfo`-Tabelle und Ergänzung einer `precision`-Spalte für Indikatoren via Liquibase.
-*   **Performance:** Refactoring der Feature-Abruflogik aus der PostgreSQL/PostGIS Datenbank zur Steigerung der Effizienz bei großen Datenmengen.
+
+#### Neue Features
+{: .no_toc }
+
+##### Web Service Favoriten Management:
+Einführung eines Managementsystems zur Verwaltung von Web Service Favoriten für verbesserte Benutzerfreundlichkeit.
+
+### 5.2.2 (21.05.2026)
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### Qualitative Klassifizierung:
+Erweiterte Unterstützung für die qualitative Klassifizierung von Datenbeständen.
+
+#### Änderungen
+{: .no_toc }
+
+##### Refactoring Default Classification:
+Umfassendes Refactoring der Standard-Klassifizierungslogik zur Steigerung der Wartbarkeit.
+
+### 5.2.0 (20.04.2026)
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### Docker-Compose:
+Bereitstellung optimierter Docker-Compose Konfigurationen für eine vereinfachte Deployment-Orchestrierung.
+
+##### OpenAPI UI:
+Integration der interaktiven OpenAPI Benutzeroberfläche zur direkten API-Dokumentation und Erprobung.
 
 ---
 
-## Version 4.x
-### Zugriffssteuerung & Sicherheit
-{: .no_toc }
-*   **Role-Based Access Control (RBAC):** Einführung einer gruppenbasierten Zugriffskontrolle und feingranularer Administrationsberechtigungen.
-*   **Keycloak-Synchronisation:** Nahtlose Integration der Synchronisation von Keycloak-Gruppen und -Rollen direkt in die API.
-*   **Berechtigungsevaluation:** Implementierung einer automatisierten Prüfung von Rechten beim Aktualisieren oder Löschen von Organisationseinheiten.
+## Version 5.1.x
 
-### API & Datenmodell
+### 5.1.5 (21.01.2026)
 {: .no_toc }
-*   **Erweiterte Nutzerinfo:** Endpunkte zur Verwaltung zusätzlicher Benutzerinformationen und Rollenzuweisungen.
-*   **Filter-Endpunkte:** Neue Filter-Möglichkeiten für Indikatoren und Georessourcen innerhalb der OpenAPI-Spezifikation (OAS).
-*   **Geometrie-Optimierung:** Implementierung des `TopologyPreservingSimplifier` zur Reduzierung der Geometrie-Komplexität und Senkung der Koordinaten-Präzision für Web-Optimierung.
+
+#### Neue Features
+{: .no_toc }
+
+##### Themen-Sortierung (Display Order):
+Implementierung einer flexiblen Sortierlogik zur Definition der Anzeige-Reihenfolge von Themenbereichen.
+
+##### Web Service Filterung:
+Einführung erweiterter Filterkriterien für Web Service Endpunkte.
+
+##### GeoPackage Export:
+Unterstützung des GeoPackage-Formats für den Export von Geodaten.
+
+### 5.1.0 (20.08.2025)
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### RBAC Updates:
+Aktualisierungen und Erweiterungen am rollenbasierten Zugriffskontrollsystem (RBAC) für feinere Berechtigungsstrukturen.
+
+##### GZIP Compression:
+Aktivierung der GZIP-Komprimierung zur Reduzierung der Payload-Größen und Optimierung der Antwortzeiten.
+
+##### Öffentliche Themen Endpoints:
+Bereitstellung dedizierter Endpunkte für den unbeschränkten Zugriff auf öffentliche Themenressourcen.
 
 ---
 
-## Version 3.x
-### Framework & Migration
-{: .no_toc }
-*   **Spring Boot 3:** Vollständige Migration auf Spring Boot 3 und Springdoc (Jakarta Persistence) für eine zukunftssichere Basis.
-*   **Sicherheit:** Einführung der Spring Security Konfiguration mit einem dedizierten `AuthenticationProvider` für JWT-Tokens.
-*   **Public Endpoints:** Implementierung öffentlicher Endpunkte für Georessourcen und Indikatoren mit spezifischen Request-Regeln.
+## Version 5.0.x
 
-### Funktionalität & Performance
+### 5.0.0 (März 2025)
 {: .no_toc }
-*   **Regionale Referenzwerte:** Unterstützung für regionale Durchschnitts- und Vergleichswerte direkt im Datenmodell.
-*   **Raumeinheiten-Outlines:** Funktionalität zur Bereitstellung von Umringen für Raumeinheiten.
-*   **Optimierung:** Aktivierung der GZIP-Komprimierung für alle API-Antworten und Optimierung des Hibernate-Dialekts für PostgreSQL.
+
+#### Neue Features
+{: .no_toc }
+
+##### Major Update:
+Grundlegende Überarbeitung der Systemarchitektur und Einführung zentraler Kernfunktionen.
 
 ---
 
-## Version 2.x
-### Datenmanagement & CRUD
-{: .no_toc }
-*   **Einzeldatensatz-Management:** Implementierung vollständiger CRUD-Operationen (Create, Read, Update, Delete) für einzelne Datensätze von Georessourcen, Raumeinheiten und Indikatoren.
-*   **Hierarchie-Konsistenz:** Unterstützung beim Umbenennen von Raumeinheiten unter automatischer Beibehaltung der hierarchischen Konsistenz.
-*   **Geometrie-Optionen:** Neue Endpunkte zum Abruf von Georessourcen-Eigenschaften ohne Geometrie-Daten zur Bandbreiteneinsparung.
+## Version 4.1.x
 
-### Sicherheit & Speichermanagement
+### 4.1.0
 {: .no_toc }
-*   **Rechte-Modell v2:** Implementierung eines neuen Zugriffskontrollmodells basierend auf Organisationseinheiten und granularen Berechtigungsstufen.
-*   **Verschlüsselung:** Einführung der AES-CBC Verschlüsselung für sensible Antwort-Objekte.
-*   **Datenbank-Pflege:** Automatische Ausführung von "VACUUM FULL" nach größeren Löschvorgängen zur Freigabe von Speicherplatz auf dem Host-System.
+
+#### Änderungen
+{: .no_toc }
+
+##### Maintenance:
+Durchführung allgemeiner Wartungsarbeiten und kleinerer Code-Optimierungen.
 
 ---
 
-## Version 1.x
-### Kern-Funktionalitäten
-{: .no_toc }
-*   **Initiales Datenmodell:** Erstimplementierung der Kernobjekte: Themen, Georessourcen, Raumeinheiten und Indikatoren.
-*   **OGC-Integration:** Verwaltung von WMS, WFS und WCS Diensten inklusive tiefer Integration mit dem GeoServer.
-*   **Berechnungs-Engine:** Bereitstellung der Scripting-API zur automatisierten Berechnung von Indikatoren.
+## Version 4.0.x
 
-### Geodaten-Verarbeitung
+### 4.0.0
 {: .no_toc }
-*   **PostGIS-Integration:** Implementierung der Integration räumlicher Features von GeoJSON in PostGIS.
-*   **Visualisierung:** Unterstützung für Styled Layer Descriptors (SLD) zur serverseitigen Visualisierung von Indikatoren.
-*   **Import-Optimierung:** Effizienzsteigerung beim Datenimport durch Just-in-Time Abfragen von Gültigkeitszeiträumen.
+
+#### Änderungen
+{: .no_toc }
+
+##### Security:
+Implementierung kritischer Sicherheitsaktualisierungen und Härtung der API-Infrastruktur.
+
+---
+
+## Version 3.4.x
+
+### 3.4.0
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### Display Order:
+Einführung der Anzeige-Reihenfolge zur besseren Strukturierung von Ressourcenlisten.
+
+---
+
+## Version 3.3.x
+
+### 3.3.0
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Maintenance:
+Kontinuierliche Wartung und Pflege der Codebasis.
+
+---
+
+## Version 3.2.x
+
+### 3.2.0
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Maintenance:
+Stabilitätsverbesserungen und interne Refactorings.
+
+---
+
+## Version 3.1.x
+
+### 3.1.0
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Maintenance:
+Reguläre Wartung zur Sicherstellung der Betriebsstabilität.
+
+---
+
+## Version 3.0.x
+
+### 3.0.0
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### Spring Boot 3:
+Vollständige Migration auf Spring Boot Version 3 inklusive Aktualisierung abhängiger Frameworks.
+
+---
+
+## Version 2.1.x
+
+### 2.1.0
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### RBAC Grid:
+Erweiterung des Berechtigungsmanagements um eine tabellarische Gitteransicht zur effizienten Rollenzuweisung.
+
+##### Encryption:
+Implementierung von Verschlüsselungsmethoden zur Erhöhung der Datensicherheit auf Transport- und Speicherebene.
+
+---
+
+## Version 2.0.x
+
+### 2.0.0
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### Organizations:
+Einführung der Mandantenfähigkeit durch Unterstützung von Organisationseinheiten.
+
+##### Keycloak:
+Integration von Keycloak als zentraler Provider für Identitätsmanagement und Authentifizierung.
+
+---
+
+## Version 1.2.x
+
+### 1.2.0
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### Initial:
+Fortführung der initialen Bereitstellungsphase mit erweiterten Basisfunktionen.
+
+---
+
+## Version 1.1.x
+
+### 1.1.0
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### Initial:
+Ergänzungen der initialen Systemkomponenten der Data Management API.
+
+---
+
+## Version 1.0.x
+
+### 1.0.0
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### Initial:
+Initiale Veröffentlichung der KomMonitor Data Management API zur zentralen Datenverwaltung.

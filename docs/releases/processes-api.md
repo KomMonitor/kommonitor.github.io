@@ -23,6 +23,40 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 
 ## Version 1.1.x
 
+### 1.1.3 (Juli 2026)
+{: .no_toc }
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Raumeinheiten-Export: 
+{: .no_toc }
+Behebung eines Fehlers beim Export von Raumeinheiten sowie allgemeine Code-Verbesserungen.
+
+#### Änderungen
+{: .no_toc }
+
+##### Technik: 
+{: .no_toc }
+Aktualisierung des Docker-Entwicklungssetups.
+
+### 1.1.2 (Juni 2026)
+{: .no_toc }
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Raumeinheiten-Export: 
+{: .no_toc }
+Korrektur der Methodensignatur des Export-Prozesses für Raumeinheiten sowie Behebung eines Fehlers bei öffentlichen Export-Anfragen.
+
+#### Änderungen
+{: .no_toc }
+
+##### Technik: 
+{: .no_toc }
+Einführung einer automatisierten Changelog-Erstellung (git-cliff).
+
 ### 1.1.0 - 1.1.1 (Mai 2026)
 {: .no_toc }
 
