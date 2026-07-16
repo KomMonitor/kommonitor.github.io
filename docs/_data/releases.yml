@@ -4,6 +4,20 @@
 # lowercase, replace spaces with hyphens. Example: "1.1.3 (Juli 2026)" → "113-juli-2026".
 # Add new entries at the TOP of this list when a version is released.
 
+- component: "Keycloak"
+  version: "26.6.4"
+  date: 2026-07-16
+  page: "/releases/keycloak.html"
+  anchor: "2664-16072026"
+  summary: "Build-Workflow-Anpassung für SNAPSHOT-Builds und Aktualisierung der Keycloak-Hotfix-Version"
+
+- component: "Keycloak"
+  version: "26.6.3"
+  date: 2026-07-13
+  page: "/releases/keycloak.html"
+  anchor: "2663-13072026"
+  summary: "Sicherheitshärtung des Docker-Images und Erweiterung der CI-Pipeline um Sicherheits-Scans und Image-Signierung"
+
 - component: "Processes API"
   version: "1.1.3"
   date: 2026-07-14
@@ -220,3 +234,52 @@
   page: "/releases/data-management.html"
   anchor: "500-10032025"
   summary: "Grundlegende Überarbeitung der Systemarchitektur"
+
+- component: "Keycloak"
+  version: "26.5.5 - 26.5.7"
+  date: 2026-04-17
+  page: "/releases/keycloak.html"
+  anchor: "2655---2657-17042026"
+  summary: "Aktualisierung der eingesetzten Keycloak-Version auf aktuelle Minor- und Hotfix-Releases"
+
+- component: "Keycloak"
+  version: "26.4.7"
+  date: 2026-01-13
+  page: "/releases/keycloak.html"
+  anchor: "2647-13012026"
+  summary: "Aktualisierung der eingesetzten Keycloak-Minor-Version"
+
+- component: "Keycloak"
+  version: "26.3.1 - 26.3.4"
+  date: 2025-09-18
+  page: "/releases/keycloak.html"
+  anchor: "2631---2634-18092025"
+  summary: "Aktualisierung der eingesetzten Keycloak-Version auf aktuelle Minor- und Hotfix-Releases"
+
+- component: "Keycloak"
+  version: "26.2.0 - 26.2.5"
+  date: 2025-07-11
+  page: "/releases/keycloak.html"
+  anchor: "2620---2625-11072025"
+  summary: "Aktualisierung der eingesetzten Keycloak-Version auf aktuelle Minor- und Hotfix-Releases"
+
+- component: "Keycloak"
+  version: "26.1.0 - 26.1.3"
+  date: 2025-05-27
+  page: "/releases/keycloak.html"
+  anchor: "2610---2613-27052025"
+  summary: "Aktualisierung der eingesetzten Keycloak-Version sowie der CI-Cache-Action"
+
+- component: "Keycloak"
+  version: "26.0.8"
+  date: 2025-01-14
+  page: "/releases/keycloak.html"
+  anchor: "2608-14012025"
+  summary: "Neue Features: hostname:v1, realm-abhängige Rollenrichtlinien und Token Exchange"
+
+- component: "Keycloak"
+  version: "25.0.6"
+  date: 2024-11-26
+  page: "/releases/keycloak.html"
+  anchor: "2506-26112024"
+  summary: "Initialer Release der KomMonitor Keycloak-Erweiterungen mit Dockerfile und CI-Workflows"

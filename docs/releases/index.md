@@ -33,6 +33,7 @@ Hier finden Sie Informationen zu den neuesten Funktionen, Verbesserungen und Kor
 | **Spatial Data Processor** | Spezialisierter Dienst für komplexe räumliche Analysen. | [Release Info Spatial Data Processor](./spatial-data-processor.md) |
 | **Importer API** | Werkzeug zum Importieren von Geodaten und Statistiken. | [Release Info Importer](./importer.md) |
 | **Client Config API** | Dienst zur zentralen Verwaltung und Bereitstellung von Client-Konfigurationen. | [Release Info Client Config](./client-config.md) |
+| **Keycloak** | KomMonitor-spezifische Erweiterungen für den Keycloak Identity Provider. | [Release Info Keycloak](./keycloak.md) |
 
 ---
 

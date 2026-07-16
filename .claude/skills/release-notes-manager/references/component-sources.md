@@ -32,3 +32,8 @@ This reference maps KomMonitor components to their remote changelog locations an
 - **GitHub Repo:** [client-config](https://github.com/KomMonitor/client-config)
 - **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/client-config/refs/heads/master/CHANGELOG.md`
 - **Local File:** `docs/releases/client-config.md`
+
+## Keycloak Extensions
+- **GitHub Repo:** [keycloak-extensions](https://github.com/KomMonitor/keycloak-extensions)
+- **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/keycloak-extensions/refs/heads/develop/CHANGELOG.md`
+- **Local File:** `docs/releases/keycloak.md`
