@@ -3,12 +3,15 @@ layout: default
 title: Web-Client
 parent: Release Info
 nav_order: 1
-date: 2026-06-05
+date: 2026-07-17
 description: Release-Informationen für den KomMonitor Web-Client
 ---
 
 # Release Info (Web-Client)
 {: .no_toc }
+
+Release Informationen für den KomMonitor Web-Client.
+{: .fs-6 .fw-300 }
 
 ## Inhalt
 {: .no_toc .text-delta }
@@ -22,53 +25,81 @@ Hier finden Sie eine detaillierte Übersicht der wichtigsten Neuerungen, Verbess
 
 ## Version 5.1.x
 
-### 5.1.3 (05.07.2026)
+### 5.1.4 (17.07.2026)
+{: .no_toc }
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Wertebereich-Filter:
+{: .no_toc }
+Fehlerbehebung bei der Filterung von Indikatorwerten: Wenn globale Indikatorgenauigkeit und indikatoren-spezifische Genauigkeit unterschiedlich eingestellt waren, wurden Werte nicht korrekt gefiltert.
+
+---
+
+### 5.1.3 (05.06.2026)
 {: .no_toc }
 
 #### Neue Features
 {: .no_toc }
+
 ##### Filter-Konfiguration:
 {: .no_toc }
-Die administrativen Filter-Einstellungen können nun gezielt für Admnistratoren von Ressourcen freigeschaltet werden.
+Die administrativen Filter-Einstellungen können nun über den Parameter `showFilterConfigForGeodataEditRoleNames` gezielt für Nutzer mit Bearbeitungsberechtigungen auf Datensätzen freigeschaltet werden.
 
 #### Fehlerbehebungen
 {: .no_toc }
+
 ##### Globale Filter:
 {: .no_toc }
-Probleme beim Abruf von Indikatoren und Geodaten bei aktiven globalen Filtern wurden behoben. Es wird nun sichergestellt, dass Datensätze wirksam gefiltert werden.
+Probleme beim Abruf von Indikatoren und Geodaten bei aktiven globalen Filtern wurden behoben. Es wird nun sichergestellt, dass Datensätze korrekt gefiltert werden.
+
+---
 
 ### 5.1.2 (27.05.2026)
 {: .no_toc }
 
 #### Neue Features
 {: .no_toc }
+
 ##### Adresssuche:
 {: .no_toc }
-Die Adresssuche lässt sich nun auch für Adressen außerhalb Deutschlands und in weiteren Sprachen konfigurieren.
+Die Adresssuche lässt sich nun über die Parameter `geocoderLanguage` und `geocoderCountryCodes` auch für Adressen außerhalb Deutschlands und in weiteren Sprachen konfigurieren (setzt einen kompatiblen Geocoding-Dienst voraus).
+
+---
 
 ### 5.1.1 (15.05.2026)
 {: .no_toc }
 
 #### Fehlerbehebungen
 {: .no_toc }
+
 ##### Radardiagramme:
 {: .no_toc }
-Probleme mit der Funktion "Raumeinheits-Selektion aufheben" und der damit verbundenen Entfernung von Raumeinheiten aus dem Radardiagramm wurden behoben.
+Probleme mit der Funktion „Raumeinheits-Selektion aufheben" und der damit verbundenen Entfernung von Raumeinheiten aus dem Radardiagramm wurden behoben.
 
 #### Änderungen
 {: .no_toc }
+
 ##### Wartungs-Release:
 {: .no_toc }
 Offizielles Wartungs-Release zur Stabilisierung der 5.1.x-Linie.
+
+---
 
 ### 5.1.0 (06.05.2026)
 {: .no_toc }
 
 #### Neue Features
 {: .no_toc }
+
 ##### Reporting Tool:
 {: .no_toc }
-Umfangreiche Verbesserungen des Reporting Tools, inklusive beschleunigter Vorschau, verbesserter Benutzerführung, ergänzter Hinweistexte sowie einer optimierten Fortschrittsanzeige und Hintergrund-Aufbereitung von Kartenbildern.
+Umfangreiche Verbesserungen des Reporting Tools: Die Vorschau zeigt sofort ausgewählte Karten- und Tabellenseiten an, während Daten im Hintergrund aufbereitet werden (beschleunigter Aufbau). Die Benutzerführung wurde überarbeitet, sodass Daten- und Parameterauswahl klar von der Vorschaugenerierung getrennt sind. Hinweistexte, eine sichtbare Fortschrittsanzeige sowie eine optimierte Hintergrundverarbeitung von Kartenbildern wurden ergänzt.
+
+##### Erreichbarkeitsanalyse:
+{: .no_toc }
+Überarbeiteter Workflow für die Erreichbarkeitsanalyse im Reporting, inklusive unterstützender Informationen zur Bedienung.
 
 ---
 
@@ -79,55 +110,79 @@ Umfangreiche Verbesserungen des Reporting Tools, inklusive beschleunigter Vorsch
 
 #### Neue Features
 {: .no_toc }
-##### Indikatoren-Fortschreibung:
+
+##### Prozess-Methodik (Processes API):
 {: .no_toc }
-Einführung einer neuen Methodik für die automatisierte Fortführung und Berechnung von Indikatoren.
+Einführung der neuen KomMonitor Processes API (OGC API – Processes Standard mit Prefect-Orchestrierung), die die bisherigen Komponenten Processing Engine und Processing Scheduler ablöst. Skripte können nun als Prozesse mit dynamischen Prozessbeschreibungen angelegt, auf Abruf ausgeführt und mit individuellen Zeitreihen-Methodiken und Ausführungsintervallen pro Indikator konfiguriert werden.
+
 ##### Skriptverwaltung:
 {: .no_toc }
-Anpassungen in der Skriptverwaltung zur Unterstützung von On-Demand Berechnungen und dynamischen Skript-Prototypen.
+Die Skriptverwaltung unterstützt explizite Raumebenen-Auswahl (auch mehrere Ebenen gleichzeitig), On-Demand-Ausführung einzelner Skripte sowie detaillierte Job-Zusammenfassungen mit berechneten Indikatoren, Zeitpunkten und Fehlerinformationen.
+
 ##### Reporting-Performance:
 {: .no_toc }
-Implementierung eines asynchronen Lade-Konzepts ("Preview-First"), bei dem Berichtsseiten sofort eine Vorschau anzeigen, während Geodaten im Hintergrund geladen werden.
+Implementierung eines asynchronen Lade-Konzepts („Preview-First"): Berichtsseiten zeigen sofort eine Vorschau, während Geodaten im Hintergrund geladen werden. Dies reduziert die wahrgenommene Ladezeit bei umfangreichen Berichten erheblich.
 
 ---
 
 ## Version 4.4.x
+
+### 4.4.4 (17.07.2026)
+{: .no_toc }
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Wertebereich-Filter:
+{: .no_toc }
+Fehlerbehebung bei der Filterung von Indikatorwerten: Wenn globale Indikatorgenauigkeit und indikatoren-spezifische Genauigkeit unterschiedlich eingestellt waren, wurden Werte nicht korrekt gefiltert.
+
+---
 
 ### 4.4.3 (05.06.2026)
 {: .no_toc }
 
 #### Neue Features
 {: .no_toc }
+
 ##### Filter-Konfiguration:
 {: .no_toc }
 Übernahme der Filter-Sichtbarkeitskonfiguration aus dem 5.x-Zweig für Nutzer der 4.4er Wartungslinie.
 
 #### Fehlerbehebungen
 {: .no_toc }
+
 ##### Metadaten-Fix:
 {: .no_toc }
 Behebung redundanter Metadaten-Abrufe zur Vermeidung von Fehlern bei globalen Filtern.
+
+---
 
 ### 4.4.2 (29.05.2026)
 {: .no_toc }
 
 #### Änderungen
 {: .no_toc }
+
 ##### Sichtbarkeit:
 {: .no_toc }
 Der Bereich Filter-Einstellungen ist nun auch für Administratoren von Ressourcen verfügbar. Technisches Release zur Synchronisation interner Metadaten und Versions-Templates.
+
+---
 
 ### 4.4.0 & 4.4.1 (15.05.2026)
 {: .no_toc }
 
 #### Neue Features
 {: .no_toc }
+
 ##### Feature-Backports:
 {: .no_toc }
 Integration der Performance-Optimierungen für das Berichtswesen (asynchrone Generierung von Geodaten-Features) in die stabile 4.4.x-Linie.
 
 #### Fehlerbehebungen
 {: .no_toc }
+
 ##### Radar-Diagramme:
 {: .no_toc }
 Konsistente Interaktions-Fixes für komplexe Diagramm-Typen beim Abwählen von Objekten.
@@ -141,62 +196,110 @@ Konsistente Interaktions-Fixes für komplexe Diagramm-Typen beim Abwählen von O
 
 #### Fehlerbehebungen
 {: .no_toc }
+
 ##### Raumfilter-Logik:
 {: .no_toc }
 Verfeinerung der räumlichen Selektionsalgorithmen und Behebung von Kantenfällen bei der Filterung komplexer Geometrien.
 
-### 4.3.0 - 4.3.5 (24.03.2026)
+---
+
+### 4.3.3 - 4.3.5 (24.03.2026)
 {: .no_toc }
 
 #### Neue Features
 {: .no_toc }
-##### Raumebenen-Aggregation:
+
+##### Processes API Integration:
 {: .no_toc }
-Neue Benutzeroberfläche zur Auswahl verschiedener Aggregationsstufen für Raumeinheiten inklusive vollständiger Integration in Import- und Export-Workflows.
-##### Visualisierungs-Details:
+Berechnungs-Skripte können nun als Prozesse aus einer laufenden Processes API-Instanz ausgewählt werden. Die Skriptverwaltung wurde um eine Job-Tabelle zur Überwachung laufender und abgeschlossener Berechnungen erweitert. Skripte lassen sich direkt über den `/schedule`-Endpunkt einplanen.
+
+##### Klassifizierung:
 {: .no_toc }
-Dynamische Datums-Beschriftungen auf der X-Achse von Balkendiagrammen und neue Layout-Optionen für den Druck-Modus.
+Verbesserungen der Jenks-Klassifizierungsmethode und Behebung fehlerhafter Klassifizierungseinstellungen für spezielle Datensituationen.
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Skriptverwaltung:
+{: .no_toc }
+Mehrere Fehlerbehebungen in der Skriptverwaltung, bei Indikator- und Georessourcen-Selektionen sowie bei der Prozess-API-Kommunikation.
 
 #### Änderungen
 {: .no_toc }
-##### Automatisierung:
+
+##### Bereinigung:
 {: .no_toc }
-Automatischer Metadaten-Refresh nach On-Demand-Berechnungen zur Sicherstellung aktueller Anzeigen.
+Veraltete JavaScript-Skript-Ressourcen wurden entfernt. Die Skript-Vorschau wurde zugunsten der neuen Job-basierten Ausführung abgelöst.
+
+---
+
+### 4.3.2 (12.01.2026)
+{: .no_toc }
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Batch-Aktualisierung:
+{: .no_toc }
+Fehlerbehebung bei der Batch-Aktualisierung von Indikatoren in Kombination mit den neuen Aggregationsoptionen der Importer API (Aggregationen werden bei Batch-Updates aktuell noch nicht unterstützt).
+
+---
+
+### 4.3.0 - 4.3.1 (11.12.2025)
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### Datenaggregation beim Import:
+{: .no_toc }
+Beim Datenimport können Indikatordaten automatisch für höhere Raumebenen über Referenzspalten aggregiert werden. Unterstützte Aggregationsfunktionen: Summe, Anzahl, Mittelwert, Median, Minimum, Maximum.
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Raumebenen-Ebenensteuerung:
+{: .no_toc }
+Behebung von doppelten Einträgen für Raumebenen als Grenzlinien-Layer in der Ebenensteuerung.
 
 ---
 
 ## Version 4.2.x
 
-### 4.2.0 & 4.2.1 (09.09.2025)
+### 4.2.0 - 4.2.1 (09.09.2025)
 {: .no_toc }
 
 #### Neue Features
 {: .no_toc }
-##### Kartenprojektionen:
-{: .no_toc }
-Integration verbesserter Projektions-Logik in Diagramme zur exakten Überlagerung statistischer Daten auf Karten.
 
-#### Änderungen
+##### Backport 3.4.x-Funktionen:
 {: .no_toc }
-##### UX-Feedback:
+Integration der Funktionen aus der 3.4.x-Linie (aktive Filter-Banner, Raumfilter für Georessourcen, konfigurierbares Reporting mit PPTX-Export, Kartenprojektionen in Diagrammen) in die mandantenfähige 4.x-Linie.
+
+#### Fehlerbehebungen
 {: .no_toc }
-Einführung neuer Statusmeldungen und Fortschrittsbalken während der Vorbereitung umfangreicher Berichtsdaten.
+
+##### Bilanzierungsanzeige:
+{: .no_toc }
+Korrektur der Darstellung für Indikatoren mit ausschließlich positiven oder negativen Werten in Zwei-Zeitpunkt-Bilanzierungsszenarien.
 
 ---
 
 ## Version 4.1.x
 
-### 4.1.0 & 4.1.1 (27.05.2025)
+### 4.1.0 - 4.1.1 (27.05.2025)
 {: .no_toc }
 
 #### Neue Features
 {: .no_toc }
-##### Modulares Filter-System:
+
+##### Backport 3.2.x & 3.3.x-Funktionen:
 {: .no_toc }
-Komplettes Redesign des Filter-Dialogs mit einem übersichtlichen Modal und tabellarischer Mehrfachauswahl für Indikatoren und Ressourcen.
+Integration der Funktionen aus der 3.2.x- und 3.3.x-Linie in die mandantenfähige 4.x-Linie, darunter das globale Filter-System, Nutzerfavoriten, Farbthemen und das überarbeitete Filter-Modal.
+
 ##### Barrierefreiheit:
 {: .no_toc }
-Erweiterte Unterstützung für assistierende Technologien und Tastaturnavigation für komplexe UI-Widgets.
+Verbesserte Unterstützung für assistierende Technologien und Tastaturnavigation für komplexe UI-Widgets. Favicon hinzugefügt.
 
 ---
 
@@ -207,15 +310,22 @@ Erweiterte Unterstützung für assistierende Technologien und Tastaturnavigation
 
 #### Neue Features
 {: .no_toc }
+
+##### Mandantenfähigkeit (Multi-Tenant):
+{: .no_toc }
+Grundlegende Architekturumstellung auf ein mandantenorientiertes Benutzer- und Rechtesystem. Mehrere unabhängige Mandanten können innerhalb einer KomMonitor-Instanz mit getrennter Nutzerverwaltung und eigenen Ressourcen betrieben werden. Hierarchische Mandanten- und Untergruppen mit flexibler Verschachtelung, gruppen-spezifische Datenzugriffskontrolle und Keycloak-Integration für vereinfachte Nutzergruppen-Zuweisung.
+
 ##### Berechtigungskonzept:
 {: .no_toc }
-Umstellung des Benutzermenüs auf ein granulares Berechtigungskonzept mit Synchronisation von Benutzergruppen.
+Neues Benutzermenü auf Basis eines granularen Berechtigungsmodells mit Synchronisation von Benutzergruppen. Explizite Datensatz-Eigentümerschaft mit gruppenbasierten Zugriffskontrollen und neuem öffentlichen Veröffentlichungs-Schalter.
+
 ##### Tabellen-Ansicht:
 {: .no_toc }
-Einführung eines performanten Gitter-Layouts für Ressourcen-Tabellen für flüssiges Scrollen bei großen Datenmengen.
+Performantes Gitter-Layout für Ressourcen-Tabellen für flüssiges Scrollen auch bei großen Datenmengen.
 
 #### Fehlerbehebungen
 {: .no_toc }
+
 ##### Datenintegrität:
 {: .no_toc }
 Verbesserte Handhabung von leeren Werten und fehlenden Datenpunkten in Berechnungs-Skripten.
@@ -224,20 +334,38 @@ Verbesserte Handhabung von leeren Werten und fehlenden Datenpunkten in Berechnun
 
 ## Version 3.4.x
 
-### 3.4.0 - 3.4.3 (20.03.2026)
+### 3.4.0 - 3.4.3 (März 2026)
 {: .no_toc }
 
 #### Neue Features
 {: .no_toc }
+
+##### Aktive Filter-Banner:
+{: .no_toc }
+Permanente visuelle Hinweise für aktive Anzeigefilter und den Bilanzierungsmodus, sodass Nutzerinnen und Nutzer stets erkennen, ob ein Filter aktiv ist.
+
+##### Raumfilter für Georessourcen:
+{: .no_toc }
+Der räumliche Filter greift nun auch auf Punkte, Linien und Polygone an. Der Download ermöglicht wahlweise den gesamten oder nur den gefilterten Datensatz.
+
+##### Konfigurierbares Reporting:
+{: .no_toc }
+Auswahl der Hintergrundkarte für Berichte, Karten-Screenshot-Caching pro Raumebene, selektives Ausblenden von Berichtsabschnitten und PowerPoint-Export (PPTX).
+
 ##### Zahlenformatierung:
 {: .no_toc }
-Verbesserte Darstellung formatierter Zahlen in Filter-Komponenten.
+Konsistente Darstellung formatierter Zahlen (Tausender-Trennzeichen, Dezimaltrennzeichen) in Filter-Komponenten.
 
-#### Änderungen
+#### Fehlerbehebungen
 {: .no_toc }
+
 ##### Klassifizierung:
 {: .no_toc }
-Optimierte Unterscheidung zwischen Rohwerten und eindeutigen Werten für die Klasseneinteilung in der Legende.
+Optimierte Farbpaletten und Klasseneinteilung für Sonderfälle (weniger als 5 eindeutige Werte, Bilanzierung, Schwellenwert-Klassifizierung). Automatische Klassen-Reduktion bei Jenks und Quantil wenn eindeutige Werte die Klassenanzahl unterschreiten.
+
+##### Messwerkzeug:
+{: .no_toc }
+Kartenverschiebungs-Fehler beim Klicken wurde behoben.
 
 ---
 
@@ -248,34 +376,42 @@ Optimierte Unterscheidung zwischen Rohwerten und eindeutigen Werten für die Kla
 
 #### Neue Features
 {: .no_toc }
+
 ##### Design & Theming:
 {: .no_toc }
-Einführung von Farbthemen für alle Komponenten und Unterstützung benutzerdefinierter Farbschemata.
+Einführung von Farbthemen für alle Komponenten und Unterstützung benutzerdefinierter Farbschemata. Dezimalzahlen werden nun einheitlich mit Komma als Dezimaltrennzeichen und Punkt als Tausendertrennzeichen dargestellt, mit indikatoren-spezifischer Genauigkeitskonfiguration.
 
 #### Änderungen
 {: .no_toc }
+
 ##### Begrifflichkeiten:
 {: .no_toc }
-Anpassung der Terminologie (z.B. "Raumeinheit" statt "Feature"), um die Verständlichkeit für Planer*innen zu erhöhen.
+Standardisierte Terminologie (z. B. „Raumebene", „Raumeinheit", „Feature") für eine konsistentere Benutzeroberfläche.
 
 ---
 
 ## Version 3.2.x
 
-### 3.2.0 & 3.2.1 (Januar - Februar 2025)
+### 3.2.0 - 3.2.1 (Januar - Februar 2025)
 {: .no_toc }
 
 #### Neue Features
 {: .no_toc }
+
+##### Globale Filter:
+{: .no_toc }
+Der Web-Client unterstützt nun aktive globale Filter für eingeschränktes Laden von Indikatoren und Georessourcen. Filter-Konfigurationen können in den allgemeinen Einstellungen angelegt und bearbeitet werden.
+
 ##### Favoriten:
 {: .no_toc }
-Möglichkeit, Indikatoren, Georessourcen und Themen als Favoriten zu markieren.
+Angemeldete Nutzerinnen und Nutzer können Indikatoren, Georessourcen und Themen als Favoriten markieren und über einen dedizierten Reiter im Themenbaum schnell aufrufen.
 
 #### Änderungen
 {: .no_toc }
-##### Skript-Verwaltung:
+
+##### Zugriffsrechte bei Batch-Updates:
 {: .no_toc }
-Neue Hinweise und Sicherheitsabfragen bei Massenaktualisierungen und in der Skript-Verwaltung.
+Bei Batch-Updates und skriptbasierten Berechnungen werden Zugriffsrechte für neu verknüpfte Raumeinheiten aus den Indikator-Metadaten übernommen.
 
 ---
 
@@ -284,20 +420,23 @@ Neue Hinweise und Sicherheitsabfragen bei Massenaktualisierungen und in der Skri
 ### 3.1.0 - 3.1.8 (August 2024 - Januar 2025)
 {: .no_toc }
 
+#### Neue Features
+{: .no_toc }
+
+##### Konfigurierbarkeit:
+{: .no_toc }
+Neue Parameter für die Anzeige von Mittelwerten in Legenden und Diagrammen, Unterstützung für ColorBrewer-Divergenzpaletten, CSV-Export kompatibel mit Excel-Format sowie erweitertes Widget-Control für zusätzliche HTML-Elemente.
+
 #### Fehlerbehebungen
 {: .no_toc }
+
 ##### Diagramm-Referenzen:
 {: .no_toc }
-Neue Referenzwerte für Ranking-Diagramme zur Korrektur von Fehlern in Zeitreihen-Berichten.
+Neue Referenzwerte für Ranking-Diagramme zur Korrektur von Fehlern in Zeitreihen-Berichten. Korrekte Behandlung von Leer-Werten in Berechnungs-Skripten (Summe, Quotient, Prozent, Promille, Subtraktion).
 
-#### Änderungen
+##### Keycloak-Unterstützung:
 {: .no_toc }
-##### Farben:
-{: .no_toc }
-Reaktivierung verschiedener Farppaletten und Unterstützung für zusätzliche Farbschemata.
-##### Statistik:
-{: .no_toc }
-Neue Konfigurationsoptionen für die Anzeige von Mittelwerten in Legenden und Diagrammen.
+Aktualisierte Keycloak-JS-Bibliothek für Kompatibilität mit Keycloak-Versionen > 25.0.
 
 ---
 
@@ -308,24 +447,25 @@ Neue Konfigurationsoptionen für die Anzeige von Mittelwerten in Legenden und Di
 
 #### Neue Features
 {: .no_toc }
+
 ##### Erreichbarkeitsanalysen:
 {: .no_toc }
-Integration von Erreichbarkeits-Zonen direkt in die Hauptkarte und neue Kurzinformationen für Statistiken.
+Integration von Erreichbarkeits-Zonen direkt in die Hauptkarte, szenario-basierte Erreichbarkeitsanalyse mit Indikatorstatistik-Verschneidung für Versorgungsanalysen sowie spontaner Geo-/Adressdaten-Import (CSV mit Geocoding über OpenStreetMap/Nominatim; GeoJSON/ESRI Shapefile).
+
 ##### Metadaten-Tab:
 {: .no_toc }
-Umstrukturierung der Legende: Metadaten und verknüpfte Ressourcen befinden sich nun in einem eigenen Reiter.
+Umstrukturierte Legende: Metadaten, Klassifizierungsoptionen und verknüpfte Ressourcen befinden sich nun in eigenen Reitern.
+
 ##### Regionale Referenzwerte:
 {: .no_toc }
-Neue Benutzeroberfläche für den Vergleich mit regionalen Durchschnittswerten in Zeitreihen.
+Neue Benutzeroberfläche für den Vergleich mit regionalen Durchschnittswerten (Gesamtsumme, Mittelwert, nicht-zuordenbar) in Zeitreihen.
 
 #### Änderungen
 {: .no_toc }
-##### Karten-Interaktion:
-{: .no_toc }
-Anzeige von Informationstexten direkt in der Karte und Legende.
+
 ##### Technik-Update:
 {: .no_toc }
-Modernisierung der Basis-Technologien für eine zukunftssichere Anwendung.
+Modernisierung der Basis-Technologien (Leaflet, ag-Grid, weitere Bibliotheken) für eine zukunftssichere Anwendung.
 
 ---
 
@@ -336,15 +476,17 @@ Modernisierung der Basis-Technologien für eine zukunftssichere Anwendung.
 
 #### Neue Features
 {: .no_toc }
-##### Standard-Schnittstellen:
+
+##### OGC API – Features:
 {: .no_toc }
-Unterstützung für moderne Geodaten-Standards (OGC API Features) für Ressourcen und Raumeinheiten.
+Datenimport für Raumeinheiten, Georessourcen und Indikatoren unterstützt nun den OGC API – Features-Standard (setzt Importer API ab v3.2.0 voraus).
 
 #### Fehlerbehebungen
 {: .no_toc }
+
 ##### Stabilität:
 {: .no_toc }
-Allgemeine Fehlerbehebungen und Stabilitätsverbesserungen in der Kartenansicht.
+Fehlerbehebungen beim Löschen einzelner Georessourcen, bei partiellen Raumebenen-Updates und bei der Vergabe von Publisher-Rollen.
 
 ---
 
@@ -355,21 +497,25 @@ Allgemeine Fehlerbehebungen und Stabilitätsverbesserungen in der Kartenansicht.
 
 #### Neue Features
 {: .no_toc }
+
 ##### Rollenmanagement:
 {: .no_toc }
-Umstellung der Berechtigungsverwaltung auf ein effizientes Daten-Gitter (RBAC Grid) mit Auswahlfeldern.
+Umstellung der Berechtigungsverwaltung auf ein tabellarisches RBAC-Grid mit Checkboxen für lesen, bearbeiten und löschen je Datensatz und Organisationseinheit.
+
 ##### Navigation:
 {: .no_toc }
-Neue Klick-Interaktionen für direktes Springen in der Ressourcen-Verwaltung über eine Fortschrittsanzeige.
-##### Geokodierung:
+Klickbare Fortschrittsbalken für direktes Springen zwischen Verwaltungsmenü-Unterabschnitten.
+
+##### Reporting:
 {: .no_toc }
-Verbesserte Adresssuche und Geokodierung für eine präzisere Platzierung von Ressourcen.
+Template-basiertes Reporting mit konfigurierbarer Metadaten- und Indikatordaten-Befüllung; Isochronen-Generierung um Georessourcen in Berichten.
 
 #### Fehlerbehebungen
 {: .no_toc }
+
 ##### Skripting-Logik:
 {: .no_toc }
-Verfeinerung der Handhabung von fehlenden Werten und Optimierung mathematischer Grundlagen für Diagramme.
+Korrekte Behandlung von fehlenden Werten in Berechnungs-Skripten (Quotient, Prozent, Promille, Multiplikation, Division) sowie Optimierung mathematischer Grundlagen für Diagramme.
 
 ---
 
@@ -380,24 +526,14 @@ Verfeinerung der Handhabung von fehlenden Werten und Optimierung mathematischer 
 
 #### Neue Features
 {: .no_toc }
+
+##### Rechteverwaltung:
+{: .no_toc }
+Grundlegende Erweiterung des Rechtesystems mit vier Rollen pro Organisation (Betrachter, Bearbeiter, Herausgeber, Ersteller). Nutzerverwaltung erfolgt nun vollständig über Keycloak. Alle Backend-Dienste sind Keycloak-gesichert.
+
 ##### Erreichbarkeits-Analysen (Beta):
 {: .no_toc }
-Erster Entwurf für Erreichbarkeits-Zonen und Analysen interessanter Orte (POI) inklusive Puffer-Zonen.
-##### Barrierefreiheit:
-{: .no_toc }
-Erste Beta-Phase für verbesserte Zugänglichkeit der Benutzeroberfläche.
-##### Berechtigungskonzept:
-{: .no_toc }
-Einführung des initialen rollenbasierten Zugriffskontrollmodells (RBAC).
-
-#### Änderungen
-{: .no_toc }
-##### Authentifizierung:
-{: .no_toc }
-Integration von Keycloak zur zentralen Benutzerverwaltung und automatischer Abruf der Sicherheitskonfiguration.
-##### Performance:
-{: .no_toc }
-Optimierung der Ladegeschwindigkeit durch Auslagerung großer Software-Bibliotheken.
+Erste Beta-Phase für Erreichbarkeits-Zonen, POI-Analysen und Puffer-Zonen. Geocoding-Prototyp für adressbasierte POI-Imports über OpenStreetMap/Nominatim.
 
 ---
 
@@ -408,6 +544,7 @@ Optimierung der Ladegeschwindigkeit durch Auslagerung großer Software-Bibliothe
 
 #### Neue Features
 {: .no_toc }
+
 ##### ZIP-Export:
 {: .no_toc }
 Funktion zum Herunterladen von Indikatordaten als Archiv inklusive Metadaten.
@@ -421,12 +558,14 @@ Funktion zum Herunterladen von Indikatordaten als Archiv inklusive Metadaten.
 
 #### Neue Features
 {: .no_toc }
+
 ##### Skriptverwaltung:
 {: .no_toc }
 Erweiterungen in der administrativen Verwaltung von Berechnungs-Skripten.
 
 #### Änderungen
 {: .no_toc }
+
 ##### Metadaten-Caching:
 {: .no_toc }
 Implementierung einer Zwischenspeicherung für Metadaten zur Beschleunigung der Anzeige.
@@ -440,6 +579,7 @@ Implementierung einer Zwischenspeicherung für Metadaten zur Beschleunigung der 
 
 #### Änderungen
 {: .no_toc }
+
 ##### Job-Monitoring:
 {: .no_toc }
 Verbesserte Übersicht laufender Hintergrundprozesse mit Statusanzeigen.
@@ -453,6 +593,7 @@ Verbesserte Übersicht laufender Hintergrundprozesse mit Statusanzeigen.
 
 #### Neue Features
 {: .no_toc }
+
 ##### Suche & Filter:
 {: .no_toc }
 Einführung einer globalen Suchfunktion für alle Datentabellen.
@@ -466,15 +607,17 @@ Einführung einer globalen Suchfunktion für alle Datentabellen.
 
 #### Neue Features
 {: .no_toc }
+
 ##### Geführte Tour:
 {: .no_toc }
-Einführung einer interaktiven Einführung für neue Nutzer*innen.
+Einführung einer interaktiven Einführung für neue Nutzerinnen und Nutzer.
 
 #### Änderungen
 {: .no_toc }
+
 ##### Tabellen-Migration:
 {: .no_toc }
-Umstellung der zentralen Übersichts-Tabellen auf ag-grid für verbesserte Performance.
+Umstellung der zentralen Übersichts-Tabellen auf ag-Grid für verbesserte Performance bei großen Datenmengen.
 
 ---
 
@@ -485,6 +628,7 @@ Umstellung der zentralen Übersichts-Tabellen auf ag-grid für verbesserte Perfo
 
 #### Neue Features
 {: .no_toc }
+
 ##### Mapping-Grundlagen:
 {: .no_toc }
-Erster Prototyp der Karten-Engine (Leaflet Integration) mit Fokus auf dynamischem Styling von Geodaten.
+Erster Prototyp der Karten-Engine (Leaflet-Integration) mit Fokus auf dynamischem Styling von Geodaten.

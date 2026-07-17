@@ -4,6 +4,20 @@
 # lowercase, replace spaces with hyphens. Example: "1.1.3 (Juli 2026)" → "113-juli-2026".
 # Add new entries at the TOP of this list when a version is released.
 
+- component: "Web-Client"
+  version: "5.1.4"
+  date: 2026-07-17
+  page: "/releases/web-client.html"
+  anchor: "514-17072026"
+  summary: "Fehlerbehebung bei der Filterung von Indikatorwerten bei unterschiedlichen Genauigkeitseinstellungen"
+
+- component: "Web-Client"
+  version: "4.4.4"
+  date: 2026-07-17
+  page: "/releases/web-client.html"
+  anchor: "444-17072026"
+  summary: "Fehlerbehebung bei der Filterung von Indikatorwerten bei unterschiedlichen Genauigkeitseinstellungen"
+
 - component: "Keycloak"
   version: "26.6.4"
   date: 2026-07-16
@@ -52,6 +66,13 @@
   page: "/releases/processes-api.html"
   anchor: "112-09062026"
   summary: "Korrektur des Raumeinheiten-Exports und Einführung automatisierter Changelog-Erstellung"
+
+- component: "Web-Client"
+  version: "5.1.2"
+  date: 2026-05-27
+  page: "/releases/web-client.html"
+  anchor: "512-27052026"
+  summary: "Adresssuche nun für Adressen außerhalb Deutschlands und weitere Sprachen konfigurierbar"
 
 - component: "Web-Client"
   version: "4.4.2"
@@ -138,11 +159,25 @@
   summary: "Neue Methodik für automatisierte Indikatoren-Fortschreibung und asynchrones Reporting-Konzept"
 
 - component: "Web-Client"
-  version: "4.3.0 – 4.3.5"
+  version: "4.3.3 - 4.3.5"
   date: 2026-03-24
   page: "/releases/web-client.html"
-  anchor: "430---435-24032026"
-  summary: "Neue Benutzeroberfläche für Raumebenen-Aggregation und dynamische Datumsbeschriftungen"
+  anchor: "433---435-24032026"
+  summary: "Processes API Integration in die Skriptverwaltung und Verbesserungen der Jenks-Klassifizierung"
+
+- component: "Web-Client"
+  version: "4.3.2"
+  date: 2026-01-12
+  page: "/releases/web-client.html"
+  anchor: "432-12012026"
+  summary: "Fehlerbehebung bei der Batch-Aktualisierung mit neuen Importer-Aggregationsoptionen"
+
+- component: "Web-Client"
+  version: "4.3.0 - 4.3.1"
+  date: 2025-12-11
+  page: "/releases/web-client.html"
+  anchor: "430---431-11122025"
+  summary: "Automatische Datenaggregation beim Import für höhere Raumebenen"
 
 - component: "Processes API"
   version: "1.0.1"
