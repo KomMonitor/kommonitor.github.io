@@ -103,6 +103,20 @@
   summary: "Umfangreiche Verbesserungen des Reporting Tools mit beschleunigter Vorschau"
 
 - component: "Importer"
+  version: "4.2.3"
+  date: 2026-07-29
+  page: "/releases/importer.html"
+  anchor: "423-29072026"
+  summary: "Neue Proxy-Konfigurationsvorlage und konfigurierbare Non-Proxy-Host-Ausnahmen"
+
+- component: "Importer"
+  version: "4.2.2"
+  date: 2026-06-03
+  page: "/releases/importer.html"
+  anchor: "422-03062026"
+  summary: "Interne Überarbeitung des Build-Systems und Einrichtung der automatisierten Changelog-Erstellung"
+
+- component: "Importer"
   version: "4.2.1"
   date: 2026-05-05
   page: "/releases/importer.html"
@@ -318,3 +332,31 @@
   page: "/releases/keycloak.html"
   anchor: "2506-26112024"
   summary: "Initialer Release der KomMonitor Keycloak-Erweiterungen mit Dockerfile und CI-Workflows"
+
+- component: "Importer"
+  version: "2.0.6 & 2.0.7"
+  date: 2023-08-02
+  page: "/releases/importer.html"
+  anchor: "206--207-02082023"
+  summary: "Umstieg auf JDK 17 als Kompilier- und Laufzeitumgebung und automatisierte CVE-Scans"
+
+- component: "Importer"
+  version: "2.0.5"
+  date: 2023-06-26
+  page: "/releases/importer.html"
+  anchor: "205-26062023"
+  summary: "Fehlerbehebung: Leere Spaltenkopf-Zellen in CSV/Excel brechen den Import nicht mehr ab"
+
+- component: "Importer"
+  version: "2.0.3"
+  date: 2023-03-03
+  page: "/releases/importer.html"
+  anchor: "203-03032023"
+  summary: "Neue Docker Compose Konfiguration für schnellen Einstieg und konfigurierbarer Swagger-UI-Host"
+
+- component: "Importer"
+  version: "1.2.2"
+  date: 2022-02-07
+  page: "/releases/importer.html"
+  anchor: "122-07022022"
+  summary: "Log4j auf Version 2.17.1 aktualisiert zur Behebung kritischer Sicherheitslücken"

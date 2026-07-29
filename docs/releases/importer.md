@@ -3,7 +3,7 @@ layout: default
 title: Importer
 parent: Release Info
 nav_order: 2
-date: 2026-05-05
+date: 2026-07-29
 description: Release-Informationen für die KomMonitor Importer API
 ---
 
@@ -24,6 +24,34 @@ Hier finden Sie eine detaillierte Übersicht der wichtigsten Neuerungen, Fehlerb
 ---
 
 ## Version 4.2.x
+### 4.2.3 (29.07.2026)
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+##### Proxy-Konfigurationsvorlage:
+{: .no_toc }
+Eine neue Vorlagendatei für Proxy-Einstellungen erleichtert die Konfiguration von Netzwerk-Proxys in Deployment-Umgebungen.
+
+#### Änderungen
+{: .no_toc }
+##### Non-Proxy-Einstellungen:
+{: .no_toc }
+Bestimmte Hosts lassen sich nun explizit von der Proxy-Weiterleitung ausschließen. Die zuvor fest kodierten Ausnahmen wurden entfernt und sind nun flexibel konfigurierbar.
+
+##### Build-System:
+{: .no_toc }
+Einführung von git-cliff zur automatisierten Changelog-Erstellung und Anpassung des Maven-Release-Build-Prozesses.
+
+### 4.2.2 (03.06.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+##### Internes Build-System:
+{: .no_toc }
+Interne Überarbeitung der POM-Konfiguration und initiale Einrichtung der git-cliff-Konfiguration für den Release-Prozess. Keine funktionalen Änderungen für Anwender.
+
 ### 4.2.1 (05.05.2026)
 {: .no_toc }
 
@@ -198,14 +226,31 @@ Vollständige Migration auf Spring Boot 3 und Java 17 für verbesserte Sicherhei
 ---
 
 ## Version 2.0.x
-### 2.0.7 (02.08.2023)
+### 2.0.6 & 2.0.7 (02.08.2023)
 {: .no_toc }
 
 #### Änderungen
 {: .no_toc }
-##### Image-Optimierung:
+
+##### Java-Upgrade:
 {: .no_toc }
-Das Java-Laufzeit-Image wurde optimiert, um den Ressourcenverbrauch zu senken und die Startzeit zu verkürzen.
+Umstieg auf JDK 17 als Kompilier- und Laufzeitumgebung für verbesserte Sicherheit und eine modernere Laufzeitbasis.
+
+##### CI-Pipeline:
+{: .no_toc }
+Automatisierte CVE-Sicherheits-Scans wurden in die Build-Pipeline integriert.
+
+### 2.0.5 (26.06.2023)
+{: .no_toc }
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### CSV/Excel-Import:
+{: .no_toc }
+Leere Spaltenkopf-Zellen in CSV- und Excel-Dateien verursachen beim Import keinen Fehler mehr und werden korrekt übersprungen.
+
+---
 
 ### 2.0.4 (29.03.2023)
 {: .no_toc }
@@ -216,14 +261,40 @@ Das Java-Laufzeit-Image wurde optimiert, um den Ressourcenverbrauch zu senken un
 {: .no_toc }
 Unterstützung für Netzwerk-Proxys bei Geokodierungs-Anfragen wurde hinzugefügt.
 
-### 2.0.1 (07.11.2022)
+### 2.0.3 (03.03.2023)
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### Entwicklungs-Setup:
+{: .no_toc }
+Neue Docker Compose Konfiguration für einen schnellen lokalen Start des Importers.
+
+#### Änderungen
+{: .no_toc }
+
+##### Swagger-UI:
+{: .no_toc }
+Der Host für die Swagger-UI-Oberfläche ist nun konfigurierbar.
+
+---
+
+### 2.0.1 & 2.0.2 (07.11.2022)
 {: .no_toc }
 
 #### Neue Features
 {: .no_toc }
 ##### Adress-Details:
 {: .no_toc }
-Zusätzliche Adressinformationen bei der Geokodierung verbessern die Genauigkeit der räumlichen Zuordnung.
+Zusätzliche Adressinformationen (Geocoderank, Beschreibung) verbessern die Genauigkeit der räumlichen Zuordnung bei der Geokodierung. Shapefiles können nun auch als ZIP-Archiv mit flacher Ordnerstruktur importiert werden.
+
+#### Änderungen
+{: .no_toc }
+
+##### Abhängigkeiten:
+{: .no_toc }
+Die Keycloak-Adapter-Bibliothek wurde auf eine aktuelle Version aktualisiert.
 
 ### 2.0.0 (24.07.2022)
 {: .no_toc }
@@ -241,6 +312,19 @@ Daten können nun direkt aus Excel-Dateien importiert werden.
 ---
 
 ## Version 1.2.x
+
+### 1.2.2 (07.02.2022)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Sicherheits-Update:
+{: .no_toc }
+Log4j wurde auf Version 2.17.1 aktualisiert, um bekannte kritische Sicherheitslücken vollständig zu schließen.
+
+---
+
 ### 1.2.1 (17.12.2021)
 {: .no_toc }
 

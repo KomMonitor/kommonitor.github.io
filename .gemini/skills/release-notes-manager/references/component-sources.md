@@ -15,7 +15,7 @@ This reference maps KomMonitor components to their remote changelog locations an
 
 ## Importer API
 - **GitHub Repo:** [kommonitor-importer](https://github.com/KomMonitor/kommonitor-importer)
-- **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/kommonitor-importer/refs/heads/develop/CHANGELOG.md`
+- **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/kommonitor-importer/refs/heads/master/CHANGELOG.md`
 - **Local File:** `docs/releases/importer.md`
 
 ## Processing Scheduler
