@@ -3,7 +3,7 @@ layout: default
 title: Web-Client
 parent: Release Info
 nav_order: 1
-date: 2026-07-17
+date: 2026-08-10
 description: Release-Informationen für den KomMonitor Web-Client
 ---
 
@@ -24,6 +24,29 @@ Hier finden Sie eine detaillierte Übersicht der wichtigsten Neuerungen, Verbess
 ---
 
 ## Version 5.1.x
+
+### 5.1.5 (10.08.2026)
+{: .no_toc }
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Choroplethenkarte-Legende:
+{: .no_toc }
+Ein fehlerhafter unbegrenzter Legendeneintrag in Choroplethenkarten wurde behoben, der auftrat, wenn keine negativen Werte im Datensatz vorhanden waren.
+
+##### Zeitreihen-Berichte:
+{: .no_toc }
+Inkonsistente Darstellungen in Zeitreihendiagrammen, die bei nicht chronologisch sortierten Zeitstempeln auftreten konnten, wurden korrigiert.
+
+#### Änderungen
+{: .no_toc }
+
+##### Zeitreihen- und Boxplot-Diagramme im Berichtswesen:
+{: .no_toc }
+Die Übersichtsdiagramme für Zeitreihen und Boxplots in Berichten wurden verbessert. Standardmäßig werden nun maximal 5 Flächen pro Übersichtsdiagramm angezeigt, um die Lesbarkeit zu steigern.
+
+---
 
 ### 5.1.4 (17.07.2026)
 {: .no_toc }

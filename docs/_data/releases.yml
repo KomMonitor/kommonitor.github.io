@@ -5,6 +5,13 @@
 # Add new entries at the TOP of this list when a version is released.
 
 - component: "Web-Client"
+  version: "5.1.5"
+  date: 2026-08-10
+  page: "/releases/web-client.html"
+  anchor: "515-10082026"
+  summary: "Fehlerbehebungen bei Choroplethenkarten-Legende und Zeitreihendiagrammen sowie verbesserte Berichts-Übersichtsdiagramme"
+
+- component: "Web-Client"
   version: "5.1.4"
   date: 2026-07-17
   page: "/releases/web-client.html"
