@@ -150,6 +150,27 @@ Implementierung eines asynchronen Lade-Konzepts („Preview-First"): Berichtssei
 
 ## Version 4.4.x
 
+### 4.4.5 (10.08.2026)
+{: .no_toc }
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Choroplethenkarte-Legende:
+{: .no_toc }
+Ein fehlerhafter unbegrenzter Legendeneintrag in Choroplethenkarten wurde behoben, der auftrat, wenn keine negativen Werte im Datensatz vorhanden waren.
+
+##### Zeitreihen-Berichte:
+{: .no_toc }
+Inkonsistente Darstellungen in Zeitreihendiagrammen, die bei nicht chronologisch sortierten Zeitstempeln auftreten konnten, wurden korrigiert.
+
+#### Änderungen
+{: .no_toc }
+
+##### Zeitreihen- und Boxplot-Diagramme im Berichtswesen:
+{: .no_toc }
+Die Übersichtsdiagramme für Zeitreihen und Boxplots in Berichten wurden verbessert. Standardmäßig werden nun maximal 5 Flächen pro Übersichtsdiagramm angezeigt, um die Lesbarkeit zu steigern.
+
 ### 4.4.4 (17.07.2026)
 {: .no_toc }
 
