@@ -15,7 +15,7 @@
   version: "4.4.5"
   date: 2026-08-10
   page: "/releases/web-client.html"
-  anchor: "515-10082026"
+  anchor: "445-10082026"
   summary: "Fehlerbehebungen bei Choroplethenkarten-Legende und Zeitreihendiagrammen sowie verbesserte Berichts-Übersichtsdiagramme"
 
 - component: "Web-Client"
