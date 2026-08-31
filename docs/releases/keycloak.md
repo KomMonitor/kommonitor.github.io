@@ -3,7 +3,7 @@ layout: default
 title: Keycloak
 parent: Release Info
 nav_order: 9
-date: 2026-07-16
+date: 2026-08-31
 description: Release-Informationen für die KomMonitor Keycloak-Erweiterungen
 ---
 
@@ -20,6 +20,47 @@ Release Informationen für die KomMonitor Keycloak-Erweiterungen.
 {:toc}
 
 Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und technischen Optimierungen der KomMonitor Keycloak-Erweiterungen ab Version 25.0.6. Die Versionsnummern orientieren sich an der jeweils eingesetzten Keycloak-Basisversion (z. B. 26.x entspricht Keycloak 26).
+
+---
+
+## Version 26.7.x
+{: .important }
+Bei einem Update auf eine Keycloak Version 26.7.x sind folgene Upgrading Hinweise zu beachten:
+[Migration zu Keycloak 26.7.x](../upgrading/keycloak.md#migration-zu-keycloak-267x)
+
+### 26.7.2 (31.08.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Keycloak-Version:
+{: .no_toc }
+Aktualisierung der eingesetzten Keycloak-Version auf den aktuellen Hotfix-Stand.
+
+---
+
+### 26.7.0 (16.07.2026)
+{: .no_toc }
+
+
+#### Neue Features
+{: .no_toc }
+
+##### Sicherheitsdokumentation:
+{: .no_toc }
+Eine SECURITY.md-Datei mit Hinweisen zur Meldung von Sicherheitslücken wurde zum Repository hinzugefügt.
+
+##### Automatische Abhängigkeitsaktualisierungen:
+{: .no_toc }
+Dependabot wurde konfiguriert, um Abhängigkeiten automatisch auf dem neuesten Stand zu halten.
+
+#### Änderungen
+{: .no_toc }
+
+##### Keycloak-Version:
+{: .no_toc }
+Aktualisierung der eingesetzten Keycloak-Version auf die aktuelle Minor-Version 26.7.
 
 ---
 

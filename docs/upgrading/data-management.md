@@ -1,8 +1,10 @@
 ---
-title: Migration Guide (en)
-nav_order: 7
+layout: default
+title: Data Management API
+parent: Upgrading
+nav_order: 1
 ---
-# Migration Guide
+# Upgrading Guide – Data Management API
 {: .no_toc }
 
 
@@ -294,4 +296,3 @@ Check in Keycloak that the `kommonitor-creator` role is associated with the `rea
 **401/403 error occurs during Web Client initialization (403 on /roles or 401 on /account)**
 If after logging in with a kommonitor-creator account the admin user interface of KomMonitor does not show any resource administration pages, then the user information details cannot be fetched properly from Keykloak.  
 Check in Keycloak that the `kommonitor-creator` role is associated with the account-related roles `manage-account` and `manage-account-links` and `view-profile`.
-

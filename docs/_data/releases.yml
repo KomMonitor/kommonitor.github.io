@@ -33,6 +33,20 @@
   summary: "Fehlerbehebung bei der Filterung von Indikatorwerten bei unterschiedlichen Genauigkeitseinstellungen"
 
 - component: "Keycloak"
+  version: "26.7.2"
+  date: 2026-08-31
+  page: "/releases/keycloak.html"
+  anchor: "2672-31082026"
+  summary: "Aktualisierung der eingesetzten Keycloak-Version auf den aktuellen Hotfix-Stand"
+
+- component: "Keycloak"
+  version: "26.7.0"
+  date: 2026-07-16
+  page: "/releases/keycloak.html"
+  anchor: "2670-16072026"
+  summary: "Aktualisierung auf Keycloak 26.7.0 sowie neue Sicherheitsdokumentation und Dependabot-Konfiguration"
+
+- component: "Keycloak"
   version: "26.6.4"
   date: 2026-07-16
   page: "/releases/keycloak.html"
