@@ -4,7 +4,8 @@ This reference maps KomMonitor components to their remote changelog locations an
 
 ## Web-Client
 - **GitHub Repo:** [web-client](https://github.com/KomMonitor/web-client)
-- **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/web-client/refs/heads/master/CHANGELOG.md`
+- **Changelog URL for version 5 (Raw):** `https://raw.githubusercontent.com/KomMonitor/web-client/refs/heads/master/CHANGELOG.md`
+- **Changelog URL for version 4 (Raw):** `https://raw.githubusercontent.com/KomMonitor/web-client/refs/heads/version/4/CHANGELOG.md`
 - **Other Sources:** `https://raw.githubusercontent.com/KomMonitor/web-client/refs/heads/master/app/components/kommonitorUserInterface/kommonitorControls/versionInfo/version-info.template.html`
 - **Local File:** `docs/releases/web-client.md`
 

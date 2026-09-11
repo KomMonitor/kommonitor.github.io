@@ -5,6 +5,13 @@
 # Add new entries at the TOP of this list when a version is released.
 
 - component: "Web-Client"
+  version: "4.4.6"
+  date: 2026-09-10
+  page: "/releases/web-client.html"
+  anchor: "446-10092026"
+  summary: "Verbesserte Klassifizierungslogik mit automatischer Anpassung bei zu wenigen Indikatorwerten"
+
+- component: "Web-Client"
   version: "5.1.5"
   date: 2026-08-10
   page: "/releases/web-client.html"

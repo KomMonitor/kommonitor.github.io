@@ -3,7 +3,7 @@ layout: default
 title: Web-Client
 parent: Release Info
 nav_order: 1
-date: 2026-08-10
+date: 2026-09-10
 description: Release-Informationen für den KomMonitor Web-Client
 ---
 
@@ -149,6 +149,25 @@ Implementierung eines asynchronen Lade-Konzepts („Preview-First"): Berichtssei
 ---
 
 ## Version 4.4.x
+
+### 4.4.6 (10.09.2026)
+{: .no_toc }
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Klassifizierung:
+{: .no_toc }
+Wenn die Anzahl der Indikatorwerte kleiner oder gleich der gewählten Klassenanzahl ist, werden die Klassen nun automatisch angepasst und Anwender per Hinweis informiert. Jenks- und Quantil-Methoden werden dabei korrekt als nicht anwendbar erkannt.
+
+#### Änderungen
+{: .no_toc }
+
+##### Klassifizierungsoptionen bei Spezialanzeige-Modi:
+{: .no_toc }
+Klassifizierungsoptionen werden nun korrekt deaktiviert, wenn aufgrund der Datenlage (z.B. zu wenige eindeutige Werte) keine sinnvolle Klassifizierung möglich ist. Spezielle Anzeigemodi wie Balance-Darstellung oder Maßnahmen-Indikatoren werden dabei korrekt berücksichtigt.
+
+---
 
 ### 4.4.5 (10.08.2026)
 {: .no_toc }
