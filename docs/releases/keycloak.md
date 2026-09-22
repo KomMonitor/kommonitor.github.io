@@ -28,7 +28,7 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 Bei einem Update auf eine Keycloak Version 26.7.x sind folgene Upgrading Hinweise zu beachten:
 [Migration zu Keycloak 26.7.x](../upgrading/keycloak.md#migration-zu-keycloak-267x)
 
-### 26.7.2 (31.08.2026)
+### 26.7.4 (22.09.2026)
 {: .no_toc }
 
 #### Änderungen
@@ -36,7 +36,18 @@ Bei einem Update auf eine Keycloak Version 26.7.x sind folgene Upgrading Hinweis
 
 ##### Keycloak-Version:
 {: .no_toc }
-Aktualisierung der eingesetzten Keycloak-Version auf den aktuellen Hotfix-Stand.
+Aktualisierung der eingesetzten Keycloak-Version.
+
+### 26.7.3 (22.09.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+Anpassung der CI Image Build Pipeline
+
+##### Keycloak-Version:
+{: .no_toc }
+Aktualisierung der eingesetzten Keycloak-Version..
 
 ---
 
