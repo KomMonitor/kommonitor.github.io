@@ -3,7 +3,7 @@ layout: default
 title: Web-Client
 parent: Release Info
 nav_order: 1
-date: 2026-09-10
+date: 2026-10-01
 description: Release-Informationen für den KomMonitor Web-Client
 ---
 
@@ -24,6 +24,18 @@ Hier finden Sie eine detaillierte Übersicht der wichtigsten Neuerungen, Verbess
 ---
 
 ## Version 5.1.x
+
+### 5.1.6 (01.10.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Hintergrundkarte für POI-Bearbeitung:
+{: .no_toc }
+Beim Bearbeiten von Punkt-Geodaten (POI) wird nun OpenStreetMap (OSM) statt CartoDB als Hintergrundkarte verwendet.
+
+---
 
 ### 5.1.5 (10.08.2026)
 {: .no_toc }
@@ -149,6 +161,18 @@ Implementierung eines asynchronen Lade-Konzepts („Preview-First"): Berichtssei
 ---
 
 ## Version 4.4.x
+
+### 4.4.7 (01.10.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Hintergrundkarte für POI-Bearbeitung:
+{: .no_toc }
+Beim Bearbeiten von Punkt-Geodaten (POI) wird nun OpenStreetMap (OSM) statt CartoDB als Hintergrundkarte verwendet.
+
+---
 
 ### 4.4.6 (10.09.2026)
 {: .no_toc }

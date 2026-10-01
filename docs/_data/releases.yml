@@ -19,6 +19,20 @@
   summary: "Aktualisierung der eingesetzten Keycloak-Version"
 
 - component: "Web-Client"
+  version: "5.1.6"
+  date: 2026-10-01
+  page: "/releases/web-client.html"
+  anchor: "516-01102026"
+  summary: "Wechsel der Hintergrundkarte für die POI-Bearbeitung von CartoDB zu OpenStreetMap"
+
+- component: "Web-Client"
+  version: "4.4.7"
+  date: 2026-10-01
+  page: "/releases/web-client.html"
+  anchor: "447-01102026"
+  summary: "Wechsel der Hintergrundkarte für die POI-Bearbeitung von CartoDB zu OpenStreetMap"
+
+- component: "Web-Client"
   version: "4.4.6"
   date: 2026-09-10
   page: "/releases/web-client.html"
