@@ -5,6 +5,41 @@
 # Add new entries at the TOP of this list when a version is released.
 
 - component: "Keycloak"
+  version: "26.7.2"
+  date: 2026-08-31
+  page: "/releases/keycloak.html"
+  anchor: "2672-31082026"
+  summary: "Aktualisierung der Keycloak-Hotfix-Version sowie Abhängigkeitsaktualisierungen durch Dependabot"
+
+- component: "Data Management"
+  version: "5.2.6"
+  date: 2026-06-17
+  page: "/releases/data-management.html"
+  anchor: "526-17062026"
+  summary: "Erweiterter Proxy-Support mit globalem Proxy-Selector für die Java-Netzwerkschicht"
+
+- component: "Spatial Data Processor"
+  version: "1.1.1"
+  date: 2026-06-15
+  page: "/releases/spatial-data-processor.html"
+  anchor: "111-15062026"
+  summary: "Spring Boot 3 Migration und optionale Proxy-Unterstützung für die Keycloak-Kommunikation"
+
+- component: "Data Management"
+  version: "5.2.5"
+  date: 2026-06-15
+  page: "/releases/data-management.html"
+  anchor: "525-15062026"
+  summary: "Fehlerbehebung bei der Proxy-Konfiguration für Keycloak-Benutzergruppenverwaltung"
+
+- component: "Data Management"
+  version: "5.2.4"
+  date: 2026-06-08
+  page: "/releases/data-management.html"
+  anchor: "524-08062026"
+  summary: "Verfeinerung der Proxy-Konfiguration für den RestEasy-Client bei Keycloak-Admin-Anfragen"
+
+- component: "Keycloak"
   version: "26.7.4"
   date: 2026-09-22
   page: "/releases/keycloak.html"

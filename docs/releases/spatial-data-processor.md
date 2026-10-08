@@ -3,7 +3,7 @@ layout: default
 title: Spatial Data Processor
 parent: Release Info
 nav_order: 5
-date: 2025-03-01
+date: 2026-06-15
 description: Release-Informationen für den KomMonitor Spatial Data Processor
 ---
 
@@ -24,6 +24,34 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 ---
 
 ## Version 1.1.x
+
+### 1.1.1 (15.06.2026)
+{: .no_toc }
+
+#### Neue Features
+{: .no_toc }
+
+##### Proxy-Unterstützung:
+{: .no_toc }
+Optionale Proxy-Logik für die Keycloak-Kommunikation via Proxy. Die interne Kommunikation zur Data Management API bleibt dabei direkt ohne Proxy-Routing erhalten.
+
+#### Änderungen
+{: .no_toc }
+
+##### Spring Boot 3 Migration:
+{: .no_toc }
+Vollständige Migration auf Spring Boot 3 inklusive Aktualisierung der Sicherheitskonfiguration und Anpassung der Java-Importe.
+
+##### Abhängigkeiten:
+{: .no_toc }
+Aktualisierung der Data Management Modelle und der API-Spezifikation auf den aktuellen Stand.
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Abhängigkeitskonflikt:
+{: .no_toc }
+Behebung eines Versionskonflikts zwischen `httpok3` und `logging-interceptor`.
 
 ### 1.1.0 (10.03.2025)
 {: .no_toc }

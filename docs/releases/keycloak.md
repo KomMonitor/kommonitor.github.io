@@ -3,7 +3,7 @@ layout: default
 title: Keycloak
 parent: Release Info
 nav_order: 9
-date: 2026-08-31
+date: 2026-09-22
 description: Release-Informationen für die KomMonitor Keycloak-Erweiterungen
 ---
 
@@ -48,6 +48,20 @@ Anpassung der CI Image Build Pipeline
 ##### Keycloak-Version:
 {: .no_toc }
 Aktualisierung der eingesetzten Keycloak-Version..
+
+### 26.7.2 (31.08.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Keycloak-Version:
+{: .no_toc }
+Aktualisierung der eingesetzten Keycloak-Hotfix-Version auf 26.7.2.
+
+##### Abhängigkeitsaktualisierungen:
+{: .no_toc }
+Automatische Aktualisierung von CI/CD-Abhängigkeiten (Docker Actions, Sigstore Cosign) sowie Maven-Bibliotheken (jboss-logging) durch Dependabot.
 
 ---
 

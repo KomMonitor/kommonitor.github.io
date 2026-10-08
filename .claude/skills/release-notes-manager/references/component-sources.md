@@ -11,7 +11,7 @@ This reference maps KomMonitor components to their remote changelog locations an
 
 ## Data Management API
 - **GitHub Repo:** [data-management](https://github.com/KomMonitor/data-management)
-- **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/data-management/refs/heads/develop/CHANGELOG.md`
+- **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/data-management/refs/heads/master/CHANGELOG.md`
 - **Local File:** `docs/releases/data-management.md`
 
 ## Importer API
@@ -26,7 +26,7 @@ This reference maps KomMonitor components to their remote changelog locations an
 
 ## Spatial Data Processor
 - **GitHub Repo:** [spatial-data-processor](https://github.com/KomMonitor/spatial-data-processor)
-- **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/spatial-data-processor/refs/heads/develop/CHANGELOG.md`
+- **Changelog URL (Raw):** `https://raw.githubusercontent.com/KomMonitor/spatial-data-processor/refs/heads/master/CHANGELOG.md`
 - **Local File:** `docs/releases/spatial-data-processor.md`
 
 ## Client Config API
