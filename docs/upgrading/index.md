@@ -14,5 +14,6 @@ Schritt-für-Schritt-Anleitungen für das Upgrading einzelner KomMonitor-Kompone
 
 | Komponente | Beschreibung |
 | :--- | :--- |
+| **Web Client** | Upgrading des Web Clients |
 | **Data Management API** | Upgrading der Data Management API |
 | **Keycloak** | Upgrading der KomMonitor-spezifischen Keycloak-Konfiguration |
