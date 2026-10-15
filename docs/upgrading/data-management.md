@@ -2,7 +2,7 @@
 layout: default
 title: Data Management API
 parent: Upgrading
-nav_order: 1
+nav_order: 2
 ---
 # Upgrading Guide – Data Management API
 {: .no_toc }

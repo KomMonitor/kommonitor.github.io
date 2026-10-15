@@ -17,49 +17,112 @@ nav_order: 1
 ---
 
 # Migration zum Web Client 5.x.x
-Ab Version 26.7.0 von Keycloak erfolgt beim Aufruf des OAuth2 Token Introspection Endpunkts eine
-Validierung des Token Audiences Claims ([https://www.keycloak.org/docs/26.7.0/upgrading/#token-introspection-now-validates-audience-claim](https://www.keycloak.org/docs/26.7.0/upgrading/#token-introspection-now-validates-audience-claim)).
+Die nachfolgenden Migrationsschritte sind für verschiedene KomMonitor Komponenten notwendig, um einen Wechsel auf
+KomMonitor Web Client Version 5 zu vollziehen.
 
-Diese Änderung des Verhaltens führt zu Problemen bei der Kommunikation des Web Clients mit der Client 
-Config API und der Processes API. Beide Komponenten rufen den Token Introspection Endpunkt mit dem 
-Token, der für den Web Client ausgestellt wurde, auf, wodurch ein *INTROSPECT_TOKEN_ERROR* auftritt. 
 
-Nach einem Update auf eine Keycloak Version > 26.7.0 müssen daher folgende Anpassungen an der Keycloak Konfiguration über die Keycloak Administration Console vorgenommen werden:
+## Processes API
 
-**1) Audience Client Scope erstellen**
-1. Öffnen des *"Client scopes"* Bereichs
-2. Neuen Client Scope über den *"Create client scope"* Button erstellen
-3. Konfiguration des Client Scopes wie folgt:
-    * *Name*: `audience-scope`
-    * *Type*: `Default`
-    * Für alle anderen Felder können die voreingestellten Werte übernommen werden
+Mit Version 5 von KomMonitor findet ein Wechsel der Prozessierungsumgebung von KomMonitor statt, die Verantwortlich für die Ausführung von
+Indikatoren-Skripten ist. Statt der bisherigen Komponenten “KomMonitor Processing Engine” und “KomMonitor Processing Scheduler” bilden nun
+die “KomMonitor Processes API” auf Basis des Python-basierten _pygeoapi_ Frameworks sowie die Open-Source Workflow Engine _Prefect_ die
+Basis für die neue Prozessierungsumgebung
 
-**2) Client Config Mapper hinzufügen**
-1. Wechsel zum Tab *"Mappers"* des soeben erstellten *"audience-scope"*
-2. Neuen Mapper über *"Configure a new mapper"* erstellen
-3. Auswahl von *"Audience"*
-4. Mapper Konfiguration:
-    * *Name*: `client-config-audience-mapper`
-    * *Included Client Audience*: `kommonitor-client-config`
-    * Für alle anderen Felder können die voreingestellten Werte übernommen werden
+**1) Docker Einrichtung**
 
-**3) Processes API Mapper hinzufügen**
-1. Weiterhin im Tab *"Mappers"* des soeben erstellten *"audience-scope"*
-2. Neuen Mapper über *"Add mapper" -> "By configuration"* erstellen
-3. Auswahl von *"Audience"*
-4. Mapper Konfiguration:
-    * *Name*: `processes-api-audience-mapper`
-    * *Included Client Audience*: `kommonitor-processes-api`
-    * Für alle anderen Felder können die voreingestellten Werte übernommen werden
+Ein Template zum Betrieb der neuen Komponenten als Docker Container wird unter [https://github.com/KomMonitor/docker/tree/master/prod/processing](https://github.com/KomMonitor/docker/tree/master/prod/processing) bereitgestellt. Das Docker Compose Setup sowie die `.env`\-Datei sind auf die jeweilige Betriebsumgebung anzupassen.
 
-**4) Audience Client Scope für Web Client hinterlegen**
-1. Öffnen des Clients *"Web Client" über "Clients" -> "kommonitor-web-client"*
-2. Öffnen des Tabs *"Client scopes"*
-3. Neuen Scope über *"Add client scope"* hinzufügen
-4. Auswahl des soeben erstellen *"audience-scope"*
-5. Hinzufügen über *"Add" -> "Default"*
+Weitere notwendige Konfigurationsdateien sind gemäß der in den Templates vorgegebenen Ordnerstruktur anzulegen, müssen jedoch nicht angepasst werden:
 
-Ob die Konfigurationsänderungen erfolgreich waren, kann geprüft werden, indem in der KomMonitor Admin
-UI unter *"Einstellungen" -> "Allgemeine Einstellungen"* der Button *"App-Konfiguration speichern"*
-angeklickt wird. Sollte diese Aktion fehlschlagen, muss die Konfiguration in Keycloak noch einmal
-überprüft werden.
+* [https://github.com/KomMonitor/docker/blob/master/config/processes-api/default-config.yml](https://github.com/KomMonitor/docker/blob/master/config/processes-api/default-config.yml)
+* [https://github.com/KomMonitor/docker/blob/master/config/processes-api.env](https://github.com/KomMonitor/docker/blob/master/config/processes-api.env)
+
+Die nicht mehr benötigten Dienste `kommonitor-processing-engine` und `kommonitor-processing-scheduler` können aus dem Docker Compose Setup
+für KomMonitor entfernt werden: [https://github.com/KomMonitor/docker/blob/master/prod/kommonitor/docker-compose.yml](https://github.com/KomMonitor/docker/blob/master/prod/kommonitor/docker-compose.yml) 
+
+**2) Proxy Einrichtung**
+
+Um die neue Processes API über das Internet oder Intranet erreichbar zu machen, sind Proxy Einstellungen zu ergänzen. Für den internen
+KomMonitor Proxy liegen folgende Templates bereit:
+
+* [https://github.com/KomMonitor/docker/blob/master/prod/nginx/docker-compose.yml](https://github.com/KomMonitor/docker/blob/master/prod/nginx/docker-compose.yml)
+* [https://github.com/KomMonitor/docker/blob/master/prod/nginx/templates/default.conf.template](https://github.com/KomMonitor/docker/blob/master/prod/nginx/templates/default.conf.template)
+
+Soll die Prefect UI ebenfalls über das Internet/Intranet erreichbar sein, sind folgende Templates zu verwenden:
+
+* [https://github.com/KomMonitor/docker/blob/master/prod/nginx/docker-compose.oauth2-proxy.yml](https://github.com/KomMonitor/docker/blob/master/prod/nginx/docker-compose.oauth2-proxy.yml)
+* [https://github.com/KomMonitor/docker/blob/master/prod/nginx/templates/oauth2-proxy.conf.template](https://github.com/KomMonitor/docker/blob/master/prod/nginx/templates/oauth2-proxy.conf.template)
+
+In diesem Setup sichert ein OAuth2-Proxy die Prefect UI über Keycloak ab.
+
+## Web Client Konfiguration
+Für den Web Client ist in der Admin UI unter _Einstellungen_ -> _Allgemeine Einstellungen_ der Parameter
+`window.__env.targetUrlToProcessesApi` zu ergänzen. Für diesen Parameter ist die URL, unter die Processes API im Internet/Intranet
+erreichbar sein wird zu setzen.
+
+Alternativ kann dieser Parameter direkt in die Konfigurationsdatei _./kommonitor/storage/config_server/webClientAppConfig.js_ gesetzt werden.
+Anschließend ist der "kommonitor-client-config" Container neu zu starten.
+
+
+## Keycloak Konfiguration
+
+Bestehende Keycloak Instanzen müssen über die Admin Console im Browser zur Nutzung durch die neuen Prozessierungskomponenten
+angepasst werden.
+
+**1) Processes API Client erstellen**
+
+1. Öffnen des “_Clients_” Bereich
+2. Neuen Client über den “_Create Client_” Button erstellen
+3. Konfiguration des Clients wie folgt (nicht benannte Felder können freigelassen oder mit den vorausgefüllten Standard-Werten
+belassen werden):
+    * General Settings
+        * _Client type_: `OpenID Connect`
+        * _Client ID_: `kommonitor-processes-api`
+        * _Name_: `KomMonitor Processes API`
+    * Capability Config
+        * _Client authentication_: `On`
+        * _Direct access grants_: `enabled`
+        * Service account roles: `enabled`
+    * Login settings
+        
+        Login Setting sind abhängig von der Umgebung, in der KomMonitor betrieben wird und der URL unter der KomMonitor erreichbar ist.
+        Angenommen die Processes API soll unter [https://demo.kommonitor.de/processes-api](https://demo.kommonitor.de/processes-api)
+        erreichbar sein, sind folgende Werte einzutragen:
+        
+        * _Valid redirect URIs_: `https://demo.kommonitor.de/processes-api/*`
+        * _Web origins_: [`https://demo.kommonitor.de`](https://demo.kommonitor.de)
+4. Mit Klick auf “Save” kann der Client angelegt werden
+5. Über den Tab “Credentials” das “Client Secret” kopieren und sicher abspeichern
+
+**2) Token Exchange Permissions anlegen**
+
+1. Öffnen des “_Clients_” Bereich
+2. Auswahl des “kommonitor-data-management” Clients
+3. Öffnen des “Permissions” Tab
+4. Aktivieren von “Permissions enabled”
+5. Aufruf der “token-exchange” Permission aus der “Permission list”
+6. Klick in Feld “Policies”, um neue Policy über “Create client policy” zu erstellen
+7. Auswahl “Client” als Policy Type
+8. Konfiguration der Policy
+    * _Name:_ `data-management-token-exchange`
+    * _Clients:_ `_kommonitor-processes-api_`
+    * _Logic:_ `_Positive_`
+9. Erneut Aufruf der “token-exchange” Permission für den “kommonitor-data-management” Client
+10. Auswahl der `data-management-token-exchange` Policy nach Klick ins Feld “Policies”
+11. Klick auf “Save”
+
+**3) Impersonate Permission anlegen**
+
+1. Öffnen des “Users” Bereich
+2. Öffnen des “Permissions” Tab
+3. Aktivieren von “Permissions enabled”
+4. Aufruf der “impersonate” Permission aus der “Permission list”
+5. Klick in Feld “Policies”, um neue Policy über “Create client policy” zu erstellen
+6. Auswahl “Client” als Policy Type
+7. Konfiguration der Policy
+    * _Name:_ `_kommonitor-processor-impersonator_`
+    * _Clients:_ `_kommonitor-processes-api_`
+    * _Logic:_ `_Positive_`
+8. Erneut Aufruf der “impersonate” Permission im Bereich “Users”
+9. Auswahl der `_kommonitor-processor-impersonator_` Policy nach Klick ins Feld “Policies”
+10. Klick auf “Save”

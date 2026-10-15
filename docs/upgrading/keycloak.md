@@ -2,7 +2,7 @@
 layout: default
 title: Keycloak
 parent: Upgrading
-nav_order: 2
+nav_order: 3
 ---
 
 # Upgrading Guide – Keycloak
