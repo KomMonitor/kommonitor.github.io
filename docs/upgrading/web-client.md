@@ -117,8 +117,8 @@ Standard-Werten belassen werden):
 7. Auswahl “Client” als Policy Type
 8. Konfiguration der Policy
     * _Name:_ `data-management-token-exchange`
-    * _Clients:_ `_kommonitor-processes-api_`
-    * _Logic:_ `_Positive_`
+    * _Clients:_ `kommonitor-processes-api`
+    * _Logic:_ `Positive`
 9. Erneut Aufruf der “token-exchange” Permission für den “kommonitor-data-management” Client
 10. Auswahl der `data-management-token-exchange` Policy nach Klick ins Feld “Policies”
 11. Klick auf “Save”
@@ -132,9 +132,9 @@ Standard-Werten belassen werden):
 5. Klick in Feld “Policies”, um neue Policy über “Create client policy” zu erstellen
 6. Auswahl “Client” als Policy Type
 7. Konfiguration der Policy
-    * _Name:_ `_kommonitor-processor-impersonator_`
-    * _Clients:_ `_kommonitor-processes-api_`
-    * _Logic:_ `_Positive_`
+    * _Name:_ `kommonitor-processor-impersonator`
+    * _Clients:_ `kommonitor-processes-api`
+    * _Logic:_ `Positive`
 8. Erneut Aufruf der “impersonate” Permission im Bereich “Users”
-9. Auswahl der `_kommonitor-processor-impersonator_` Policy nach Klick ins Feld “Policies”
+9. Auswahl der `kommonitor-processor-impersonator` Policy nach Klick ins Feld “Policies”
 10. Klick auf “Save”
