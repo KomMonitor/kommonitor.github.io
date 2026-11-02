@@ -4,6 +4,20 @@
 # lowercase, replace spaces with hyphens. Example: "1.1.3 (Juli 2026)" → "113-juli-2026".
 # Add new entries at the TOP of this list when a version is released.
 
+- component: "Web-Client"
+  version: "5.1.7"
+  date: 2026-10-23
+  page: "/releases/web-client.html"
+  anchor: "517-23102026"
+  summary: "Ausgewähltes Datum bleibt beim Indikatorwechsel erhalten, nginx-Basis-Image aktualisiert"
+
+- component: "Web-Client"
+  version: "4.4.8"
+  date: 2026-10-23
+  page: "/releases/web-client.html"
+  anchor: "448-23102026"
+  summary: "Ausgewähltes Datum bleibt beim Indikatorwechsel erhalten, nginx-Basis-Image aktualisiert"
+
 - component: "Keycloak"
   version: "26.7.2"
   date: 2026-08-31

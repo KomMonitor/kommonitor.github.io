@@ -3,7 +3,7 @@ layout: default
 title: Web-Client
 parent: Release Info
 nav_order: 1
-date: 2026-10-01
+date: 2026-10-23
 description: Release-Informationen für den KomMonitor Web-Client
 ---
 
@@ -24,6 +24,25 @@ Hier finden Sie eine detaillierte Übersicht der wichtigsten Neuerungen, Verbess
 ---
 
 ## Version 5.1.x
+
+### 5.1.7 (23.10.2026)
+{: .no_toc }
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Datumsauswahl bei Indikatorwechsel:
+{: .no_toc }
+Das zuletzt ausgewählte Datum wird beim Wechsel eines Indikators nun beibehalten. Falls das Datum im neuen Indikator nicht verfügbar ist, wird automatisch auf das nächstverfügbare Datum zurückgefallen.
+
+#### Änderungen
+{: .no_toc }
+
+##### Infrastruktur:
+{: .no_toc }
+Aktualisierung des nginx-Basis-Images auf die aktuelle Version.
+
+---
 
 ### 5.1.6 (01.10.2026)
 {: .no_toc }
@@ -161,6 +180,25 @@ Implementierung eines asynchronen Lade-Konzepts („Preview-First"): Berichtssei
 ---
 
 ## Version 4.4.x
+
+### 4.4.8 (23.10.2026)
+{: .no_toc }
+
+#### Fehlerbehebungen
+{: .no_toc }
+
+##### Datumsauswahl bei Indikatorwechsel:
+{: .no_toc }
+Das zuletzt ausgewählte Datum wird beim Wechsel eines Indikators nun beibehalten. Falls das Datum im neuen Indikator nicht verfügbar ist, wird automatisch auf das nächstverfügbare Datum zurückgefallen.
+
+#### Änderungen
+{: .no_toc }
+
+##### Infrastruktur:
+{: .no_toc }
+Aktualisierung des nginx-Basis-Images auf die aktuelle Version.
+
+---
 
 ### 4.4.7 (01.10.2026)
 {: .no_toc }
