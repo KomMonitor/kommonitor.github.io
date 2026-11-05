@@ -24,6 +24,7 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 ---
 
 ## Version 26.7.x
+
 {: .important }
 Bei einem Update auf eine Keycloak Version 26.7.x sind folgene Upgrading Hinweise zu beachten:
 [Migration zu Keycloak 26.7.x](../upgrading/keycloak.md#migration-zu-keycloak-267x)
