@@ -16,6 +16,20 @@ nav_order: 3
 
 ---
 
+# Update auf Keycloak 26.8.2
+Keycloak prüft nun ob, Access Tokens für Keycloak Admin API ausgelegt sind. Hierzu wurde der
+`kc-admin-api` scope eingeführt [https://www.keycloak.org/docs/latest/upgrading/index.html#admin-rest-api-now-enforces-an-audience-check](https://www.keycloak.org/docs/latest/upgrading/index.html#admin-rest-api-now-enforces-an-audience-check). 
+
+Da auch der KomMonitor Web Client (für angemeldete Usern mit den entsprechenden Rechten) mit der Keycloak
+Admin API kommuniziert, ist eine Anpassung der Keycloak Konfiguration über die Keycloak Administration Console notwendig:
+
+**1) kc-admin-api Scope für Web Client hinterlegen**
+1. Öffnen des Clients *"Web Client" über "Clients" -> "kommonitor-web-client"*
+2. Öffnen des Tabs *"Client scopes"*
+3. Neuen Scope über *"Add client scope"* hinzufügen
+4. Auswahl des *"kc-admin-api"* Scope
+5. Hinzufügen über *"Add" -> "Default"*
+
 # Migration zu Keycloak 26.7.x
 Ab Version 26.7.0 von Keycloak erfolgt beim Aufruf des OAuth2 Token Introspection Endpunkts eine
 Validierung des Token Audiences Claims ([https://www.keycloak.org/docs/26.7.0/upgrading/#token-introspection-now-validates-audience-claim](https://www.keycloak.org/docs/26.7.0/upgrading/#token-introspection-now-validates-audience-claim)).
