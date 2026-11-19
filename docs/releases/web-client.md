@@ -3,7 +3,7 @@ layout: default
 title: Web-Client
 parent: Release Info
 nav_order: 1
-date: 2026-10-23
+date: 2026-11-19
 description: Release-Informationen für den KomMonitor Web-Client
 ---
 
@@ -24,6 +24,18 @@ Hier finden Sie eine detaillierte Übersicht der wichtigsten Neuerungen, Verbess
 ---
 
 ## Version 5.1.x
+
+### 5.1.8 (19.11.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Infrastruktur:
+{: .no_toc }
+Patch-Release: Aktualisierung des Docker-Basis-Images von NGINX auf die aktuellste Version.
+
+---
 
 ### 5.1.7 (23.10.2026)
 {: .no_toc }
@@ -180,6 +192,18 @@ Implementierung eines asynchronen Lade-Konzepts („Preview-First"): Berichtssei
 ---
 
 ## Version 4.4.x
+
+### 4.4.9 (19.11.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Infrastruktur:
+{: .no_toc }
+Patch-Release: Aktualisierung des Docker-Basis-Images von NGINX auf die aktuellste Version.
+
+---
 
 ### 4.4.8 (23.10.2026)
 {: .no_toc }
