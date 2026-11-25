@@ -3,7 +3,7 @@ layout: default
 title: Spatial Data Processor
 parent: Release Info
 nav_order: 5
-date: 2026-06-15
+date: 2026-11-25
 description: Release-Informationen für den KomMonitor Spatial Data Processor
 ---
 
@@ -24,6 +24,30 @@ Hier finden Sie eine Übersicht der wichtigsten Neuerungen, Fehlerbehebungen und
 ---
 
 ## Version 1.1.x
+
+### 1.1.3 (25.11.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Infrastruktur:
+{: .no_toc }
+Aktualisierung des Eclipse Temurin Basis-Images auf die aktuelle Version.
+
+---
+
+### 1.1.2 (05.11.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Infrastruktur:
+{: .no_toc }
+Aktualisierung des Docker-Basis-Images auf die aktuelle Version (enthält Korrektur für CVE-2026-111497).
+
+---
 
 ### 1.1.1 (15.06.2026)
 {: .no_toc }

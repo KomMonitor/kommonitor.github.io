@@ -3,7 +3,7 @@ layout: default
 title: Importer
 parent: Release Info
 nav_order: 2
-date: 2026-07-29
+date: 2026-11-25
 description: Release-Informationen für die KomMonitor Importer API
 ---
 
@@ -24,6 +24,35 @@ Hier finden Sie eine detaillierte Übersicht der wichtigsten Neuerungen, Fehlerb
 ---
 
 ## Version 4.2.x
+
+### 4.2.5 (25.11.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Infrastruktur:
+{: .no_toc }
+Aktualisierung des Eclipse Temurin Basis-Images auf die aktuelle Version.
+
+---
+
+### 4.2.4 (05.11.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Infrastruktur:
+{: .no_toc }
+Aktualisierung des Docker-Basis-Images auf die aktuelle Version (enthält Korrektur für CVE-2026-111497).
+
+##### Abhängigkeiten:
+{: .no_toc }
+Entfernung einer doppelt deklarierten Abhängigkeit.
+
+---
+
 ### 4.2.3 (29.07.2026)
 {: .no_toc }
 

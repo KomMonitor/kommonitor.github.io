@@ -4,6 +4,48 @@
 # lowercase, replace spaces with hyphens. Example: "1.1.3 (Juli 2026)" → "113-juli-2026".
 # Add new entries at the TOP of this list when a version is released.
 
+- component: "Importer API"
+  version: "4.2.5"
+  date: 2026-11-25
+  page: "/releases/importer.html"
+  anchor: "425-25112026"
+  summary: "Aktualisierung des Eclipse Temurin Basis-Images auf die aktuelle Version"
+
+- component: "Data Management API"
+  version: "5.2.8"
+  date: 2026-11-25
+  page: "/releases/data-management.html"
+  anchor: "528-25112026"
+  summary: "Aktualisierung des Eclipse Temurin Basis-Images auf die aktuelle Version"
+
+- component: "Spatial Data Processor"
+  version: "1.1.3"
+  date: 2026-11-25
+  page: "/releases/spatial-data-processor.html"
+  anchor: "113-25112026"
+  summary: "Aktualisierung des Eclipse Temurin Basis-Images auf die aktuelle Version"
+
+- component: "Importer API"
+  version: "4.2.4"
+  date: 2026-11-05
+  page: "/releases/importer.html"
+  anchor: "424-05112026"
+  summary: "Basis-Image-Aktualisierung mit Korrektur für CVE-2026-111497 (libbrotli)"
+
+- component: "Data Management API"
+  version: "5.2.7"
+  date: 2026-11-05
+  page: "/releases/data-management.html"
+  anchor: "527-05112026"
+  summary: "Basis-Image-Aktualisierung mit Korrektur für CVE-2026-111497 (libbrotli)"
+
+- component: "Spatial Data Processor"
+  version: "1.1.2"
+  date: 2026-11-05
+  page: "/releases/spatial-data-processor.html"
+  anchor: "112-05112026"
+  summary: "Basis-Image-Aktualisierung mit Korrektur für CVE-2026-111497 (libbrotli)"
+
 - component: "Web-Client"
   version: "5.1.8"
   date: 2026-11-19

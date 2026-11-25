@@ -3,7 +3,7 @@ layout: default
 title: Data Management
 parent: Release Info
 nav_order: 3
-date: 2026-06-17
+date: 2026-11-25
 description: Release-Informationen für die KomMonitor Data Management API
 ---
 
@@ -24,6 +24,34 @@ Hier finden Sie eine detaillierte Übersicht der wichtigsten Neuerungen, Fehlerb
 ---
 
 ## Version 5.2.x
+
+### 5.2.8 (25.11.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Infrastruktur:
+{: .no_toc }
+Aktualisierung des Eclipse Temurin Basis-Images auf die aktuelle Version.
+
+---
+
+### 5.2.7 (05.11.2026)
+{: .no_toc }
+
+#### Änderungen
+{: .no_toc }
+
+##### Infrastruktur:
+{: .no_toc }
+Aktualisierung des Docker-Basis-Images auf die aktuelle Version (enthält Korrektur für CVE-2026-111497).
+
+##### Abhängigkeiten:
+{: .no_toc }
+Entfernung einer doppelt deklarierten Abhängigkeit.
+
+---
 
 ### 5.2.6 (17.06.2026)
 {: .no_toc }
